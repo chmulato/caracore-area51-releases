@@ -2,6 +2,7 @@
 
 Vitrine pública do **Suporte Área 51** (Cara Core Informática).
 
+- **Oficina (código):** chmulato/caracore-area51 — repositório de desenvolvimento do sistema Área 51 (`D:\dev\caracore-area51`).
 - **Loja online (GitHub Pages):** https://chmulato.github.io/caracore-area51-releases/
 - **Matriz (portal completo):** https://caracore.com.br/delivery/area51/
 
