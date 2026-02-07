@@ -9,28 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --bg-dark: #1a1d21; --bg-card: #252a30; --text-primary: #e6edf3; --text-secondary: #8b949e; --accent-blue: #58a6ff; --border: #373e47; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-primary); background: var(--bg-dark); min-height: 100vh; padding: 0 20px 40px; }
-        .wrapper { max-width: 640px; margin: 0 auto; }
-        .breadcrumb { font-size: 0.85rem; margin-bottom: 24px; padding-top: 16px; }
-        .breadcrumb a { color: var(--accent-blue); text-decoration: none; }
-        .breadcrumb span { color: var(--text-secondary); }
-        header { padding: 32px 0 24px; border-bottom: 1px solid var(--border); }
-        header h1 { font-size: 1.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
-        header .subtitle { font-size: 0.95rem; color: var(--text-secondary); }
-        .nav-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; text-decoration: none; color: inherit; display: block; margin-bottom: 16px; transition: border-color 0.2s; }
-        .nav-card:hover { border-color: var(--accent-blue); }
-        .nav-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
-        .nav-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; }
-        .alert { margin: 20px 0; padding: 14px 18px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 10px; font-size: 0.9rem; color: #f59e0b; }
-        .back { margin-top: 32px; font-size: 0.9rem; }
-        .back a { color: var(--accent-blue); text-decoration: none; }
-        .back a:hover { text-decoration: underline; }
-    </style>
+    <link rel="stylesheet" href="assets/css/loja.css">
 </head>
-<body>
+<body class="page-canal">
     <div class="wrapper">
         <nav class="breadcrumb" aria-label="Navegação">
             <a href="https://caracore.com.br/portfolio.html#area-51">Cara Core Informática</a>
@@ -62,5 +43,6 @@
 
         <p class="back"><a href="index.html">Voltar ao portal</a> · <a href="https://caracore.com.br/delivery/area51/">Matriz</a> · <a href="https://caracore.com.br/portfolio.html#area-51">Portfólio</a></p>
     </div>
+    <script src="assets/js/loja.js"></script>
 </body>
 </html>
