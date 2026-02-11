@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
+    <link rel="stylesheet" href="assets/css/area51.css">
 </head>
 <body class="page-canal">
     <div class="wrapper">
@@ -24,35 +23,41 @@
 
         <header>
             <h1>Canal de feedback — Suporte Área 51</h1>
-            <p class="subtitle">Solicitar suporte, orçamento ou consultoria. E-mail, WhatsApp e Telegram.</p>
+            <p class="subtitle">Solicitar suporte, orçamento ou consultoria para autenticação enterprise (OAuth 2.1, OIDC, PKCE). E-mail, WhatsApp e Telegram.</p>
         </header>
 
-        <div class="alert"><strong>Não atendemos ligações telefônicas.</strong> Use e-mail, WhatsApp ou Telegram.</div>
+        <div class="no-phone"><strong>Não atendemos ligações telefônicas.</strong> Use e-mail, WhatsApp ou Telegram.</div>
 
-        <a href="mailto:suporte@caracore.com.br?subject=Suporte%20%C3%81rea%2051%20-%20Or%C3%A7amento%20%2F%20Consultoria%20OIDC" class="nav-card" target="_blank" rel="noopener">
-            <h3>E-mail — suporte@caracore.com.br</h3>
-            <p>Assunto sugerido: &quot;Suporte Área 51 - Orçamento / Consultoria OIDC&quot;.</p>
-        </a>
-        <a href="https://wa.me/5541999097797?text=Olá%2C%20vim%20pelo%20portal%20Suporte%20%C3%81rea%2051%20para%20solicitar%20or%C3%A7amento%20%2F%20consultoria%20OIDC." class="nav-card" target="_blank" rel="noopener">
-            <h3>WhatsApp — 55 41 9 9909-7797</h3>
-            <p>Suporte Área 51 — orçamento e consultoria.</p>
-        </a>
-        <a href="https://t.me/+5541999097797" class="nav-card" target="_blank" rel="noopener">
-            <h3>Telegram — 55 41 9 9909-7797</h3>
-            <p>Cara Core Informática. Não atendemos ligações.</p>
-        </a>
+        <section class="intro">
+            <p><strong>Contato da Cara Core Informática</strong> para solicitar suporte ou orçamento do <strong>Suporte Área 51</strong> (consultoria OAuth 2.1, OIDC, PKCE, autenticação enterprise, integração Google/Microsoft).</p>
+        </section>
 
-        <nav class="back">
-            <a href="index.html">Voltar à Área 51 — Loja</a> · <a href="download.html">Download</a> · <a href="licenca-uso.html">Licença de uso</a>
+        <section class="channels">
+            <a href="mailto:suporte@caracore.com.br?subject=Suporte%20%C3%81rea%2051%20-%20Or%C3%A7amento%20%2F%20Consultoria%20OIDC" class="nav-card" target="_blank" rel="noopener">
+                <span class="channel-icon" aria-hidden="true">&#9993;</span>
+                <h3>suporte@caracore.com.br</h3>
+                <p>Assunto sugerido: &quot;Suporte Área 51 - Orçamento / Consultoria OIDC&quot;. Descreva sua necessidade de autenticação ou suporte.</p>
+            </a>
+            <a href="https://wa.me/5541999097797?text=Olá%2C%20vim%20pelo%20portal%20Suporte%20%C3%81rea%2051%20para%20solicitar%20or%C3%A7amento%20%2F%20consultoria%20OIDC." class="nav-card" target="_blank" rel="noopener">
+                <span class="channel-icon" aria-hidden="true">&#128172;</span>
+                <h3>55 41 9 9909-7797 (WhatsApp)</h3>
+                <p>Cara Core Informática. Suporte Área 51 — orçamento e consultoria.</p>
+            </a>
+            <a href="https://t.me/+5541999097797" class="nav-card" target="_blank" rel="noopener">
+                <span class="channel-icon" aria-hidden="true">&#9992;</span>
+                <h3>55 41 9 9909-7797 (Telegram)</h3>
+                <p>Cara Core Informática. Suporte Área 51. Não atendemos ligações telefônicas.</p>
+            </a>
+        </section>
+
+        <nav class="download-back">
+            <a href="index.html">Voltar à Área 51 — Loja</a> · <a href="download.html">Download</a> · <a href="licenca-uso.html">Licença de uso</a> · <a href="https://caracore.com.br/delivery/area51/" target="_blank" rel="noopener">Delivery (matriz)</a>
         </nav>
-        <footer class="page-footer">
+        <footer>
             <p><a href="index.html">Cara Core Informática</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
             <p>Área 51 — Scripts de configuração OpenID Connect. Lançamento 02 de agosto de 2026. Oficina: caracore-area51 · Loja: caracore-area51-releases.</p>
         </footer>
     </div>
-    <script src="assets/js/loja.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Versão de teste oficial">Seed<span class="evo-beta-tooltip">Esta é uma versão oficial de teste da Cara Core Informática para parceiros do Plano Premium+.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Lançamento scripts <span class="evo-roadmap-tag">02 de agosto de 2026</span></li><li>Domínio próprio</li></ul></footer>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Canal de feedback"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+    <script src="assets/js/area51.js"></script>
 </body>
 </html>
