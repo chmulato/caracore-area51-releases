@@ -5,9 +5,11 @@
 - **Oficina (código):** [caracore-area51](https://github.com/chmulato/caracore-area51) — desenvolvimento dos scripts (Python, baseline, validação OIDC).
 - **Loja online (GitHub Pages):** https://chmulato.github.io/caracore-area51-releases/
 - **Matriz (portal):** https://caracore.com.br/delivery/area51/
-- **Lançamento scripts:** 02 de agosto de 2026
+- **Releases:** A publicar. Contrate o Suporte Área 51 para implementação.
 
 Produto: scripts de configuração (Python, baseline, controle de versão). Serviço: Suporte Área 51 (implementação, portais Google/Microsoft Entra ID, painel admin, auditoria). Contratação e orçamento pelo [canal de feedback](docs/canal-feedback.html).
+
+> ⚠️ **Licença proprietária — não é MIT, não é open source.** Gratuito para pessoas físicas (uso pessoal e estudo). Instituições e uso comercial requerem contratação.
 
 ## Páginas (GitHub Pages)
 
@@ -26,4 +28,4 @@ Esta loja espelha a chamada da matriz (delivery/area51). Apresentação completa
 
 ---
 
-© Cara Core Informática · Área 51 — Scripts de configuração OpenID Connect · Lançamento 02 de agosto de 2026
+© Cara Core Informática · Área 51 — Scripts de configuração OpenID Connect · Licença Proprietária — não é MIT, não é open source
