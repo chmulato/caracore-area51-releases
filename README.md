@@ -26,12 +26,12 @@ A pasta `docs/` é a raiz do site da loja (GitHub Pages → Source: branch main 
 
 Esta loja espelha a chamada da matriz (delivery/area51). Apresentação completa e contexto do ecossistema ficam em [caracore.com.br/delivery/area51/](https://caracore.com.br/delivery/area51/).
 
-## Licença
-
-Este repositório segue política **proprietária** da Cara Core Informática.
-
-- Termos completos: [LICENSE](LICENSE)
-
 ---
 
 © Cara Core Informática · Área 51 — Scripts de configuração OpenID Connect · Licença Proprietária — não é MIT, não é open source
+
+## Licenca
+
+Este repositorio segue licenciamento proprietario institucional da Cara Core Informatica.
+Consulte [LICENSE](LICENSE).
+
