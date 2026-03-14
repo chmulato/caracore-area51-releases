@@ -1,27 +1,27 @@
-PROPRIETARY LICENSE - CARA CORE INFORMATICA
+IMPLEMENTATION LICENSE NOTICE - AREA 51 RELEASES
 
-Copyright (c) 2026 Christian Vladimir Uhdre Mulato
-CNPJ 23.969.028/0001-37
 Repository: caracore-area51-releases
+Maintainer: Cara Core Informatica (CNPJ 23.969.028/0001-37)
 
-THIS PROJECT IS NOT OPEN SOURCE.
+THIS REPOSITORY IS NOT OPEN SOURCE.
 
-All rights reserved. The content of this repository (including source code,
-text, documentation, media, binaries, and other artifacts) is proprietary and
-belongs exclusively to Cara Core Informatica and its author.
+LEGAL OWNERSHIP STATEMENT:
+- The Area 51 product is owned by the Federal Government.
+- Cara Core Informatica is limited to technical implementation and support
+  services.
 
-PERMITTED USE:
-- Personal use and individual study by natural persons, when explicitly allowed
-  by product policy.
+SCOPE OF THIS REPOSITORY:
+- This repository publishes storefront/delivery artifacts and operational
+  documentation used in implementation service flows.
+- No statement in this repository transfers ownership of the Area 51 product
+  to Cara Core or to third parties.
 
-PROHIBITED WITHOUT SPECIFIC LICENSE OR WRITTEN AUTHORIZATION:
-- Institutional or commercial use.
-- Redistribution, resale, sublicensing, or public mirroring.
-- Reverse engineering, decompilation, or derivative works.
-- Removal or modification of copyright notices.
+USE RESTRICTIONS:
+- Redistribution, resale, sublicensing, public mirroring, reverse engineering,
+  and derivative works are prohibited without written authorization from the
+  competent rights holder and/or formal contract.
+- Removal or modification of legal notices is prohibited.
 
-Violations may result in civil and criminal liability under applicable law.
-
-For commercial/institutional licensing:
+For implementation service requests:
 suporte@caracore.com.br
 https://caracore.com.br

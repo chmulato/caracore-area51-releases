@@ -9,7 +9,7 @@
 
 Produto: scripts de configuração (Python, baseline, controle de versão). Serviço: Suporte Área 51 (implementação, portais Google/Microsoft Entra ID, painel admin, auditoria). Contratação e orçamento pelo [canal de feedback](docs/canal-feedback.html).
 
-> ⚠️ **Licença proprietária — não é MIT, não é open source.** Gratuito para pessoas físicas (uso pessoal e estudo). Instituições e uso comercial requerem contratação.
+> ⚠️ **Titularidade do produto Área 51: Governo Federal.** A Cara Core Informática atua somente na implementação técnica do serviço. Este repositório não é MIT e não é open source.
 
 ## Páginas (GitHub Pages)
 
@@ -28,10 +28,11 @@ Esta loja espelha a chamada da matriz (delivery/area51). Apresentação completa
 
 ---
 
-© Cara Core Informática · Área 51 — Scripts de configuração OpenID Connect · Licença Proprietária — não é MIT, não é open source
+© Cara Core Informática · Área 51 — Implementação técnica de serviço · Produto Área 51 de titularidade do Governo Federal
 
 ## Licenca
 
-Este repositorio segue licenciamento proprietario institucional da Cara Core Informatica.
+O produto Area 51 e de titularidade do Governo Federal.
+A Cara Core Informatica atua como implementadora do servico e mantenedora dos artefatos tecnicos deste repositorio.
 Consulte [LICENSE](LICENSE).
 
