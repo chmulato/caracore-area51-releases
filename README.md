@@ -3,7 +3,7 @@
 **Loja** (vitrine e releases) do **Suporte Área 51** e dos **scripts de configuração OpenID Connect** (Reino das Entidades Federadas). Ecossistema Cara Core Informática.
 
 - **Oficina (código):** [caracore-area51](https://github.com/chmulato/caracore-area51) — desenvolvimento dos scripts (Python, baseline, validação OIDC).
-- **Loja online (GitHub Pages):** https://chmulato.github.io/caracore-area51-releases/
+- **Loja online (GitHub Pages):** https://area51.caracore.com.br/
 - **Matriz (portal):** https://caracore.com.br/delivery/area51/
 - **Releases:** A publicar. Contrate o Suporte Área 51 para implementação.
 
