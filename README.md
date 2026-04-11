@@ -4,7 +4,7 @@
 
 - **Oficina (código):** [caracore-area51](https://github.com/chmulato/caracore-area51) — desenvolvimento dos scripts (Python, baseline, validação OIDC).
 - **Loja online (GitHub Pages):** https://area51.caracore.com.br/
-- **Matriz (portal):** https://caracore.com.br/delivery/area51/
+- **Matriz (portal):** https://area51.caracore.com.br/
 - **Releases:** A publicar. Contrate o Suporte Área 51 para implementação.
 
 Produto: scripts de configuração (Python, baseline, controle de versão). Serviço: Suporte Área 51 (implementação, portais Google/Microsoft Entra ID, painel admin, auditoria). Contratação e orçamento pelo [canal de feedback](docs/canal-feedback.html).
@@ -24,7 +24,7 @@ A pasta `docs/` é a raiz do site da loja (GitHub Pages → Source: branch main 
 
 ## Alinhamento
 
-Esta loja espelha a chamada da matriz (delivery/area51). Apresentação completa e contexto do ecossistema ficam em [caracore.com.br/delivery/area51/](https://caracore.com.br/delivery/area51/).
+Esta loja espelha a chamada institucional da Cara Core. Apresentação completa e contexto do ecossistema ficam em [area51.caracore.com.br](https://area51.caracore.com.br/).
 
 ---
 
