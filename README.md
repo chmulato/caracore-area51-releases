@@ -28,14 +28,16 @@
 
 A pasta `docs/` é publicada em: **https://area51.caracore.com.br/**
 
-| Página | Descrição |
-|--------|-----------|
-| [**produto.html**](docs/produto.html) | 🎯 Visão geral do produto, features, casos de uso |
-| [**servicos.html**](docs/servicos.html) | 💼 Três opções de engajamento (Básico, Implementação, Platinum) |
-| [**index.html**](docs/index.html) | 🏠 Página inicial da loja |
-| [**download.html**](docs/download.html) | 📥 Como baixar e começar |
-| [**licenca-uso.html**](docs/licenca-uso.html) | ⚖️ Termos e licença |
-| [**canal-feedback.html**](docs/canal-feedback.html) | 💬 Contato e suporte |
+| Página | Descrição | Tipo |
+|--------|-----------|------|
+| [**produto.html**](docs/produto.html) | 🎯 Visão geral do produto, features, casos de uso | Marketing |
+| [**galeria.html**](docs/galeria.html) | 🖼️ Galeria de 10 imagens profissionais 16:9 | Recursos |
+| [**imprensa.html**](docs/imprensa.html) | 📰 Kit de imprensa para mídia e vendas | Press Kit |
+| [**servicos.html**](docs/servicos.html) | 💼 Três opções de engajamento (Básico, Implementação, Platinum) | Vendas |
+| [**index.html**](docs/index.html) | 🏠 Página inicial da loja | Home |
+| [**download.html**](docs/download.html) | 📥 Como baixar e começar | Getting Started |
+| [**licenca-uso.html**](docs/licenca-uso.html) | ⚖️ Termos e licença | Legal |
+| [**canal-feedback.html**](docs/canal-feedback.html) | 💬 Contato e suporte | Contato |
 
 ---
 
