@@ -1,107 +1,764 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang=”pt-BR”>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://area51.caracore.com.br/">
-    <title>Área 51 — Loja | O que os scripts entregam no seu ambiente | Cara Core</title>
-    <meta name="description" content="Reino das Entidades Federadas (OpenID Connect). Produto Área 51 de titularidade do Governo Federal. Cara Core atua na implementação técnica do serviço.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/area51.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
-        <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <title>Área 51 OIDC Platform — Autenticação Federada Segura em 5 Minutos</title>
+    <meta name=”description” content=”Proteja suas aplicações com OIDC seguro. Deploy automatizado de Keycloak, OAuth 2.1, PKCE. Para governo, empresas e desenvolvedores.”>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo { font-size: 1.5em; font-weight: bold; color: #667eea; }
+
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #667eea; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 { font-size: 2.8em; margin-bottom: 20px; line-height: 1.2; }
+        .hero-text p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.95; }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 400px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .badge-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #f8f9ff;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .feature-card-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: #666;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .feature-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s;
+        }
+
+        .feature-card a:hover {
+            gap: 12px;
+        }
+
+        /* Solutions Section */
+        .solutions {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .solutions-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .solution-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .solution-block:nth-child(even) {
+            grid-template-columns: 1fr 1fr;
+            direction: rtl;
+        }
+
+        .solution-block:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .solution-image {
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .solution-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .solution-text h3 {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .solution-text p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .solution-points {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .solution-points li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #666;
+        }
+
+        .solution-points li:before {
+            content: “✓”;
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 20px;
+            background: #f8f9ff;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .gallery-preview img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-preview img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5em;
+            color: #764ba2;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 10px 0;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-card li:before {
+            content: “✓ “;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            margin-top: 30px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero-content { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2em; }
+            .hero-image { height: 250px; }
+            .solution-block { grid-template-columns: 1fr; gap: 30px; }
+            .solution-block:nth-child(even) { direction: ltr; }
+            .section-title h2 { font-size: 1.8em; }
+            .footer-links { flex-direction: column; gap: 15px; }
+        }
+    </style>
 </head>
-<body class="cc-i-page">
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">Área 51 — Loja</a>
-            <span> · </span>
-            <span>Cara Core Informática</span>
-            <span> · </span>
-            <span>Área 51 — Loja</span>
-        </nav>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class=”logo”>🔐 Área 51</div>
+        <ul>
+            <li><a href=”#features”>Recursos</a></li>
+            <li><a href=”#solutions”>Soluções</a></li>
+            <li><a href=”#pricing”>Preços</a></li>
+            <li><a href=”galeria.html”>Galeria</a></li>
+            <li><a href=”canal-feedback.html”>Contato</a></li>
+        </ul>
+    </nav>
 
-        <section class="hero-cta" aria-label="Loja Área 51">
-            <p class="hero-label">Marketing de guerrilha — Cara Core Informática</p>
-            <h2 class="hero-title">Reino das Entidades Federadas (OpenID Connect) — o que os scripts entregam no seu ambiente.</h2>
-            <p class="hero-desc">Para o leigo: <strong>Reino das Entidades Federadas (OpenID Connect)</strong>. O produto Área 51 é de titularidade do <strong>Governo Federal</strong>. Empresas médias que contratam o <strong>serviço Área 51</strong> recebem implementação técnica (Python/baseline), login Google e Microsoft, controle de acesso e auditoria. <strong>A Cara Core atua exclusivamente na implementação técnica do serviço.</strong></p>
-            <div class="cta-buttons">
-                <a href="canal-feedback.html" class="cta-btn cta-btn-primary">Quero o serviço Área 51 — Solicitar orçamento</a>
-                <a href="download.html" class="cta-btn cta-btn-secondary">Ver o que o serviço entrega</a>
-                <a href="wiki/index.html" class="cta-btn cta-btn-secondary">Wiki da aplicação</a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class=”hero”>
+        <div class=”hero-content”>
+            <div class=”hero-text”>
+                <h1>🔐 Autenticação OIDC Segura em 5 Minutos</h1>
+                <p>Proteja suas aplicações com OAuth 2.1 + PKCE. Deploy automático, sem complexidade.</p>
 
-        <header>
-            <h1>Loja Área 51</h1>
-            <p class="subtitle">Reino das Entidades Federadas (OpenID Connect). Scripts Python → seu ambiente. Produto + serviço para empresas médias. loja oficial: area51.caracore.com.br.</p>
-        </header>
+                <div class=”badge-group”>
+                    <span class=”badge”>✓ PKCE Seguro</span>
+                    <span class=”badge”>✓ OAuth 2.1</span>
+                    <span class=”badge”>✓ Keycloak Docker</span>
+                </div>
 
-        <section class="methodology" aria-label="Para o leigo: Reino das Entidades Federadas">
-            <div class="card card-gold">
-                <h2>Reino das Entidades Federadas (OpenID Connect)</h2>
-                <p>Para você que não é técnico: o produto que vendemos aqui tem duas “caras” que se complementam.</p>
-                <ul style="margin: 1rem 0 0 1.2rem; color: var(--text-secondary, #8b949e); line-height: 1.7;">
-                    <li><strong style="color: var(--text-primary, #e6edf3);">Produto Área 51</strong> — titularidade do Governo Federal.</li>
-                    <li><strong style="color: var(--text-primary, #e6edf3);">Cara Core</strong> — implementação técnica do serviço: baseline, scripts operacionais, documentação de execução e suporte por escopo contratado.</li>
-                    <li><strong style="color: var(--text-primary, #e6edf3);">Crachá</strong> — O <strong>OpenID Connect</strong> e sua <strong>especificação padrão de mercado da segurança</strong>. É o “crachá digital” que a tecnologia usa: protocolos, tokens, login seguro (o que o técnico de configuração mexe na oficina).</li>
-                </ul>
-                <p style="margin-top: 1rem;">Produto Área 51 (titularidade federal) + implementação técnica Cara Core ↔ Crachá (OpenID Connect, padrão). Na <strong>oficina</strong> falamos OpenID Connect; na <strong>loja</strong> você vê o Reino das Entidades Federadas (OpenID Connect).</p>
+                <div class=”hero-buttons”>
+                    <a href=”produto.html” class=”btn btn-primary”>📖 Ver Produto</a>
+                    <a href=”download.html” class=”btn btn-secondary”>🚀 Começar Agora</a>
+                </div>
             </div>
-            <div class="card">
-                <h2>O que você leva para o seu ambiente</h2>
-                <p>Os <strong>scripts de configuração</strong> da Oficina (Python, baseline, controle de versão) viram <strong>solução no seu ambiente</strong>: autenticação e autorização corporativa, login Google/Microsoft, painel admin, auditoria, conformidade LGPD. Processo completo do Reino das Entidades Federadas (OpenID Connect), com produto Área 51 de titularidade do Governo Federal e implementação técnica executada pela Cara Core.</p>
+            <div class=”hero-image”>
+                <img src=”images/02_security_network.png” alt=”Segurança de Rede Federada”>
             </div>
-            <div class="card">
-                <h2>Para quem é</h2>
-                <p><strong>Médias empresas</strong> que querem identidade e acesso sob controle, com tempo e orçamento para investir. Os scripts entregam o que a Oficina construiu; o <strong>Suporte Área 51</strong> (serviço) implementa e configura no seu cenário. Um CTA: contratar o serviço.</p>
-            </div>
-            <div class="card">
-                <h2>Suporte Área 51 — serviço</h2>
-                <p>Contratação do <strong>serviço Área 51</strong>: a Cara Core leva os scripts do produto ao seu ambiente, configura portais, integra Google e Microsoft Entra ID, painel administrativo e auditoria. <strong>Prova de capacidade: o portal OIDC em produção no site Cara Core e o produto Reino OIDC configuram esse ambiente ao vivo.</strong> A startup tem o conhecimento — o serviço tem preço porque a dedicação exclusiva a um projeto externo tem custo. <a href="canal-feedback.html">Canal de feedback</a>: e-mail, WhatsApp, Telegram. Assunto: <strong>Suporte Área 51</strong>.</p>
-            </div>
-            <div class="card">
-                <h2>Como contratar</h2>
-                <p><strong>CTA:</strong> <a href="canal-feedback.html">Solicitar orçamento / Suporte Área 51</a>. E-mail suporte@caracore.com.br, WhatsApp e Telegram. Não atendemos por telefone.</p>
-            </div>
-        </section>
-
-        <p class="nav-section-title">Links</p>
-        <div class="nav-grid">
-            <a href="download.html" class="nav-card" title="Download e releases">
-                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
-                <h3>O que o serviço entrega</h3>
-                <p>O que sua empresa recebe ao contratar o Suporte Área 51.</p>
-            </a>
-            <a href="licenca-uso.html" class="nav-card" title="Licença de uso">
-                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-                <h3>Licença de uso</h3>
-                <p>Produto scripts Área 51, uso e responsabilidade, propriedade intelectual. Suporte Área 51 (serviço).</p>
-            </a>
-            <a href="canal-feedback.html" class="nav-card" title="Canal de feedback">
-                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-                <h3>Canal de feedback</h3>
-                <p>E-mail suporte@caracore.com.br, Telegram ou WhatsApp. Solicitar orçamento ou Suporte Área 51.</p>
-            </a>
-            <a href="wiki/index.html" class="nav-card" title="Wiki da aplicação">
-                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-                <h3>Wiki da aplicação</h3>
-                <p>Documentação técnica e funcional da implementação Área 51 na loja de releases.</p>
-            </a>
         </div>
+    </section>
 
-        <footer>
-            <p><a href="index.html">Área 51 — Loja</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
-            <p>Área 51 — Produto de titularidade do Governo Federal. Serviço contratável de implementação técnica pela Cara Core. Oficina: caracore-area51 · Loja: caracore-area51-releases.</p>
-        </footer>
-    </div>
-    <script src="assets/js/area51.js"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" title="Versão de teste oficial">Seed<span class="evo-beta-tooltip">Esta é uma versão oficial de teste da Cara Core Informática para parceiros do Plano Premium+.</span></span></div>
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Ampliação de integrações de identidade federada</li><li>Hardening de políticas de acesso e auditoria</li><li>Evolução do catálogo de implantação</li></ul></footer>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria pelo canal oficial"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+    <!-- Features Section -->
+    <section class=”features” id=”features”>
+        <div class=”features-container”>
+            <div class=”section-title”>
+                <h2>⚡ O Que Área 51 Oferece</h2>
+                <p>Tudo que você precisa para OIDC seguro em um único lugar</p>
+            </div>
+
+            <div class=”features-grid”>
+                <div class=”feature-card”>
+                    <img src=”images/05_speed_setup.png” alt=”Setup Rápido”>
+                    <div class=”feature-card-content”>
+                        <h3>⚡ Setup em 5 Min</h3>
+                        <p>Deploy automático de Keycloak com um único comando. Sem configuração manual complexa.</p>
+                        <a href=”download.html”>Começar →</a>
+                    </div>
+                </div>
+
+                <div class=”feature-card”>
+                    <img src=”images/01_oidc_flow.png” alt=”Fluxo OIDC Seguro”>
+                    <div class=”feature-card-content”>
+                        <h3>🔒 Segurança PKCE</h3>
+                        <p>Implementa OAuth 2.1 com PKCE, JWT validado e proteção contra ataques.</p>
+                        <a href=”produto.html”>Ver Detalhes →</a>
+                    </div>
+                </div>
+
+                <div class=”feature-card”>
+                    <img src=”images/03_cloud_deployment.png” alt=”Deploy Cloud”>
+                    <div class=”feature-card-content”>
+                        <h3>☁️ Cloud-Native</h3>
+                        <p>Docker, Kubernetes-ready, infraestrutura moderna para ambientes distribuídos.</p>
+                        <a href=”download.html”>Setup Guide →</a>
+                    </div>
+                </div>
+
+                <div class=”feature-card”>
+                    <img src=”images/09_docker_deployment.png” alt=”Deploy Docker”>
+                    <div class=”feature-card-content”>
+                        <h3>🐳 Containerizado</h3>
+                        <p>Keycloak em Docker. Deploy consistente em qualquer infraestrutura Linux.</p>
+                        <a href=”download.html”>Documentação →</a>
+                    </div>
+                </div>
+
+                <div class=”feature-card”>
+                    <img src=”images/07_workshop_learning.png” alt=”Treinamento”>
+                    <div class=”feature-card-content”>
+                        <h3>📚 Bem Documentado</h3>
+                        <p>Guias passo-a-passo, conceitos explicados, exemplos prontos para usar.</p>
+                        <a href=”galeria.html”>Ver Recursos →</a>
+                    </div>
+                </div>
+
+                <div class=”feature-card”>
+                    <img src=”images/08_community.png” alt=”Comunidade”>
+                    <div class=”feature-card-content”>
+                        <h3>👥 Open Source</h3>
+                        <p>Código aberto, comunidade global, contribuições bem-vindas no GitHub.</p>
+                        <a href=”https://github.com/chmulato/caracore-area51”>GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class=”solutions” id=”solutions”>
+        <div class=”solutions-container”>
+            <div class=”section-title”>
+                <h2>🎯 Soluções para Cada Caso</h2>
+                <p>Área 51 se adapta a diferentes necessidades</p>
+            </div>
+
+            <!-- Solution 1 -->
+            <div class=”solution-block”>
+                <div class=”solution-text”>
+                    <h3>🏛️ Governo Federal</h3>
+                    <p>Proteja portais internos e federalize identidades entre agências.</p>
+                    <ul class=”solution-points”>
+                        <li>Integração com Entra ID / Gov.br</li>
+                        <li>Conformidade NIST 800-63</li>
+                        <li>Suporte técnico dedicado</li>
+                        <li>Segurança auditada</li>
+                    </ul>
+                    <a href=”servicos.html” class=”btn btn-primary”>Ver Serviços</a>
+                </div>
+                <div class=”solution-image”>
+                    <img src=”images/04_gov_federation.png” alt=”Federação Governamental”>
+                </div>
+            </div>
+
+            <!-- Solution 2 -->
+            <div class=”solution-block”>
+                <div class=”solution-text”>
+                    <h3>🏢 Empresas</h3>
+                    <p>Integre múltiplos sistemas com autenticação centralizada segura.</p>
+                    <ul class=”solution-points”>
+                        <li>SSO para múltiplas aplicações</li>
+                        <li>Escalável para 1000s de usuários</li>
+                        <li>Integração ERP/CRM/HR</li>
+                        <li>Implementação rápida</li>
+                    </ul>
+                    <a href=”servicos.html” class=”btn btn-primary”>Solicitar Demo</a>
+                </div>
+                <div class=”solution-image”>
+                    <img src=”images/06_enterprise_integration.png” alt=”Integração Empresarial”>
+                </div>
+            </div>
+
+            <!-- Solution 3 -->
+            <div class=”solution-block”>
+                <div class=”solution-text”>
+                    <h3>👨‍💻 Desenvolvedores</h3>
+                    <p>Aprenda e implemente OAuth 2.1 com exemplos práticos e documentação clara.</p>
+                    <ul class=”solution-points”>
+                        <li>Exemplos de código Python/Flask</li>
+                        <li>Testes automáticos inclusos</li>
+                        <li>Documentação técnica completa</li>
+                        <li>Comunidade para dúvidas</li>
+                    </ul>
+                    <a href=”https://github.com/chmulato/caracore-area51” class=”btn btn-primary”>GitHub</a>
+                </div>
+                <div class=”solution-image”>
+                    <img src=”images/08_community.png” alt=”Comunidade Developer”>
+                </div>
+            </div>
+
+            <!-- Solution 4 -->
+            <div class=”solution-block”>
+                <div class=”solution-text”>
+                    <h3>🎓 Facilitadores / Oficinas</h3>
+                    <p>Treine equipes em OIDC com ambiente pronto em minutos.</p>
+                    <ul class=”solution-points”>
+                        <li>Setup automático para workshops</li>
+                        <li>Fluxo visível e interativo</li>
+                        <li>Materiais de treinamento inclusos</li>
+                        <li>Suporte para facilitadores</li>
+                    </ul>
+                    <a href=”canal-feedback.html” class=”btn btn-primary”>Agendar Workshop</a>
+                </div>
+                <div class=”solution-image”>
+                    <img src=”images/07_workshop_learning.png” alt=”Workshop e Treinamento”>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class=”gallery-section”>
+        <div class=”gallery-container”>
+            <div class=”section-title”>
+                <h2>🎨 Galeria de Recursos Visuais</h2>
+                <p>10 imagens profissionais 16:9 para entender melhor o produto</p>
+            </div>
+
+            <div class=”gallery-preview”>
+                <img src=”images/01_oidc_flow.png” title=”OIDC Flow” onclick=”window.open('images/01_oidc_flow.png')”>
+                <img src=”images/02_security_network.png” title=”Security Network” onclick=”window.open('images/02_security_network.png')”>
+                <img src=”images/03_cloud_deployment.png” title=”Cloud” onclick=”window.open('images/03_cloud_deployment.png')”>
+                <img src=”images/04_gov_federation.png” title=”Gov” onclick=”window.open('images/04_gov_federation.png')”>
+                <img src=”images/05_speed_setup.png” title=”Speed” onclick=”window.open('images/05_speed_setup.png')”>
+                <img src=”images/06_enterprise_integration.png” title=”Enterprise” onclick=”window.open('images/06_enterprise_integration.png')”>
+                <img src=”images/07_workshop_learning.png” title=”Workshop” onclick=”window.open('images/07_workshop_learning.png')”>
+                <img src=”images/08_community.png” title=”Community” onclick=”window.open('images/08_community.png')”>
+                <img src=”images/09_docker_deployment.png” title=”Docker” onclick=”window.open('images/09_docker_deployment.png')”>
+                <img src=”images/10_digital_transformation.png” title=”Transformation” onclick=”window.open('images/10_digital_transformation.png')”>
+            </div>
+
+            <div style=”text-align: center; margin-top: 40px;”>
+                <a href=”galeria.html” class=”btn btn-primary”>📸 Ver Galeria Completa</a>
+                <a href=”imprensa.html” class=”btn btn-secondary” style=”background: #667eea; color: white; margin-left: 15px;”>📰 Kit de Imprensa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class=”pricing” id=”pricing”>
+        <div class=”pricing-container”>
+            <div class=”section-title”>
+                <h2>💰 Opções e Preços</h2>
+                <p>Escolha o modelo que melhor se adequa</p>
+            </div>
+
+            <div class=”pricing-cards”>
+                <div class=”pricing-card”>
+                    <h3>📦 Produto Básico</h3>
+                    <div class=”price”>Gratuito</div>
+                    <ul>
+                        <li>Scripts baseline OIDC</li>
+                        <li>Deploy automatizado</li>
+                        <li>Testes integrados</li>
+                        <li>Documentação completa</li>
+                        <li>Open source</li>
+                    </ul>
+                    <a href=”download.html” class=”btn btn-primary” style=”width: 100%; margin-top: 20px; text-align: center;”>Baixar</a>
+                </div>
+
+                <div class=”pricing-card”>
+                    <h3>🚀 Implementação</h3>
+                    <div class=”price”>T&M</div>
+                    <ul>
+                        <li>Setup guiado</li>
+                        <li>Integração aplicação</li>
+                        <li>Suporte implementação</li>
+                        <li>Validação segurança</li>
+                        <li>2-5 dias entrega</li>
+                    </ul>
+                    <a href=”canal-feedback.html” class=”btn btn-primary” style=”width: 100%; margin-top: 20px; text-align: center;”>Solicitar</a>
+                </div>
+
+                <div class=”pricing-card”>
+                    <h3>🏆 Platinum</h3>
+                    <div class=”price”>SLA</div>
+                    <ul>
+                        <li>Setup + customizações</li>
+                        <li>Gov.br / Entra ID</li>
+                        <li>Auditoria segurança</li>
+                        <li>Suporte 24x5</li>
+                        <li>Treinamento equipe</li>
+                    </ul>
+                    <a href=”canal-feedback.html” class=”btn btn-primary” style=”width: 100%; margin-top: 20px; text-align: center;”>Contatar</a>
+                </div>
+            </div>
+
+            <div style=”text-align: center; margin-top: 50px;”>
+                <a href=”servicos.html” class=”btn btn-primary”>💼 Ver Todos os Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class=”cta-section”>
+        <div class=”cta-content”>
+            <h2>Pronto para Proteger Suas Aplicações?</h2>
+            <p>Implemente OIDC seguro em minutos, não semanas</p>
+            <div style=”display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;”>
+                <a href=”download.html” class=”btn btn-primary”>🚀 Começar Agora</a>
+                <a href=”canal-feedback.html” class=”btn btn-secondary”>💬 Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class=”footer-content”>
+            <h3>🔐 Área 51 OIDC Platform</h3>
+            <p style=”margin: 15px 0; color: #aaa;”>Autenticação federada segura para governo, empresas e comunidade desenvolvedora</p>
+
+            <div class=”footer-links”>
+                <a href=”produto.html”>Produto</a>
+                <a href=”servicos.html”>Serviços</a>
+                <a href=”galeria.html”>Galeria</a>
+                <a href=”imprensa.html”>Imprensa</a>
+                <a href=”licenca-uso.html”>Licença</a>
+                <a href=”canal-feedback.html”>Contato</a>
+                <a href=”https://github.com/chmulato/caracore-area51”>GitHub</a>
+            </div>
+
+            <div class=”footer-bottom”>
+                <p>&copy; 2026 Cara Core Informática · Área 51 — Implementação técnica de serviço do Governo Federal</p>
+                <p>Produto de titularidade do Governo Federal</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
