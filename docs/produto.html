@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área 51 OIDC Platform — Autenticação Federada Segura</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        header p { font-size: 1.2em; opacity: 0.9; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        section { margin: 40px 0; padding: 30px; border-radius: 8px; background: #f9f9f9; }
+        section h2 { color: #667eea; margin-bottom: 20px; font-size: 1.8em; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0; }
+        .feature { background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .feature h3 { color: #667eea; margin-bottom: 10px; }
+        .feature p { color: #666; }
+
+        .benefits { background: white; padding: 30px; border-radius: 8px; border-left: 4px solid #764ba2; margin: 20px 0; }
+        .benefits ul { list-style: none; padding-left: 0; }
+        .benefits li { padding: 10px 0; padding-left: 30px; position: relative; }
+        .benefits li:before { content: "✓"; position: absolute; left: 0; color: #667eea; font-weight: bold; }
+
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 5px 10px 0;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cta-button:hover { background: #764ba2; }
+        .cta-button-secondary { background: #764ba2; }
+
+        .tech-stack { display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
+        .tech-badge { background: white; padding: 10px 20px; border-radius: 20px; border: 2px solid #667eea; color: #667eea; font-weight: bold; }
+
+        footer { background: #333; color: white; padding: 20px; text-align: center; margin-top: 40px; }
+
+        .comparison { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .comparison th { background: #667eea; color: white; padding: 12px; text-align: left; }
+        .comparison td { padding: 12px; border-bottom: 1px solid #ddd; }
+        .comparison tr:nth-child(even) { background: #f9f9f9; }
+
+        .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 4px; margin: 20px 0; }
+        .warning strong { color: #856404; }
+
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔐 Área 51 OIDC Platform</h1>
+        <p>Autenticação Federada Segura em Minutos</p>
+    </header>
+
+    <div class="container">
+        <!-- Problem/Solution -->
+        <section>
+            <h2>🎯 O Problema</h2>
+            <p>Órgãos públicos e empresas precisam proteger acesso a aplicações internas com <strong>OpenID Connect (OIDC)</strong>, mas enfrentam:</p>
+            <div class="benefits">
+                <ul>
+                    <li>❌ Configuração manual e complexa do Keycloak</li>
+                    <li>❌ Falta de validação de segurança (PKCE, JWT)</li>
+                    <li>❌ Impossível reproduzir em ambientes consistentes</li>
+                    <li>❌ Deploy leva semanas, não minutos</li>
+                </ul>
+            </div>
+
+            <h2 style="margin-top: 40px;">✅ A Solução: Área 51</h2>
+            <p><strong>Plataforma completa de configuração e operação de ambientes OpenID Connect</strong></p>
+            <p style="margin: 20px 0; font-size: 1.1em; color: #667eea; font-weight: bold;">Proteja aplicações com OIDC em <5 minutos, não 5 semanas.</p>
+        </section>
+
+        <!-- Features -->
+        <section>
+            <h2>⚡ Componentes</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>1. Scripts Baseline</h3>
+                    <p>Configuração OIDC padronizada (OAuth 2.1, PKCE). Python, versionado, pronto para integração.</p>
+                </div>
+                <div class="feature">
+                    <h3>2. Deploy Automatizado</h3>
+                    <p>Um comando instala Keycloak + aplicação protegida em Docker. Ambiente reproduzível.</p>
+                </div>
+                <div class="feature">
+                    <h3>3. Testes Integrados</h3>
+                    <p>Validação automática do fluxo OAuth 2.1 + PKCE. Segurança garantida.</p>
+                </div>
+                <div class="feature">
+                    <h3>4. Documentação Completa</h3>
+                    <p>Setup passo-a-passo, conceitos OIDC, troubleshooting. Tudo em português.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security -->
+        <section>
+            <h2>🔒 Segurança Implementada</h2>
+            <p>Implementamos <strong>padrões OAuth 2.1 + OpenID Connect</strong> com proteções contra ataques comuns:</p>
+            <table class="comparison">
+                <tr>
+                    <th>Proteção</th>
+                    <th>Contra Ataque</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td><strong>PKCE</strong></td>
+                    <td>Interception de código</td>
+                    <td>✅ Automático</td>
+                </tr>
+                <tr>
+                    <td><strong>State Parameter</strong></td>
+                    <td>CSRF</td>
+                    <td>✅ Automático</td>
+                </tr>
+                <tr>
+                    <td><strong>JWT Signature</strong></td>
+                    <td>Falsificação de tokens</td>
+                    <td>✅ Validado</td>
+                </tr>
+                <tr>
+                    <td><strong>HTTP-only Cookies</strong></td>
+                    <td>XSS theft</td>
+                    <td>✅ Implementado</td>
+                </tr>
+                <tr>
+                    <td><strong>Token Expiration</strong></td>
+                    <td>Replay attacks</td>
+                    <td>✅ 5 min padrão</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Use Cases -->
+        <section>
+            <h2>📋 Casos de Uso</h2>
+
+            <h3 style="margin-top: 20px; color: #667eea;">Órgão Federal — Proteger Portal Interno</h3>
+            <p><strong>Antes:</strong> 2-3 semanas de setup manual + risco de segurança</p>
+            <p><strong>Com Área 51:</strong> Deploy + validação em 2-3 dias</p>
+
+            <h3 style="margin-top: 20px; color: #667eea;">Empresa — Oficina de OIDC</h3>
+            <p><strong>Antes:</strong> Difícil demonstrar fluxo OAuth 2.1</p>
+            <p><strong>Com Área 51:</strong> Ambiente pronto para treinamento em 1 hora</p>
+
+            <h3 style="margin-top: 20px; color: #667eea;">Integrador — Múltiplos Clientes</h3>
+            <p><strong>Antes:</strong> Retrabalho em cada cliente</p>
+            <p><strong>Com Área 51:</strong> Padrão reutilizável, 70% redução de tempo</p>
+        </section>
+
+        <!-- Quick Start -->
+        <section>
+            <h2>🚀 Quick Start (2 minutos)</h2>
+            <p><strong>Pré-requisitos:</strong> Linux, Docker, Python 3.9+</p>
+
+            <pre style="background: #f4f4f4; padding: 15px; border-radius: 4px; overflow-x: auto; margin: 20px 0;">
+# 1. Clonar repositório
+git clone https://github.com/chmulato/caracore-area51.git
+cd caracore-area51
+
+# 2. Instalar dependências
+pip install -r operational/requirements.txt
+
+# 3. Deploy automático
+python operational/setup_oidc_environment.py \
+  --server 192.168.1.100 \
+  --docker-user admin \
+  --docker-pass password
+
+# 4. Validar fluxo
+python operational/tests/validate_oidc_flow.py \
+  --keycloak-url http://192.168.1.100:8080
+
+# 5. Acessar aplicação
+# Browser: http://192.168.1.100:5000
+# Login: demo / demo123
+            </pre>
+
+            <p><strong>Resultado:</strong> Keycloak + Protected App + Validação ✅</p>
+        </section>
+
+        <!-- Tech Stack -->
+        <section>
+            <h2>⚙️ Stack Tecnológico</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Python 3.9+</span>
+                <span class="tech-badge">Keycloak 20+</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">OAuth 2.1</span>
+                <span class="tech-badge">PKCE</span>
+                <span class="tech-badge">JWT</span>
+                <span class="tech-badge">Linux</span>
+            </div>
+        </section>
+
+        <!-- Comparison -->
+        <section>
+            <h2>📊 Comparação: Antes vs. Depois</h2>
+            <table class="comparison">
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Manual</th>
+                    <th>Com Área 51</th>
+                </tr>
+                <tr>
+                    <td><strong>Tempo de Setup</strong></td>
+                    <td>2-3 semanas</td>
+                    <td>&lt;5 minutos ⚡</td>
+                </tr>
+                <tr>
+                    <td><strong>Segurança (PKCE)</strong></td>
+                    <td>Implementação manual</td>
+                    <td>Automático ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Testes OIDC</strong></td>
+                    <td>Inexistentes</td>
+                    <td>Inclusos ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Reprodutibilidade</strong></td>
+                    <td>Inconsistente (máquina a máquina)</td>
+                    <td>100% ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Documentação</strong></td>
+                    <td>Dispersa (múltiplas fontes)</td>
+                    <td>Centralizada ✅</td>
+                </tr>
+                <tr>
+                    <td><strong>Risco de Erro</strong></td>
+                    <td>Alto (config manual)</td>
+                    <td>Baixo (automático) ✅</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Services -->
+        <section>
+            <h2>💼 Serviços Oferecidos</h2>
+
+            <h3 style="margin-top: 20px; color: #667eea;">Serviço 1: Produto Área 51 (Gratuito)</h3>
+            <p><strong>Scripts baseline + Deploy automatizado + Testes</strong></p>
+            <p>Repositório GitHub public, documentação completa. Incluido neste site.</p>
+
+            <h3 style="margin-top: 20px; color: #667eea;">Serviço 2: Suporte Área 51 (Premium)</h3>
+            <p><strong>Consultoria técnica, customização, suporte dedicado</strong></p>
+            <div class="benefits">
+                <ul>
+                    <li>Implementação em ambiente cliente (Time &amp; Materials)</li>
+                    <li>Integração com Entra ID / Gov.br</li>
+                    <li>Customização de fluxo OIDC</li>
+                    <li>Auditoria de segurança</li>
+                    <li>Suporte 24x5 (SLA)</li>
+                </ul>
+            </div>
+            <a href="canal-feedback.html" class="cta-button">Solicitar Orçamento</a>
+        </section>
+
+        <!-- Call to Action -->
+        <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+            <h2 style="color: white;">🚀 Pronto para Começar?</h2>
+            <p style="margin: 20px 0; font-size: 1.1em;">Proteja suas aplicações com OIDC em minutos</p>
+
+            <a href="https://github.com/chmulato/caracore-area51" class="cta-button" style="background: white; color: #667eea; margin: 10px 5px;">📦 Acessar Repositório</a>
+            <a href="download.html" class="cta-button">📥 Download & Setup</a>
+            <a href="canal-feedback.html" class="cta-button cta-button-secondary">💬 Contate-nos</a>
+        </section>
+
+        <!-- Legal -->
+        <section>
+            <h2>⚖️ Informações Legais</h2>
+            <div class="warning">
+                <strong>⚠️ Titularidade:</strong> O produto Área 51 é de titularidade do Governo Federal.
+                A Cara Core Informática atua como implementadora técnica e mantenedora dos artefatos.
+            </div>
+            <p><a href="licenca-uso.html">Ver Licença Completa</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cara Core Informática. Área 51 — Implementação técnica de serviço.</p>
+        <p>Produto de titularidade do Governo Federal</p>
+        <p><a href="https://area51.caracore.com.br/" style="color: #667eea;">area51.caracore.com.br</a></p>
+    </footer>
+</body>
+</html>

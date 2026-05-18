@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços Área 51 — OIDC Seguro para Produção</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; text-align: center; }
+        header h1 { font-size: 2em; margin-bottom: 10px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .service-card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .service-card .price {
+            font-size: 1.5em;
+            color: #764ba2;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .service-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover { background: #764ba2; }
+
+        section { margin: 40px 0; padding: 30px; border-radius: 8px; background: #f9f9f9; }
+        section h2 { color: #667eea; margin-bottom: 20px; }
+
+        footer { background: #333; color: white; padding: 20px; text-align: center; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>💼 Serviços Área 51</h1>
+        <p>OIDC Seguro para Órgãos, Empresas e Integradores</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Três Opções de Engajamento</h2>
+            <p>Escolha o modelo que melhor se adequa ao seu cenário:</p>
+        </section>
+
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <h2>📦 Produto Básico</h2>
+                <p><strong>Para quem quer fazer sozinho</strong></p>
+
+                <div class="price">Gratuito</div>
+
+                <p><strong>O que inclui:</strong></p>
+                <ul>
+                    <li>Scripts baseline OIDC (Python)</li>
+                    <li>Deploy automático (Keycloak Docker)</li>
+                    <li>Testes de validação OAuth 2.1 + PKCE</li>
+                    <li>Documentação completa (PT-BR)</li>
+                    <li>Repositório GitHub público</li>
+                </ul>
+
+                <p><strong>Tempo de setup:</strong> &lt;5 minutos</p>
+                <p><strong>Público:</strong> Desenvolvedores, DevOps, entusiastas</p>
+
+                <a href="https://github.com/chmulato/caracore-area51" class="cta-button">📥 Baixar Agora</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <h2>🚀 Implementação Rápida</h2>
+                <p><strong>Para quem precisa de suporte técnico</strong></p>
+
+                <div class="price">T&M ou Fixo</div>
+
+                <p><strong>O que inclui:</strong></p>
+                <ul>
+                    <li>Deploy guiado no seu ambiente</li>
+                    <li>Integração com sua aplicação</li>
+                    <li>Configuração segura</li>
+                    <li>Validação de fluxo OIDC</li>
+                    <li>Suporte durante implementação</li>
+                </ul>
+
+                <p><strong>Tempo:</strong> 2-5 dias</p>
+                <p><strong>Público:</strong> Órgãos públicos, empresas</p>
+
+                <a href="canal-feedback.html" class="cta-button">💬 Solicitar Orçamento</a>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <h2>🏆 Suporte Platinum</h2>
+                <p><strong>Para quem precisa de suporte contínuo</strong></p>
+
+                <div class="price">SLA Dedicado</div>
+
+                <p><strong>O que inclui:</strong></p>
+                <ul>
+                    <li>Setup + implementação</li>
+                    <li>Integração Entra ID/Gov.br</li>
+                    <li>Customizações OIDC</li>
+                    <li>Auditoria de segurança</li>
+                    <li>Suporte 24x5 (SLA 4h)</li>
+                    <li>Treinamento de equipe</li>
+                </ul>
+
+                <p><strong>Tempo:</strong> 1-3 meses</p>
+                <p><strong>Público:</strong> Órgãos críticos, integradores</p>
+
+                <a href="canal-feedback.html" class="cta-button">📞 Falar com Especialista</a>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <section>
+            <h2>🔍 Comparação de Serviços</h2>
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background: #667eea; color: white;">
+                    <th style="padding: 12px; text-align: left;">Recurso</th>
+                    <th style="padding: 12px; text-align: center;">Produto Básico</th>
+                    <th style="padding: 12px; text-align: center;">Implementação</th>
+                    <th style="padding: 12px; text-align: center;">Suporte Platinum</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">Scripts baseline</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;">
+                    <td style="padding: 12px;">Deploy automático</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">Testes OIDC</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;">
+                    <td style="padding: 12px;">Suporte técnico</td>
+                    <td style="padding: 12px; text-align: center;">❌</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅ 24x5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">Implementação guiada</td>
+                    <td style="padding: 12px; text-align: center;">❌</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;">
+                    <td style="padding: 12px;">Integração Gov.br/Entra</td>
+                    <td style="padding: 12px; text-align: center;">❌</td>
+                    <td style="padding: 12px; text-align: center;">Opcional</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">Auditoria de segurança</td>
+                    <td style="padding: 12px; text-align: center;">❌</td>
+                    <td style="padding: 12px; text-align: center;">❌</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                    <td style="padding: 12px;">Treinamento de equipe</td>
+                    <td style="padding: 12px; text-align: center;">❌</td>
+                    <td style="padding: 12px; text-align: center;">❌</td>
+                    <td style="padding: 12px; text-align: center;">✅</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Use Cases -->
+        <section>
+            <h2>📋 Recomendações por Perfil</h2>
+
+            <h3 style="color: #667eea; margin-top: 20px;">👨‍💻 Desenvolvedor / DevOps Interno</h3>
+            <p><strong>→ Use: Produto Básico</strong></p>
+            <p>Você tem conhecimento técnico, quer usar os scripts como baseline e implementar no seu próprio ambiente. Tudo que você precisa está documentado.</p>
+
+            <h3 style="color: #667eea; margin-top: 20px;">🏢 Órgão Público / Empresa Média</h3>
+            <p><strong>→ Use: Implementação Rápida</strong></p>
+            <p>Você quer que especialistas configurem OIDC no seu ambiente, com integração ao Entra ID ou Gov.br. Suporte durante a implementação incluso.</p>
+
+            <h3 style="color: #667eea; margin-top: 20px;">🎯 Órgão Crítico / Integrador</h3>
+            <p><strong>→ Use: Suporte Platinum</strong></p>
+            <p>Você precisa de segurança de alto nível, auditoria, treinamento de equipe e suporte contínuo. SLA garantido.</p>
+        </section>
+
+        <!-- Process -->
+        <section>
+            <h2>🔄 Como Funciona o Processo</h2>
+
+            <h3 style="color: #667eea; margin-top: 20px;">1. Contato Inicial</h3>
+            <p>Você nos contata via <a href="canal-feedback.html">canal de feedback</a> com seus requisitos.</p>
+
+            <h3 style="color: #667eea; margin-top: 20px;">2. Diagnóstico</h3>
+            <p>Analisamos seu ambiente, escopo e requisitos de segurança.</p>
+
+            <h3 style="color: #667eea; margin-top: 20px;">3. Proposta</h3>
+            <p>Enviamos orçamento e cronograma detalhado.</p>
+
+            <h3 style="color: #667eea; margin-top: 20px;">4. Implementação</h3>
+            <p>Executamos conforme acordado, com atualizações periódicas.</p>
+
+            <h3 style="color: #667eea; margin-top: 20px;">5. Validação & Entrega</h3>
+            <p>Testes de fluxo OIDC, documentação e handoff. Para Platinum: treinamento de equipe.</p>
+
+            <h3 style="color: #667eea; margin-top: 20px;">6. Suporte Contínuo (Platinum)</h3>
+            <p>Suporte 24x5 para problemas, atualizações e evoluções.</p>
+        </section>
+
+        <!-- Pricing Note -->
+        <section style="background: #fff3cd; border-left: 4px solid #ffc107;">
+            <h2 style="color: #856404;">💰 Sobre Preços</h2>
+            <p><strong>Produto Básico:</strong> Gratuito (produto do Governo Federal)</p>
+            <p><strong>Implementação:</strong> Varia conforme escopo (Time &amp; Materials ou fixo)</p>
+            <p><strong>Suporte Platinum:</strong> Contrato mensal com SLA garantido</p>
+            <p style="margin-top: 15px;"><strong>Para orçamento personalizado:</strong> <a href="canal-feedback.html">Entre em contato</a></p>
+        </section>
+
+        <!-- CTA -->
+        <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+            <h2 style="color: white;">📞 Pronto para Começar?</h2>
+            <p style="font-size: 1.1em; margin: 20px 0;">Escolha seu caminho:</p>
+
+            <div style="margin: 30px 0;">
+                <a href="https://github.com/chmulato/caracore-area51" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px;">📥 Baixar Produto Básico</a>
+                <a href="canal-feedback.html" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px;">💬 Solicitar Implementação</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cara Core Informática. Serviços Área 51.</p>
+        <p>Produto de titularidade do Governo Federal</p>
+    </footer>
+</body>
+</html>
