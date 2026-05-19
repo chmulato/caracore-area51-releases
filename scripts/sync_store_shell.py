@@ -7,6 +7,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "docs"
 
+TAGLINE = (
+    "Identidade e acesso institucional — produto licenciado e serviços Cara Core."
+)
+
 # Catálogo numerado da vitrine (01–10) + apresentação técnica (11)
 FOOTER_PAGES = [
     (1, "index.html", "Início"),
@@ -14,7 +18,7 @@ FOOTER_PAGES = [
     (3, "servicos.html", "Serviços"),
     (4, "galeria.html", "Galeria"),
     (5, "wiki/index.html", "Wiki"),
-    (6, "download.html", "Download"),
+    (6, "download.html", "Como começar"),
     (7, "imprensa.html", "Imprensa"),
     (8, "faq.html", "FAQ"),
     (9, "licenca-uso.html", "Licença"),
@@ -28,7 +32,7 @@ STORE_ITEMS = [
     ("servicos.html", "Serviços"),
     ("galeria.html", "Galeria"),
     ("wiki/index.html", "Wiki"),
-    ("download.html", "Download"),
+    ("download.html", "Como começar"),
     ("imprensa.html", "Imprensa"),
     ("canal-feedback.html", "Contato"),
 ]
@@ -183,7 +187,7 @@ def store_footer(current_href: str) -> str:
         '            <h2 class="sf-visually-hidden">Rodapé institucional</h2>\n'
         '            <p class="sf-footer-brand">Área 51</p>\n'
         '            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>\n'
-        '            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>\n'
+        f'            <p class="sf-footer-tagline">{TAGLINE}</p>\n'
         '            <nav class="sf-footer-links" aria-label="Mapa do site">\n'
         + "\n".join(links)
         + "\n            </nav>\n"
@@ -210,7 +214,7 @@ def wiki_footer(current_href: str) -> str:
         '            <h2 class="sf-visually-hidden">Rodapé institucional</h2>\n'
         '            <p class="sf-footer-brand">Área 51</p>\n'
         '            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>\n'
-        '            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>\n'
+        f'            <p class="sf-footer-tagline">{TAGLINE}</p>\n'
         '            <nav class="sf-footer-links" aria-label="Mapa do site">\n'
         + "\n".join(links)
         + "\n            </nav>\n"

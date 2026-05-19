@@ -2,7 +2,7 @@
 
 Vitrine estática em `docs/` (GitHub Pages): https://area51.caracore.com.br/
 
-Pacote técnico OpenID Connect e Keycloak em Docker. **Produto privado licenciado** — oficina não open source. Titularidade: Governo Federal. Implementação: Cara Core Informática (Suporte Área 51).
+Pacote licenciado de identidade e acesso institucional. Titularidade: Governo Federal. Implementação: Cara Core Informática (Suporte Área 51).
 
 Único Markdown deste repositório. Memória de manutenção: [docs/assets/inc/loja-memoria.txt](docs/assets/inc/loja-memoria.txt).
 
@@ -24,7 +24,7 @@ Referências na oficina: [OFICINA.md](https://github.com/chmulato/caracore-area5
 | 03 | [servicos.html](docs/servicos.html) | Contratação |
 | 04 | [galeria.html](docs/galeria.html) | Material visual (prompts 01–10) |
 | 05 | [wiki](docs/wiki/index.html) | Conceitos OIDC |
-| 06 | [download.html](docs/download.html) | Entrega licenciada |
+| 06 | [download.html](docs/download.html) | Como começar |
 | 07 | [imprensa.html](docs/imprensa.html) | Kit imprensa |
 | 08 | [faq.html](docs/faq.html) | FAQ |
 | 09 | [licenca-uso.html](docs/licenca-uso.html) | Licença |

@@ -5,14 +5,14 @@ Referência interna para manutenção da vitrine em docs/. Publicação: https:/
 ## Posicionamento
 
 - Produto Área 51: titularidade Governo Federal; implementação Cara Core (Suporte Área 51).
-- Oficina (caracore-area51): código privado, licenciado — não open source.
-- Loja (este repo): HTML/CSS institucional, documentação pública do produto; não distribui código.
+- Oficina (caracore-area51): baseline e operação.
+- Loja (este repo): HTML/CSS institucional e documentação do produto.
 
 ## Mapa do site (rodapé 01–11)
 
-01 index · 02 produto · 03 servicos · 04 galeria · 05 wiki · 06 download · 07 imprensa · 08 faq · 09 licenca-uso · 10 canal-feedback · 11 apresentacao-tecnica
+01 index · 02 produto · 03 servicos · 04 galeria · 05 wiki · 06 como-comecar · 07 imprensa · 08 faq · 09 licenca-uso · 10 canal-feedback · 11 apresentacao-tecnica
 
-Menu desktop (8): Início, Produto, Serviços, Galeria, Wiki, Download, Imprensa, Contato.
+Menu desktop (8): Início, Produto, Serviços, Galeria, Wiki, Como começar, Imprensa, Contato.
 Menu mobile: idem + FAQ + Licença (antes de Contato).
 
 ## Área produto (subnav)
@@ -20,7 +20,7 @@ Menu mobile: idem + FAQ + Licença (antes de Contato).
 produto.html · apresentacao-tecnica.html · download.html · licenca-uso.html
 
 apresentacao-tecnica.html — documentação técnica institucional (arquitetura, fluxo OIDC, entrega licenciada).
-download.html — entrega da baseline; sem repositório público.
+download.html — como começar (entrega licenciada).
 
 ## Galeria (galeria.html)
 
@@ -45,8 +45,11 @@ docs/assets/css/store-public.css (--sf-gutter, sf-header, sf-footer, sf-product-
 
 ## Tom editorial
 
-Profissional, institucional, conciso. Sem prolixidade; bullets directos; vocabulário corporativo.
+Comercial e institucional — linguagem acessível, foco em benefícios e contratação.
+Detalhes técnicos (protocolos, arquitetura, stack) ficam em apresentacao-tecnica.html e wiki.
+Evitar jargão (OIDC, PKCE, Docker, baseline) nas páginas comerciais: index, produto, servicos, download, faq.
+Menu item 06: «Como começar» (download.html). Tagline: identidade e acesso institucional — produto licenciado e serviços Cara Core.
 
 ## index.html
 
-Hero: única imagem (02 rede federada). Demais secções: cards texto (sf-card-flat). Galeria concentra as 10 figuras.
+Hero: única imagem (02 rede federada). Demais secções: cards texto (sf-card-flat). CTAs principais: serviços e contato. Galeria concentra as 10 figuras.

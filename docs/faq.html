@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ — Área 51</title>
-    <meta name="description" content="Perguntas frequentes sobre o Área 51: produto, oficina, loja, baseline gratuita, serviços contratados, OIDC, Keycloak e suporte.">
+    <meta name="description" content="Perguntas frequentes sobre o Área 51: produto licenciado, serviços, entrega, licença e contato com a Cara Core.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
                     <li><a href="servicos.html">Serviços</a></li>
                     <li><a href="galeria.html">Galeria</a></li>
                     <li><a href="wiki/index.html">Wiki</a></li>
-                    <li><a href="download.html">Download</a></li>
+                    <li><a href="download.html">Como começar</a></li>
                     <li><a href="imprensa.html">Imprensa</a></li>
                     <li><a href="canal-feedback.html">Contato</a></li>
                 </ul>
@@ -35,7 +35,7 @@
                     <a href="servicos.html">Serviços</a>
                     <a href="galeria.html">Galeria</a>
                     <a href="wiki/index.html">Wiki</a>
-                    <a href="download.html">Download</a>
+                    <a href="download.html">Como começar</a>
                     <a href="imprensa.html">Imprensa</a>
                     <a href="faq.html" aria-current="page">FAQ</a>
                     <a href="licenca-uso.html">Licença</a>
@@ -48,202 +48,110 @@
     <main id="main" class="sf-main">
         <header class="sf-page-hero">
             <h1>Perguntas frequentes</h1>
-            <p class="sf-lede">Respostas sobre o pacote técnico Área 51, produto privado licenciado, relação entre oficina e loja, entrega da baseline e serviços contratados.</p>
+            <p class="sf-lede">Respostas objetivas sobre produto, entrega, serviços e contato.</p>
         </header>
 
         <nav class="sf-block sf-faq-nav" aria-label="Secções do FAQ">
             <h2 class="sf-faq-nav-title">Secções</h2>
             <ul class="sf-faq-nav-list">
-                <li><a href="#produto">Produto e titularidade</a></li>
-                <li><a href="#oficina-loja">Oficina e loja</a></li>
-                <li><a href="#baseline">Baseline e entrega</a></li>
-                <li><a href="#servicos">Serviços contratados</a></li>
-                <li><a href="#tecnico">Aspectos técnicos</a></li>
-                <li><a href="#suporte">Suporte e licença</a></li>
+                <li><a href="#produto">Produto</a></li>
+                <li><a href="#entrega">Entrega e licença</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#suporte">Contato</a></li>
             </ul>
         </nav>
 
         <section class="sf-block" id="produto">
-            <h2>Produto e titularidade</h2>
+            <h2>Produto</h2>
             <div class="sf-faq">
                 <details class="sf-faq-item">
                     <summary>O que é o Área 51?</summary>
                     <div class="sf-faq-answer">
-                        <p>Pacote técnico para implantar autenticação federada com OpenID Connect e Keycloak em Docker. Inclui baseline versionada, scripts automatizados, testes de fluxo OAuth/OIDC e documentação para equipes técnicas.</p>
+                        <p>Solução licenciada de identidade e acesso para organizações que precisam de login seguro, integração entre sistemas e entrega documentada. Indicada para órgãos públicos, empresas e programas de capacitação.</p>
                     </div>
                 </details>
                 <details class="sf-faq-item">
                     <summary>Quem é titular do produto?</summary>
                     <div class="sf-faq-answer">
-                        <p>O produto Área 51 é de titularidade do Governo Federal. A Cara Core Informática actua como implementadora técnica do Suporte Área 51, sem reivindicar titularidade sobre o produto.</p>
+                        <p>O produto Área 51 é de titularidade do Governo Federal. A Cara Core Informática atua como implementadora técnica do Suporte Área 51.</p>
                         <p>Texto integral: <a href="licenca-uso.html">licença de uso</a>.</p>
                     </div>
                 </details>
                 <details class="sf-faq-item">
-                    <summary>O Área 51 substitui o Google ou a Microsoft como provedor de identidade?</summary>
+                    <summary>Substitui Google ou Microsoft?</summary>
                     <div class="sf-faq-answer">
-                        <p>Não. O pacote configura e valida fluxos OIDC; os provedores (Google Workspace, Microsoft Entra ID, Keycloak local, etc.) são produtos de terceiros. A baseline inclui geradores de configuração para Google e Entra ID no repositório de código.</p>
+                        <p>Não. O Área 51 organiza e valida o acesso; os provedores de login (Google, Microsoft e outros) continuam sendo serviços de terceiros integrados ao seu ambiente.</p>
                     </div>
                 </details>
             </div>
         </section>
 
-        <section class="sf-block" id="oficina-loja">
-            <h2>Oficina e loja</h2>
+        <section class="sf-block" id="entrega">
+            <h2>Entrega e licença</h2>
             <div class="sf-faq">
                 <details class="sf-faq-item">
-                    <summary>Qual a diferença entre oficina e loja?</summary>
+                    <summary>Como obtenho o produto?</summary>
                     <div class="sf-faq-answer">
-                        <p>A oficina Área 51 concentra desenvolvimento privado: código Python, pasta <code>operational/</code>, testes e documentação técnica interna. Não é open source.</p>
-                        <p>A loja (area51.caracore.com.br) é a vitrine institucional: páginas HTML, apresentação técnica, galeria, wiki conceptual e canal comercial.</p>
+                        <p>Mediante aceite da <a href="licenca-uso.html">licença de uso</a> e solicitação pelo <a href="canal-feedback.html">canal institucional</a>. Não há download público avulso. Ver <a href="download.html">como começar</a>.</p>
                     </div>
                 </details>
                 <details class="sf-faq-item">
-                    <summary>O que fica em cada pasta da oficina?</summary>
+                    <summary>O que vem no pacote licenciado?</summary>
                     <div class="sf-faq-answer">
-                        <ul>
-                            <li><code>src/</code> e <code>tests/</code> — scripts baseline e validação de protocolo</li>
-                            <li><code>operational/</code> — deploy Keycloak em Docker, app Flask protegida, testes de fluxo</li>
-                            <li><code>docs/</code> — guias técnicos internos</li>
-                            <li><code>marketing/prompts/</code> — rascunhos visuais; imagens finais publicam-se em <code>docs/assets/img/</code> na loja</li>
-                        </ul>
+                        <p>Produto completo, documentação, rotinas de validação e material de apoio — entregues pelo canal acordado após autorização.</p>
                     </div>
                 </details>
                 <details class="sf-faq-item">
-                    <summary>O que a wiki publicada cobre?</summary>
+                    <summary>Serve para produção imediata?</summary>
                     <div class="sf-faq-answer">
-                        <p>A <a href="wiki/index.html">wiki</a> expõe conceitos de autenticação (OAuth, OIDC, PKCE). A <a href="apresentacao-tecnica.html">apresentação técnica</a> instrui sobre arquitectura e entrega; o processo operacional completo acompanha a baseline licenciada.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <section class="sf-block" id="baseline">
-            <h2>Baseline e entrega</h2>
-            <div class="sf-faq">
-                <details class="sf-faq-item">
-                    <summary>O que inclui a baseline licenciada?</summary>
-                    <div class="sf-faq-answer">
-                        <ul>
-                            <li>Scripts de referência OIDC e gerador de configuração</li>
-                            <li>Rotina de deploy Keycloak + aplicação protegida em Docker (<code>operational/</code>)</li>
-                            <li>Testes de fluxo OAuth 2.1 com PKCE</li>
-                            <li>Documentação operacional e guias passo a passo no pacote entregue</li>
-                            <li>Uso regulado pela <a href="licenca-uso.html">licença de uso</a> — produto privado, não open source</li>
-                        </ul>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
-                    <summary>Quais requisitos para executar a baseline?</summary>
-                    <div class="sf-faq-answer">
-                        <p>Servidor ou VM Linux com Docker, Python 3 e rede acessível às portas do Keycloak (8080) e da aplicação exemplo (5000). Dependências listadas em <code>operational/requirements.txt</code>.</p>
-                        <p>Comandos de início: <a href="download.html">download e como começar</a>.</p>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
-                    <summary>Como confirmar que o ambiente está correcto?</summary>
-                    <div class="sf-faq-answer">
-                        <p>Após o setup, execute <code>operational/tests/validate_oidc_flow.py</code> contra a URL do Keycloak. Saída esperada: servidor de identidades activo, aplicação protegida a responder e validação automatizada concluída sem erros.</p>
-                        <p>Utilizador de teste padrão após setup: demo / demo123 (ambiente de laboratório).</p>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
-                    <summary>A baseline é suficiente para produção?</summary>
-                    <div class="sf-faq-answer">
-                        <p>A baseline destina-se a laboratório, prova de conceito e autoatendimento técnico. Ambientes de produção exigem hardening, políticas internas, integração com IdP corporativo e, frequentemente, implementação guiada ou contrato SLA.</p>
+                        <p>O pacote licenciado é indicado para laboratório, prova de conceito e operação autônoma autorizada. Ambientes de produção exigem planejamento, políticas internas e, em muitos casos, implementação guiada ou contrato de acompanhamento.</p>
                     </div>
                 </details>
             </div>
         </section>
 
         <section class="sf-block" id="servicos">
-            <h2>Serviços contratados</h2>
+            <h2>Serviços</h2>
             <div class="sf-faq">
                 <details class="sf-faq-item">
                     <summary>Qual a diferença entre produto e serviço?</summary>
                     <div class="sf-faq-answer">
-                        <p>O produto (scripts e baseline) é privado e licenciado. O Suporte Área 51 é a contratação da Cara Core para implementar no ambiente do cliente: integração, painel administrativo, conformidade acordada e acompanhamento durante o projecto.</p>
+                        <p>O <strong>produto</strong> é licenciado e entregue conforme acordo. O <strong>Suporte Área 51</strong> é a contratação da Cara Core para implantar e acompanhar no ambiente do cliente.</p>
                     </div>
                 </details>
                 <details class="sf-faq-item">
-                    <summary>Quais modelos de contratação existem?</summary>
+                    <summary>Quais modelos existem?</summary>
                     <div class="sf-faq-answer">
                         <ul>
-                            <li>Baseline técnica — licenciada, entrega institucional</li>
-                            <li>Implementação guiada — sob consulta, escopo definido com o cliente</li>
-                            <li>Acompanhamento estendido — contrato com SLA e evolução contínua</li>
+                            <li>Pacote licenciado</li>
+                            <li>Implementação guiada — sob consulta</li>
+                            <li>Acompanhamento contínuo — contrato com SLA</li>
                         </ul>
                         <p>Detalhes: <a href="servicos.html">serviços</a>.</p>
                     </div>
                 </details>
                 <details class="sf-faq-item">
-                    <summary>O que entrega a implementação contratada?</summary>
-                    <div class="sf-faq-answer">
-                        <p>Conforme escopo acordado, pode incluir login corporativo (Google, Entra ID), painel de utilizadores, fluxos para auditoria, baseline documentada no ambiente do cliente e suporte técnico durante a implantação. Ver <a href="download.html">download</a> (secção serviço contratado).</p>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
                     <summary>Como solicitar orçamento?</summary>
                     <div class="sf-faq-answer">
-                        <p>Pelo <a href="canal-feedback.html">canal de feedback</a>: e-mail suporte@caracore.com.br ou WhatsApp/Telegram 55 41 9 9909 7797 (apenas mensagens). Descreva cenário, integrações esperadas e janelas de projecto.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <section class="sf-block" id="tecnico">
-            <h2>Aspectos técnicos</h2>
-            <div class="sf-faq">
-                <details class="sf-faq-item">
-                    <summary>Quais protocolos e práticas de segurança são usados?</summary>
-                    <div class="sf-faq-answer">
-                        <p>OAuth 2.1, OpenID Connect, fluxo de código de autorização com PKCE, parâmetro state contra CSRF, validação de JWT quando aplicável e cookies HTTP-only nos exemplos documentados.</p>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
-                    <summary>Keycloak é obrigatório?</summary>
-                    <div class="sf-faq-answer">
-                        <p>A baseline operacional usa Keycloak em Docker como IdP de referência para laboratório e validação de fluxo. Integrações com Google ou Microsoft Entra ID usam os geradores de configuração em <code>src/area51_config/</code>.</p>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
-                    <summary>Quais componentes são implantados no setup operacional?</summary>
-                    <div class="sf-faq-answer">
-                        <ul>
-                            <li>Keycloak — porta 8080, realm caracore-area51</li>
-                            <li>Aplicação Flask protegida — porta 5000, rotas públicas e /protected</li>
-                            <li>Scripts de validação automatizada do fluxo completo</li>
-                        </ul>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
-                    <summary>Os scripts são open source?</summary>
-                    <div class="sf-faq-answer">
-                        <p>Não. Os scripts da Oficina Área 51 são software proprietário, de titularidade institucional. A loja publica documentação técnica (<a href="apresentacao-tecnica.html">apresentação técnica</a>, wiki, FAQ); o código-fonte permanece em ambiente controlado e é entregue mediante licença.</p>
+                        <p>Pelo <a href="canal-feedback.html">canal de feedback</a>, e-mail suporte@caracore.com.br ou WhatsApp/Telegram 55 41 9 9909 7797 (apenas mensagens). Descreva cenário, integrações esperadas e prazos desejados.</p>
                     </div>
                 </details>
             </div>
         </section>
 
         <section class="sf-block" id="suporte">
-            <h2>Suporte e licença</h2>
+            <h2>Contato e material</h2>
             <div class="sf-faq">
                 <details class="sf-faq-item">
-                    <summary>Como obter suporte técnico?</summary>
+                    <summary>Onde encontrar detalhes técnicos?</summary>
                     <div class="sf-faq-answer">
-                        <p>Baseline licenciada: consulte <a href="apresentacao-tecnica.html">apresentação técnica</a>, wiki e guias incluídos no pacote entregue. Suporte comercial ou implementação: <a href="canal-feedback.html">canal de feedback</a>. Não há atendimento por chamada de voz no número publicado.</p>
+                        <p>Na <a href="apresentacao-tecnica.html">apresentação técnica</a> e na <a href="wiki/index.html">wiki</a>, para equipes que precisam desse nível de informação.</p>
                     </div>
                 </details>
                 <details class="sf-faq-item">
-                    <summary>Onde está a licença de uso?</summary>
+                    <summary>Posso usar as imagens da galeria?</summary>
                     <div class="sf-faq-answer">
-                        <p>Página <a href="licenca-uso.html">licença de uso</a>. Produto de titularidade do Governo Federal; Cara Core como implementadora técnica. Software privado — não open source.</p>
-                    </div>
-                </details>
-                <details class="sf-faq-item">
-                    <summary>Posso usar as imagens da galeria publicamente?</summary>
-                    <div class="sf-faq-answer">
-                        <p>As dez figuras 16:9 estão em <a href="galeria.html">galeria</a> e no kit de <a href="imprensa.html">imprensa</a>. Verifique políticas internas antes de distribuição oficial.</p>
+                        <p>As figuras estão em <a href="galeria.html">galeria</a> e no kit de <a href="imprensa.html">imprensa</a>. Verifique políticas internas antes de uso oficial.</p>
                     </div>
                 </details>
             </div>
@@ -251,10 +159,10 @@
 
         <div class="sf-banner-cta">
             <h2>Não encontrou a resposta?</h2>
-            <p>Consulte produto, download ou entre em contacto pelo canal institucional.</p>
+            <p>Fale conosco pelo canal institucional.</p>
             <div class="sf-actions sf-actions-center">
                 <a class="sf-btn sf-btn-primary" href="canal-feedback.html">Canal de feedback</a>
-                <a class="sf-btn sf-btn-outline" href="download.html">Download e como começar</a>
+                <a class="sf-btn sf-btn-outline" href="download.html">Como começar</a>
             </div>
         </div>
     </main>
@@ -264,14 +172,14 @@
             <h2 class="sf-visually-hidden">Rodapé institucional</h2>
             <p class="sf-footer-brand">Área 51</p>
             <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
-            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>
+            <p class="sf-footer-tagline">Identidade e acesso institucional — produto licenciado e serviços Cara Core.</p>
             <nav class="sf-footer-links" aria-label="Mapa do site">
                 <a href="index.html"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
                 <a href="produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
                 <a href="servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
                 <a href="galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
                 <a href="wiki/index.html"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
-                <a href="download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Download</a>
+                <a href="download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Como começar</a>
                 <a href="imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
                 <a href="faq.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
                 <a href="licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
