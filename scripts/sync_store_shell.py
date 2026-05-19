@@ -57,6 +57,11 @@ STORE_CURRENT = {
 WIKI_CURRENT = {
     "index.html": "index.html",
     "projeto-area51.html": "index.html",
+    "fluxo-oidc-referencia.html": "index.html",
+    "o-que-e-area51.html": "index.html",
+    "o-que-recebe-entrega.html": "index.html",
+    "componentes-entrega.html": "index.html",
+    "fronteiras-seguranca.html": "index.html",
 }
 
 HEADER_PATTERN = re.compile(

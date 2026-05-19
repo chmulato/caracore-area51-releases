@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki — Área 51 | Loja Cara Core</title>
-    <meta name="description" content="Wiki do produto Área 51 na loja oficial. Documentação e navegação em area51.caracore.com.br.">
+    <title>Componentes da entrega — Wiki Área 51</title>
+    <meta name="description" content="Componentes fieis do pacote licenciado Área 51: scripts OIDC, operação Keycloak, testes e documentação.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="assets/css/wiki.css">
     <link rel="stylesheet" href="assets/css/wiki-unified.css">
     <link rel="stylesheet" href="assets/css/wiki-loja-align.css">
+    <link rel="stylesheet" href="assets/css/wiki-diagrams.css">
     <link rel="icon" href="../assets/img/favicon.ico" type="image/ico">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="assets/js/wiki-mermaid.js" defer></script>
 </head>
 <body class="store store-inner wiki-loja">
     <a class="sf-skip" href="#main">Ir para o conteúdo</a>
@@ -55,68 +58,121 @@
             <nav class="sf-breadcrumb" aria-label="Navegação">
                 <a href="../index.html">Loja</a>
                 <span class="sep">/</span>
-                <span class="sf-breadcrumb-current">Wiki</span>
+                <a href="index.html">Wiki</a>
+                <span class="sep">/</span>
+                <span class="sf-breadcrumb-current">Componentes da entrega</span>
             </nav>
         </div>
     </div>
 
     <main id="main" class="wiki-container">
-        <div class="wiki-content">
-            <h1>Wiki — Área 51</h1>
-            <p class="lead text-muted">Documentação técnica alinhada ao produto licenciado — clareza, transparência e fidelidade ao pacote entregue.</p>
-            <p class="mb-2">Pacote documentado: <strong>Área 51 baseline · versão 0.1.0-dev</strong> (nível 1). Para contratação, use <a href="../produto.html">produto</a>, <a href="../servicos.html">serviços</a> e <a href="../download.html">como começar</a>.</p>
-            <p>Detalhe arquitectural ampliado: <a href="../apresentacao-tecnica.html">apresentação técnica</a>.</p>
+        <article class="wiki-content wiki-diagram-page">
+            <h1>Componentes da entrega licenciada</h1>
+            <p class="wiki-diagram-lead">
+                O <strong>nível 1</strong> (pacote licenciado) inclui os blocos abaixo.
+                Itens de implementação guiada ou SLA são <strong>serviços contratados</strong> — ver <a href="../servicos.html">serviços</a>.
+            </p>
 
-            <section class="mt-4" aria-labelledby="wiki-ordem">
-                <h2 id="wiki-ordem" class="h4 mb-3">Ordem de leitura recomendada</h2>
-                <ol class="list-group list-group-numbered mb-4">
-                    <li class="list-group-item bg-transparent border-secondary"><a href="o-que-e-area51.html">O que é o Área 51</a> — titularidade, níveis de entrega e relação loja · wiki · pacote</li>
-                    <li class="list-group-item bg-transparent border-secondary"><a href="o-que-recebe-entrega.html">O que recebe na entrega</a> — estrutura do pacote, comandos e referência de lab</li>
-                    <li class="list-group-item bg-transparent border-secondary"><a href="componentes-entrega.html">Componentes da entrega</a> — inventário fiel do pacote licenciado</li>
-                    <li class="list-group-item bg-transparent border-secondary"><a href="fronteiras-seguranca.html">Fronteiras e segurança</a> — env on-premises, PKCE, JWT e validação baseline</li>
-                    <li class="list-group-item bg-transparent border-secondary"><a href="fluxo-oidc-referencia.html">Fluxo OIDC de referência</a> — diagrama para integrações do cliente (não checkout da loja)</li>
-                    <li class="list-group-item bg-transparent border-secondary"><a href="../apresentacao-tecnica.html">Apresentação técnica</a> — documentação institucional ampliada</li>
-                </ol>
-            </section>
+            <div class="wiki-diagram-panel">
+                <h2>Arquitetura lógica do pacote</h2>
+                <pre class="mermaid">
+flowchart TB
+    U["Utilizador"]
+    RP["Aplicação protegida<br/>exemplo Flask :5000"]
+    IDP["Provedor de identidade<br/>Keycloak lab ou Google / Entra"]
+    SCR["Scripts baseline<br/>gerador OIDC + CLI"]
+    TST["Testes automatizados<br/>protocolo e fluxo"]
+    DOC["Documentação<br/>guias e wiki"]
 
-            <section class="mt-4" aria-labelledby="wiki-trilhas">
-                <h2 id="wiki-trilhas" class="h4 mb-3">Páginas do wiki</h2>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <div class="p-3 h-100 border rounded" style="border-color: var(--sf-border, #30363d) !important; background: var(--sf-surface, #161b22);">
-                            <h3 class="h5"><a href="o-que-recebe-entrega.html">O que recebe na entrega</a></h3>
-                            <p class="text-muted mb-2 small">Estrutura baseline/, CLI area51-config, validate_baseline.py e stack lab.</p>
-                            <a class="btn btn-primary btn-sm" href="o-que-recebe-entrega.html">Ver pacote</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="p-3 h-100 border rounded" style="border-color: var(--sf-border, #30363d) !important; background: var(--sf-surface, #161b22);">
-                            <h3 class="h5"><a href="projeto-area51.html">Documentação do produto</a></h3>
-                            <p class="text-muted mb-2 small">Hub com mapa de leitura, links para todas as páginas e limites do que está fora da baseline.</p>
-                            <a class="btn btn-outline-secondary btn-sm" href="projeto-area51.html">Abrir hub</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="alert alert-info mt-3" role="note">
-                Mapa completo:
-                <a href="o-que-e-area51.html">o que é</a> ·
-                <a href="o-que-recebe-entrega.html">entrega</a> ·
-                <a href="componentes-entrega.html">componentes</a> ·
-                <a href="fronteiras-seguranca.html">fronteiras</a> ·
-                <a href="fluxo-oidc-referencia.html">fluxo OIDC</a> ·
-                <a href="projeto-area51.html">hub do produto</a> ·
-                <a href="../apresentacao-tecnica.html">apresentação técnica</a>.
+    U --> RP
+    RP -->|"Authorization Code + PKCE"| IDP
+    SCR --> RP
+    SCR --> IDP
+    TST --> RP
+    TST --> IDP
+    DOC --> SCR
+                </pre>
             </div>
-            <div class="d-flex flex-wrap gap-2 mt-4">
-                <a class="btn btn-primary" href="o-que-e-area51.html">Começar leitura</a>
-                <a class="btn btn-outline-secondary" href="projeto-area51.html">Hub do produto</a>
-                <a class="btn btn-outline-secondary" href="../apresentacao-tecnica.html">Apresentação técnica</a>
-                <a class="btn btn-outline-secondary" href="../index.html">Início da loja</a>
-                <a class="btn btn-outline-secondary" href="../faq.html">FAQ</a>
+
+            <div class="wiki-diagram-panel">
+                <h2>Camadas entregues no pacote</h2>
+                <pre class="mermaid">
+flowchart LR
+    subgraph P["Pacote licenciado — nível 1"]
+        A["Scripts OIDC<br/>Google e Microsoft Entra"]
+        B["Operação lab<br/>Keycloak Docker + app"]
+        C["Validação<br/>testes de fluxo"]
+        D["Documentação<br/>setup e conceitos"]
+    end
+    subgraph CTX["Ambiente on-premises do cliente"]
+        E["Lab / homologação"]
+    end
+    A --> E
+    B --> E
+    C --> E
+    D --> E
+                </pre>
             </div>
-        </div>
+
+            <h2>Inventário fiel</h2>
+            <div class="wiki-table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Função</th>
+                            <th>Incluído no pacote?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Scripts OIDC versionados</td>
+                            <td>Configuração Google e Entra; PKCE obrigatório</td>
+                            <td>Sim</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiente lab Keycloak</td>
+                            <td>IdP de referência; realm caracore-area51; demo/demo123</td>
+                            <td>Sim</td>
+                        </tr>
+                        <tr>
+                            <td>Aplicação protegida exemplo</td>
+                            <td>RP de referência na porta 5000</td>
+                            <td>Sim</td>
+                        </tr>
+                        <tr>
+                            <td>Testes de fluxo OAuth 2.1 / OIDC</td>
+                            <td>Evidência antes de homologação</td>
+                            <td>Sim</td>
+                        </tr>
+                        <tr>
+                            <td>Painel administrativo corporativo</td>
+                            <td>Gestão de utilizadores além do lab</td>
+                            <td>Não — serviço contratado</td>
+                        </tr>
+                        <tr>
+                            <td>SLA e evolução contínua</td>
+                            <td>Acompanhamento operacional</td>
+                            <td>Não — nível 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Referência de laboratório</h2>
+            <ul class="wiki-diagram-list">
+                <li><strong>Keycloak:</strong> porta 8080 · realm <code>caracore-area51</code></li>
+                <li><strong>App protegida:</strong> porta 5000 · rota <code>/protected</code></li>
+                <li><strong>Utilizador demo:</strong> demo / demo123 (apenas lab)</li>
+            </ul>
+
+            <div class="wiki-diagram-nav">
+                <a class="btn btn-outline-secondary btn-sm" href="o-que-e-area51.html">O que é o Área 51</a>
+                <a class="btn btn-primary btn-sm" href="o-que-recebe-entrega.html">O que recebe na entrega</a>
+                <a class="btn btn-outline-secondary btn-sm" href="fronteiras-seguranca.html">Fronteiras e segurança</a>
+                <a class="btn btn-outline-secondary btn-sm" href="../apresentacao-tecnica.html">Apresentação técnica</a>
+            </div>
+        </article>
     </main>
 
     <footer class="sf-footer">

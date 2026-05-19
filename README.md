@@ -1,53 +1,36 @@
-# caracore-area51-releases — Loja oficial Área 51
+# caracore-area51-releases — Loja Área 51
 
-Vitrine estática em `docs/` (GitHub Pages): https://area51.caracore.com.br/
+**Objetivo:** vitrine pública e documentação do produto licenciado de identidade e acesso institucional.
 
-Pacote licenciado de identidade e acesso institucional. Titularidade: Governo Federal. Implementação: Cara Core Informática (Suporte Área 51).
+Publicação: [area51.caracore.com.br](https://area51.caracore.com.br/) · conteúdo estático em `docs/` (GitHub Pages).
 
-Único Markdown deste repositório. Memória de manutenção: [docs/assets/inc/loja-memoria.txt](docs/assets/inc/loja-memoria.txt).
+Titularidade: Governo Federal. Implementação: Cara Core Informática (Suporte Área 51).
 
-Referências na oficina: [OFICINA.md](https://github.com/chmulato/caracore-area51/blob/main/OFICINA.md) · [ALINHAMENTO_LOJA_PRESENTACAO.md](https://github.com/chmulato/caracore-area51/blob/main/docs/ALINHAMENTO_LOJA_PRESENTACAO.md)
+## O que é este repositório
 
-## Loja e oficina
+| Aqui (loja) | Na oficina (`caracore-area51`) |
+|-------------|--------------------------------|
+| HTML, CSS, wiki | Código, baseline, testes, `operational/` |
+| Comercial e conceitos | Entrega técnica licenciada |
 
-| Papel | Repositório | Conteúdo |
-|-------|-------------|----------|
-| Loja | caracore-area51-releases / docs/ | HTML, CSS, wiki conceptual |
-| Oficina | caracore-area51 (privado) | Baseline, operational/, testes |
+A loja **não** distribui o pacote por download público — explica o produto e canaliza pedidos via [licença](docs/licenca-uso.html) e [contato](docs/canal-feedback.html).
 
-## Páginas (# = rodapé)
+## Onde ir
 
-| # | Página | Função |
-|---|--------|--------|
-| 01 | [index.html](docs/index.html) | Landing |
-| 02 | [produto.html](docs/produto.html) | Visão geral |
-| 03 | [servicos.html](docs/servicos.html) | Contratação |
-| 04 | [galeria.html](docs/galeria.html) | Material visual (prompts 01–10) |
-| 05 | [wiki](docs/wiki/index.html) | Conceitos OIDC |
-| 06 | [download.html](docs/download.html) | Como começar |
-| 07 | [imprensa.html](docs/imprensa.html) | Kit imprensa |
-| 08 | [faq.html](docs/faq.html) | FAQ |
-| 09 | [licenca-uso.html](docs/licenca-uso.html) | Licença |
-| 10 | [canal-feedback.html](docs/canal-feedback.html) | Contato |
-| 11 | [apresentacao-tecnica.html](docs/apresentacao-tecnica.html) | Documentação técnica |
+| Público | Página |
+|---------|--------|
+| Visitante / comprador | [Início](docs/index.html) · [Produto](docs/produto.html) · [Serviços](docs/servicos.html) |
+| Técnico licenciado | [Wiki](docs/wiki/index.html) · [Apresentação técnica](docs/apresentacao-tecnica.html) |
+| Manutenção deste site | [loja-memoria.txt](docs/assets/inc/loja-memoria.txt) |
 
-Wiki: [projeto-area51.html](docs/wiki/projeto-area51.html).
+Wiki (baseline **0.1.0-dev**): o que é → [entrega](docs/wiki/o-que-recebe-entrega.html) → componentes → fronteiras → [fluxo OIDC](docs/wiki/fluxo-oidc-referencia.html).
 
-## Convenções
+## Manutenção
 
-- **CSS:** [store-public.css](docs/assets/css/store-public.css); wiki: [wiki-loja-align.css](docs/wiki/assets/css/wiki-loja-align.css).
-- **Imagens:** [docs/assets/img/](docs/assets/img/); prompts na oficina: `marketing/prompts/01–10`.
-- **Menu:** ordem linear partilhada; mobile inclui FAQ e Licença. Fragmentos em `docs/assets/inc/` e `docs/wiki/assets/inc/`.
-- **Sincronização:** `python scripts/sync_store_shell.py` (cabeçalho + rodapé).
+```bash
+python scripts/sync_store_shell.py   # cabeçalho e rodapé em docs/*.html e docs/wiki/*.html
+```
 
-## Início (cliente licenciado)
+Alinhamento com a oficina: [OFICINA.md](https://github.com/chmulato/caracore-area51/blob/main/OFICINA.md) · [ALINHAMENTO_LOJA_PRESENTACAO.md](https://github.com/chmulato/caracore-area51/blob/main/docs/ALINHAMENTO_LOJA_PRESENTACAO.md)
 
-1. [Apresentação técnica](docs/apresentacao-tecnica.html) e [licença](docs/licenca-uso.html).
-2. Entrega da baseline via [canal de feedback](docs/canal-feedback.html) ou acordo activo.
-3. Guias do pacote entregue (Docker, Keycloak, testes OIDC).
-
-Implementação supervisada: [canal-feedback.html](docs/canal-feedback.html).
-
-## Contato
-
-suporte@caracore.com.br · [canal-feedback.html](docs/canal-feedback.html)
+**Contato:** suporte@caracore.com.br

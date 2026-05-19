@@ -31,8 +31,18 @@ Temas: 01 fluxo OIDC · 02 rede federada · 03 cloud OIDC · 04 federação gov 
 
 ## Wiki
 
-docs/wiki/index.html · docs/wiki/projeto-area51.html
+docs/wiki/index.html — índice com ordem de leitura e versão baseline (0.1.0-dev)
+docs/wiki/o-que-e-area51.html — definição fiel (titularidade, níveis, loja · wiki · entrega)
+docs/wiki/o-que-recebe-entrega.html — estrutura do pacote, comandos e referência de lab
+docs/wiki/componentes-entrega.html — inventário baseline + diagramas Mermaid
+docs/wiki/fronteiras-seguranca.html — AREA51_FRONTIER_* / OIDC_*, PKCE, JWT, validate_baseline
+docs/wiki/fluxo-oidc-referencia.html — fluxo OIDC de referência (integração cliente; não checkout loja)
+docs/wiki/fluxo-oidc-vitrine.html — redirect legado → fluxo-oidc-referencia.html
+docs/wiki/projeto-area51.html — hub da documentação do produto
+
+Assets: docs/wiki/assets/css/wiki-diagrams.css · docs/wiki/assets/js/wiki-mermaid.js
 Tema escuro: store-public.css + wiki-loja-align.css (data-loja-shell="1").
+Diagramas: Mermaid (flowchart, sequenceDiagram) com tema neutral.
 
 ## Sincronização
 

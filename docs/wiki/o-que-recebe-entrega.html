@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentação do produto — Wiki Área 51</title>
-    <meta name="description" content="Hub da documentação técnica do produto Área 51: definição, componentes, fronteiras de segurança e fluxo OIDC de referência.">
+    <title>O que recebe na entrega — Wiki Área 51</title>
+    <meta name="description" content="Estrutura do pacote licenciado Área 51, exemplos de configuração, comandos de validação e referência de laboratório.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,76 +60,120 @@
                 <span class="sep">/</span>
                 <a href="index.html">Wiki</a>
                 <span class="sep">/</span>
-                <span class="sf-breadcrumb-current">Documentação do produto</span>
+                <span class="sf-breadcrumb-current">O que recebe na entrega</span>
             </nav>
         </div>
     </div>
 
     <main id="main" class="wiki-container">
         <article class="wiki-content wiki-diagram-page">
-            <h1>Documentação do produto</h1>
+            <h1>O que recebe na entrega</h1>
             <p class="wiki-diagram-lead">
-                Wiki técnica alinhada ao pacote licenciado Área 51.
-                Descreve o que é entregue, como se valida e quais fronteiras de segurança aplicam-se on-premises.
+                Após licença e canal institucional, o cliente recebe o <strong>pacote baseline</strong>
+                (nível 1) com código, configuração de exemplo, ambiente lab e validação repetível.
+                Versão de referência documentada: <strong>0.1.0-dev</strong>.
             </p>
 
             <div class="wiki-diagram-callout">
-                <strong>Transparência:</strong> esta wiki não substitui a licença nem o canal institucional de entrega.
-                Para contratação e níveis de serviço, consulte <a href="../produto.html">produto</a> e <a href="../servicos.html">serviços</a>.
+                <strong>Transparência:</strong> esta página descreve o conteúdo típico da entrega licenciada.
+                O artefacto exacto acompanha <code>VERSION</code> e <code>MANIFEST.md</code> no pacote recebido.
             </div>
 
             <div class="wiki-diagram-panel">
-                <h2>Mapa de leitura recomendado</h2>
+                <h2>Estrutura do pacote</h2>
                 <pre class="mermaid">
-flowchart LR
-    A["1. O que é"] --> B["2. Entrega"]
-    B --> C["3. Componentes"]
-    C --> D["4. Fronteiras"]
-    D --> E["5. Fluxo OIDC"]
-    E --> F["6. Apresentação técnica"]
+flowchart TB
+    ROOT["Pacote licenciado Área 51"]
+    BL["baseline/"]
+    SRC["src/area51_config/"]
+    OP["operational/"]
+    TESTS["tests/"]
+
+    ROOT --> BL
+    ROOT --> SRC
+    ROOT --> OP
+    ROOT --> TESTS
+
+    BL --> BLR["README · VERSION · MANIFEST · CHANGELOG"]
+    BL --> BLS["scripts/ — validate, samples, manifest"]
+    BL --> BLC["config/ — exemplos .env"]
+    BL --> BLD["docs/ — QUICKSTART e guias"]
+
+    SRC --> CLI["CLI area51-config"]
+    OP --> KC["Keycloak Docker :8080"]
+    OP --> APP["App Flask protegida :5000"]
                 </pre>
             </div>
 
-            <div class="wiki-hub-grid">
-                <div class="wiki-hub-card">
-                    <h3><a href="o-que-e-area51.html">O que é o Área 51</a></h3>
-                    <p>Titularidade, níveis de entrega (pacote vs serviço) e relação loja · wiki · entrega licenciada.</p>
-                    <a class="btn btn-outline-secondary btn-sm" href="o-que-e-area51.html">Ler</a>
-                </div>
-                <div class="wiki-hub-card">
-                    <h3><a href="o-que-recebe-entrega.html">O que recebe na entrega</a></h3>
-                    <p>Estrutura baseline/, comandos validate_baseline, CLI area51-config e referência de lab.</p>
-                    <a class="btn btn-outline-secondary btn-sm" href="o-que-recebe-entrega.html">Ler</a>
-                </div>
-                <div class="wiki-hub-card">
-                    <h3><a href="componentes-entrega.html">Componentes da entrega</a></h3>
-                    <p>Scripts OIDC, ambiente lab Keycloak, testes automatizados e documentação incluídos no nível 1.</p>
-                    <a class="btn btn-outline-secondary btn-sm" href="componentes-entrega.html">Ler</a>
-                </div>
-                <div class="wiki-hub-card">
-                    <h3><a href="fronteiras-seguranca.html">Fronteiras e segurança</a></h3>
-                    <p>Variáveis <code>AREA51_FRONTIER_*</code> e <code>OIDC_*</code>, PKCE, JWT e pipeline de validação.</p>
-                    <a class="btn btn-outline-secondary btn-sm" href="fronteiras-seguranca.html">Ler</a>
-                </div>
-                <div class="wiki-hub-card">
-                    <h3><a href="fluxo-oidc-referencia.html">Fluxo OIDC de referência</a></h3>
-                    <p>Diagrama Authorization Code + PKCE para integrações do cliente — não modela checkout da loja pública.</p>
-                    <a class="btn btn-outline-secondary btn-sm" href="fluxo-oidc-referencia.html">Ver diagrama</a>
-                </div>
+            <h2>Directórios principais</h2>
+            <div class="wiki-table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Caminho</th>
+                            <th>Conteúdo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>baseline/</code></td>
+                            <td>Entrega versionada: manifesto, scripts de validação e exemplos de configuração</td>
+                        </tr>
+                        <tr>
+                            <td><code>baseline/config/</code></td>
+                            <td><code>.env.google.example</code>, <code>.env.microsoft.example</code>, <code>frontier.onprem.env.example</code>, <code>oidc.keycloak.client.env.example</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>baseline/scripts/</code></td>
+                            <td><code>validate_baseline.py</code>, <code>generate_sample_configs.py</code>, <code>prepare_delivery.py</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>src/area51_config/</code></td>
+                            <td>Biblioteca e CLI <code>area51-config</code> para gerar parâmetros OIDC</td>
+                        </tr>
+                        <tr>
+                            <td><code>operational/</code></td>
+                            <td>Stack lab: Keycloak + aplicação protegida de referência</td>
+                        </tr>
+                        <tr>
+                            <td><code>tests/</code></td>
+                            <td>Testes automatizados de protocolo e fluxo (~118 cenários)</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <h2 class="mt-4">O que não está na baseline</h2>
+            <h2>Primeiros passos após receber</h2>
+            <div class="wiki-diagram-panel">
+                <h3>Validação da baseline</h3>
+                <pre><code>python baseline/scripts/validate_baseline.py</code></pre>
+                <p class="text-muted small mb-0 mt-2">Executa fases <strong>dev</strong> (testes), <strong>config</strong> (Google/Entra), <strong>env</strong> (fronteira + OIDC) e, com IdP activo, <strong>operational</strong> (<code>validate_oidc_flow</code>).</p>
+            </div>
+
             <ul class="wiki-diagram-list">
-                <li><strong>Painel administrativo corporativo</strong> — serviço contratado (nível 2+).</li>
-                <li><strong>SLA e evolução contínua</strong> — Suporte Área 51 nível 3.</li>
-                <li><strong>SAML, LDAP, MFA adaptativo</strong> — fora do escopo do pacote licenciado actual.</li>
-                <li><strong>Download público</strong> — entrega via licença e canal institucional (<a href="../download.html">como começar</a>).</li>
+                <li><strong>Configuração OIDC:</strong> <code>area51-config</code> ou módulo <code>area51_config</code> — gera parâmetros com PKCE.</li>
+                <li><strong>Lab Keycloak:</strong> realm <code>caracore-area51</code> · utilizador demo <code>demo</code> / <code>demo123</code>.</li>
+                <li><strong>App de referência:</strong> rota <code>/protected</code> na porta <strong>5000</strong>.</li>
+                <li><strong>Guia rápido:</strong> <code>baseline/docs/QUICKSTART.md</code> no pacote recebido.</li>
             </ul>
 
+            <div class="wiki-diagram-panel">
+                <h2>Fluxo pós-entrega</h2>
+                <pre class="mermaid">
+flowchart LR
+    E["Pacote recebido"] --> V["validate_baseline.py"]
+    V --> C["Configurar .env<br/>fronteira + OIDC"]
+    C --> L["Subir lab operational/"]
+    L --> F["validate_oidc_flow"]
+    F --> H["Evidência para homologação"]
+                </pre>
+            </div>
+
             <div class="wiki-diagram-nav">
-                <a class="btn btn-outline-secondary btn-sm" href="index.html">Índice do wiki</a>
-                <a class="btn btn-primary btn-sm" href="o-que-e-area51.html">Começar leitura</a>
-                <a class="btn btn-outline-secondary btn-sm" href="../apresentacao-tecnica.html">Apresentação técnica</a>
+                <a class="btn btn-outline-secondary btn-sm" href="o-que-e-area51.html">O que é o Área 51</a>
+                <a class="btn btn-outline-secondary btn-sm" href="componentes-entrega.html">Componentes</a>
+                <a class="btn btn-primary btn-sm" href="fronteiras-seguranca.html">Fronteiras e segurança</a>
+                <a class="btn btn-outline-secondary btn-sm" href="fluxo-oidc-referencia.html">Fluxo OIDC</a>
             </div>
         </article>
     </main>
