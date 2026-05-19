@@ -83,28 +83,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Breadcrumb dinâmico
+    // Breadcrumb: só preencher se marcado como dinâmico (não sobrescrever sf-breadcrumb estático)
     function initBreadcrumb() {
-        const breadcrumb = document.querySelector('.wiki-breadcrumb nav');
-        if (breadcrumb) {
-            const currentPage = document.title;
-            const pathParts = window.location.pathname.split('/').filter(part => part !== '');
-            
-            let breadcrumbHTML = '<a href="index.html">Wiki Home</a>';
-            
-            if (pathParts.length > 2) {
-                const currentFile = pathParts[pathParts.length - 1];
-                if (currentFile !== 'index.html') {
-                    breadcrumbHTML += ` > <span>${currentPage}</span>`;
-                }
-            }
-            
-            breadcrumb.innerHTML = breadcrumbHTML;
+        const breadcrumb = document.querySelector('.wiki-breadcrumb[data-dynamic] nav');
+        if (!breadcrumb) {
+            return;
         }
+
+        const currentPage = document.title;
+        const pathParts = window.location.pathname.split('/').filter(part => part !== '');
+
+        let breadcrumbHTML = '<a href="index.html">Wiki Home</a>';
+
+        if (pathParts.length > 2) {
+            const currentFile = pathParts[pathParts.length - 1];
+            if (currentFile !== 'index.html') {
+                breadcrumbHTML += ` > <span>${currentPage}</span>`;
+            }
+        }
+
+        breadcrumb.innerHTML = breadcrumbHTML;
     }
-    
+
     // Tema claro/escuro:
-    // Padronizado via assets/js/theme-toggle.js (usa atributo data-theme no <html>).
     // Não duplicar aqui para evitar conflitos.
     
     // Copiar código para clipboard

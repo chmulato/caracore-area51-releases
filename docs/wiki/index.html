@@ -3,61 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki — Área 51 | Loja oficial Cara Core</title>
-    <meta name="description" content="Wiki do produto Área 51 na loja oficial. Documentação e navegação no domínio area51.caracore.com.br.">
+    <title>Wiki — Área 51 | Loja Cara Core</title>
+    <meta name="description" content="Wiki do produto Área 51 na loja oficial. Documentação e navegação em area51.caracore.com.br.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/store-public.css">
     <link rel="stylesheet" href="assets/css/wiki.css">
     <link rel="stylesheet" href="assets/css/wiki-unified.css">
     <link rel="stylesheet" href="assets/css/wiki-loja-align.css">
     <link rel="icon" href="../assets/img/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">Área 51 · Wiki</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarWiki">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Loja</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../produto.html">Produto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../servicos.html">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../galeria.html">Galeria</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Wiki</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../download.html">Download</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../imprensa.html">Imprensa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../canal-feedback.html">Contato</a></li>
+<body class="store store-inner wiki-loja">
+    <a class="sf-skip" href="#main">Ir para o conteúdo</a>
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="../index.html">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../produto.html">Produto</a></li>
+                    <li><a href="../servicos.html">Serviços</a></li>
+                    <li><a href="../galeria.html">Galeria</a></li>
+                    <li><a href="index.html" aria-current="page">Wiki</a></li>
+                    <li><a href="../download.html">Download</a></li>
+                    <li><a href="../imprensa.html">Imprensa</a></li>
+                    <li><a href="../canal-feedback.html">Contato</a></li>
                 </ul>
-            </div>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="../index.html">Início</a>
+                    <a href="../produto.html">Produto</a>
+                    <a href="../servicos.html">Serviços</a>
+                    <a href="../galeria.html">Galeria</a>
+                    <a href="index.html" aria-current="page">Wiki</a>
+                    <a href="../download.html">Download</a>
+                    <a href="../imprensa.html">Imprensa</a>
+                    <a href="../faq.html">FAQ</a>
+                    <a href="../licenca-uso.html">Licença</a>
+                    <a href="../canal-feedback.html">Contato</a>
+                </div>
+            </details>
         </div>
-    </nav>
-    <div class="wiki-breadcrumb">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="../index.html">Loja</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Wiki</li>
-                </ol>
+    </header>
+
+    <div class="wiki-trail">
+        <div class="sf-header-inner">
+            <nav class="sf-breadcrumb" aria-label="Navegação">
+                <a href="../index.html">Loja</a>
+                <span class="sep">/</span>
+                <span class="sf-breadcrumb-current">Wiki</span>
             </nav>
         </div>
     </div>
-    <div class="wiki-container">
-        <div class="wiki-content py-4">
+
+    <main id="main" class="wiki-container">
+        <div class="wiki-content">
             <h1>Wiki — Área 51</h1>
-            <p class="lead text-muted">Documentação deste produto na loja oficial <strong>area51.caracore.com.br</strong>. Trilhas de leitura, glossário e visão geral do ecossistema permanecem neste site, sem dependência de domínios externos.</p>
-            <p>Reino das Entidades Federadas (OpenID Connect), autenticação enterprise e consultoria OIDC.</p>
+            <p class="lead text-muted">Documentação do pacote técnico OIDC publicado em area51.caracore.com.br. Trilhas de leitura, glossário e visão geral do ecossistema ficam neste site.</p>
+            <p>A wiki cobre conceitos de autenticação (OAuth, OIDC, PKCE). A <a href="../apresentacao-tecnica.html">apresentação técnica</a> instrui sobre o produto privado; deploy e baseline licenciada estão descritos em <a href="../download.html">entrega e download</a>.</p>
             <div class="alert alert-info mt-3" role="note">
-                A documentação do produto e trilhas de leitura ficam <strong>nesta loja</strong>, no domínio <a href="https://area51.caracore.com.br/wiki/">area51.caracore.com.br</a>. Para aprofundar, use <a href="projeto-area51.html">documentação do produto</a>.
+                Documentação detalhada: <a href="projeto-area51.html">documentação do produto (wiki)</a> ·
+                <a href="../apresentacao-tecnica.html">apresentação técnica (loja)</a> ·
+                <a href="../download.html">entrega e download</a>.
             </div>
             <div class="d-flex flex-wrap gap-2 mt-4">
-                <a class="btn btn-primary" href="projeto-area51.html">Documentação do produto</a>
-                <a class="btn btn-outline-secondary" href="../download.html">Download / o que entrega</a>
+                <a class="btn btn-primary" href="../apresentacao-tecnica.html">Apresentação técnica</a>
+                <a class="btn btn-outline-secondary" href="projeto-area51.html">Wiki do produto</a>
                 <a class="btn btn-outline-secondary" href="../index.html">Início da loja</a>
+                <a class="btn btn-outline-secondary" href="../faq.html">FAQ</a>
                 <a class="btn btn-outline-secondary" href="../canal-feedback.html">Canal de feedback</a>
             </div>
         </div>
-    </div>
-    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </main>
+
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="../index.html"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="../produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="../servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="../galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="index.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="../download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Download</a>
+                <a href="../imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="../faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="../licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="../canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="../apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="../canal-feedback.html">Canal de feedback</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # caracore-area51-releases — Loja oficial Área 51
 
-Site estático publicado em `docs/` (GitHub Pages) do Suporte Área 51, em torno de OpenID Connect e OAuth 2.1, com PKCE nos exemplos públicos. Publicação habitual: https://area51.caracore.com.br/. Código baseline e operações residem no repositório caracore-area51.
+Site estático publicado em `docs/` (GitHub Pages) do Suporte Área 51, em torno de OpenID Connect e OAuth 2.1, com PKCE nos exemplos documentados. Publicação habitual: https://area51.caracore.com.br/. A baseline e a oficina são produto privado licenciado — não open source.
 
 Este ficheiro é o único Markdown do repositório caracore-area51-releases.
 
@@ -12,27 +12,27 @@ Referências na oficina:
 
 ## Produto Área 51
 
-O Produto Área 51 é de titularidade do Governo Federal. A Cara Core Informática actua como implementadora técnica e mantenedora dos artefatos de implantação associados ao serviço Suporte Área 51.
+O Área 51 é um pacote técnico para implantar autenticação federada com OpenID Connect e Keycloak em Docker. Inclui baseline versionada, scripts automatizados, testes de fluxo OAuth/OIDC e documentação para equipes técnicas. Oferece autenticação compatível com OAuth 2.1 e PKCE, deploy repetível entre ambientes e suporte opcional para implantação, integração e capacitação.
 
-A loja comunica uma linha de apoio à implantação de ambientes OpenID Connect e OAuth 2.1, com baseline publicada, exemplo de automatização para Keycloak em Docker e roteiros de validação. O material destina-se a órgãos públicos, empresas, integradores e equipas técnicas que necessitem de referência institucional antes de contratar implementação supervisada.
+Titularidade do produto institucional: Governo Federal. Scripts da oficina: software proprietário, entrega mediante licença. A Cara Core Informática actua como implementadora técnica do Suporte Área 51.
 
-Entrega técnica referenciada na documentação pública:
+## Estrutura da loja (index.html)
 
-- Scripts baseline de configuração OIDC (Python), no repositório caracore-area51
-- Exemplo operacional de deploy com Keycloak em Docker e aplicação protegida, em operational/
-- Testes de validação de fluxo OAuth 2.1 e PKCE conforme versão publicada
-- Páginas HTML desta loja e guias Markdown na oficina
+1. O que é — hero com definição do pacote técnico
+2. Principais funcionalidades — autenticação, deploy, ambientes distribuídos, implantação repetível
+3. O que acompanha o pacote — documentação, galeria, apresentação técnica
+4. Casos de uso — órgãos públicos, empresas, desenvolvimento, capacitação
+5. Serviços disponíveis — baseline licenciada, implementação guiada, acompanhamento SLA
+6. Como começar — apresentação técnica, entrega, canal de feedback
 
-O Suporte Área 51 designa o serviço contratado de implementação e configuração executado pela Cara Core no ambiente do cliente. Não se confunde com um pacote genérico de download isolado; o canal formal de orçamento e esclarecimentos é [canal-feedback.html](docs/canal-feedback.html).
-
-Referência de tempo em laboratório, apenas ilustrativa: ordem frequentemente relatada de vários minutos após pré-requisitos atendidos. Em produção, o calendário segue o ciclo e a infraestrutura de cada cliente.
+Páginas complementares: produto.html, apresentacao-tecnica.html, servicos.html, galeria.html, download.html, faq.html, wiki, imprensa, licença, contato.
 
 ## Loja e oficina
 
 | Papel | Repositório | Conteúdo |
 |-------|-------------|----------|
 | Loja | caracore-area51-releases, pasta docs/ | HTML e CSS público, GitHub Pages |
-| Oficina | caracore-area51 | Baseline Python, operational/, testes, Markdown técnico |
+| Oficina | caracore-area51 (privado) | Baseline Python, operational/, testes — produto licenciado |
 
 | Repositório | Propósito | Público |
 |-------------|-----------|---------|
@@ -46,11 +46,15 @@ Referência de tempo em laboratório, apenas ilustrativa: ordem frequentemente r
 | Ficheiro | Função |
 |----------|--------|
 | docs/assets/css/store-public.css | Páginas principais (classe store no body) |
-| docs/wiki/assets/css/wiki-loja-align.css | Wiki Bootstrap (data-loja-shell="1" no html) |
+| docs/wiki/assets/css/wiki-loja-align.css | Wiki: tema escuro alinhado à loja (html data-loja-shell="1", body.store.wiki-loja) |
 | docs/assets/caracore-core-typography.css | Tipografia institucional opcional |
 | docs/assets/caracore-institutional-components.css | Componentes institucionais opcionais |
 
 Margens responsivas partilhadas pela variável --sf-gutter em store-public.css (header, main, secções, rodapé).
+
+Menu principal (todas as páginas em docs/ e docs/wiki/): mesma ordem linear — Início, Produto, Serviços, Galeria, Wiki, Download, Imprensa, Contato (desktop); mobile acrescenta FAQ e Licença antes de Contato. Fragmentos em docs/assets/inc/store-nav.html e docs/wiki/assets/inc/wiki-nav.html.
+
+Rodapé institucional (todas as páginas): mapa do site numerado 01–11 (item 11 = apresentação técnica), implementadora técnica, titularidade federal e contacto suporte@caracore.com.br. Fragmentos em docs/assets/inc/store-footer.html e docs/wiki/assets/inc/wiki-footer.html. Sincronização de cabeçalho e rodapé: scripts/sync_store_shell.py (ou scripts/sync_store_nav.py).
 
 Artefactos legados em docs/assets/legacy/ (loja.css, area51.css, loja.js) foram substituídos por store-public.css e area51.js. Nenhuma página activa os importa.
 
@@ -76,39 +80,40 @@ Conteúdo típico: panoramas numerados e favicon.ico.
 
 Domínio: https://area51.caracore.com.br/
 
-| Página | Descrição | Tipo |
-|--------|-----------|------|
-| [index.html](docs/index.html) | Início institucional | Landing |
-| [produto.html](docs/produto.html) | Visão de produto e cenários | Produto |
-| [servicos.html](docs/servicos.html) | Modelos de contratação | Serviços |
-| [galeria.html](docs/galeria.html) | Dez imagens panorama 16:9 | Material |
-| [imprensa.html](docs/imprensa.html) | Kit institucional de imprensa | Imprensa |
-| [wiki](docs/wiki/index.html) | Wiki no mesmo domínio | Wiki |
-| [download.html](docs/download.html) | O que o serviço contratado pode entregar | Serviço |
-| [licenca-uso.html](docs/licenca-uso.html) | Licença e titularidade | Jurídico |
-| [canal-feedback.html](docs/canal-feedback.html) | Suporte e orçamento | Canal |
+| # | Página | Descrição | Tipo |
+|---|--------|-----------|------|
+| 01 | [index.html](docs/index.html) | Início institucional | Landing |
+| 02 | [produto.html](docs/produto.html) | Visão de produto e cenários | Produto |
+| 03 | [servicos.html](docs/servicos.html) | Modelos de contratação | Serviços |
+| 04 | [galeria.html](docs/galeria.html) | Dez imagens panorama 16:9 | Material |
+| 05 | [wiki](docs/wiki/index.html) | Wiki no mesmo domínio | Wiki |
+| 06 | [download.html](docs/download.html) | Entrega licenciada da baseline e serviço contratado | Download |
+| 07 | [imprensa.html](docs/imprensa.html) | Kit institucional de imprensa | Imprensa |
+| 08 | [faq.html](docs/faq.html) | Perguntas frequentes (produto, oficina, serviços) | FAQ |
+| 09 | [licenca-uso.html](docs/licenca-uso.html) | Licença e titularidade | Jurídico |
+| 10 | [canal-feedback.html](docs/canal-feedback.html) | Suporte e orçamento | Canal |
+| 11 | [apresentacao-tecnica.html](docs/apresentacao-tecnica.html) | Apresentação técnica institucional do produto | Documentação |
 
-## Início rápido (repositório caracore-area51)
+Subpáginas wiki (herdam cabeçalho e rodapé da vitrine; mapa 05 marca Wiki como secção activa):
 
-```bash
-git clone https://github.com/chmulato/caracore-area51.git
-cd caracore-area51
-pip install -r operational/requirements.txt
-python operational/setup_oidc_environment.py \
-  --server 192.168.1.100 \
-  --docker-user admin \
-  --docker-pass password
-python operational/tests/validate_oidc_flow.py \
-  --keycloak-url http://192.168.1.100:8080
-```
+| Página | Descrição |
+|--------|-----------|
+| [wiki/index.html](docs/wiki/index.html) | Entrada da wiki |
+| [wiki/projeto-area51.html](docs/wiki/projeto-area51.html) | Documentação do projecto Área 51 |
 
-Resultado esperado, ilustrativo: Keycloak, aplicação protegida e validação segundo guias públicos; o tempo depende da infraestrutura do cliente.
+## Início rápido (clientes licenciados)
+
+1. Ler a [apresentação técnica](docs/apresentacao-tecnica.html) e a [licença de uso](docs/licenca-uso.html).
+2. Solicitar entrega da baseline pelo [canal de feedback](docs/canal-feedback.html) ou conforme acordo institucional activo.
+3. Seguir os guias incluídos no pacote entregue (setup Docker, Keycloak, testes de fluxo OIDC).
+
+Resultado esperado, ilustrativo: Keycloak activo, aplicação protegida e validação automatizada concluída; o tempo depende da infraestrutura do cliente.
 
 Implementação guiada, integração com aplicações do cliente, validação de segurança e suporte durante o projecto: [canal-feedback.html](docs/canal-feedback.html).
 
 ## Comparativo ilustrativo
 
-| Aspecto | Montagem manual dispersa | Com baseline e rotinas publicadas |
+| Aspecto | Montagem manual dispersa | Com baseline Área 51 licenciada |
 |---------|--------------------------|-----------------------------------|
 | Lead time em laboratório | Semanas típicas só com montagem manual | Minutos frequentemente relatados após pré-requisitos |
 | PKCE no exemplo público | Inconsistente sem padrão comum | Fluxos descritos na baseline e nos testes |
@@ -122,7 +127,7 @@ OAuth 2.1, OIDC, PKCE, fluxo de código de autorização, validação de JWT qua
 
 ## Componentes comunicados
 
-Scripts baseline (repositório de código): configuração OIDC padronizada, testes de validação, versionamento Git, entrega via GitHub.
+Scripts baseline (oficina privada): configuração OIDC padronizada, testes de validação, versionamento interno, entrega licenciada.
 
 Operação exemplo (operational/): Keycloak em Docker, aplicação Flask protegida, validação de fluxo OIDC, documentação passo a passo.
 
@@ -131,10 +136,11 @@ Suporte Cara Core (contrato): consultoria OIDC, customizações, integração Go
 ## Ligações úteis
 
 - Loja: https://area51.caracore.com.br/
-- Código: https://github.com/chmulato/caracore-area51
+- Apresentação técnica: [apresentacao-tecnica.html](docs/apresentacao-tecnica.html)
 - Produto: [produto.html](docs/produto.html)
 - Serviços: [servicos.html](docs/servicos.html)
 - Download: [download.html](docs/download.html)
+- FAQ: [faq.html](docs/faq.html)
 - Wiki: [wiki](docs/wiki/index.html)
 - Licença: [licenca-uso.html](docs/licenca-uso.html)
 - Contato: [canal-feedback.html](docs/canal-feedback.html)

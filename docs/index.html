@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área 51 OIDC Platform — Autenticação federada segura em minutos</title>
-    <meta name="description" content="Proteja aplicações com OIDC seguro. OAuth 2.1 e PKCE, deploy automatizado de Keycloak. Para órgãos públicos, empresas e equipes de desenvolvimento.">
+    <title>Área 51 — Pacote técnico OpenID Connect e Keycloak</title>
+    <meta name="description" content="Pacote técnico para implantar autenticação federada com OpenID Connect, Keycloak em Docker, baseline versionada, scripts automatizados e documentação para equipes técnicas.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,12 +17,10 @@
             <a class="sf-brand" href="index.html">Área 51 — Loja</a>
             <nav class="sf-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="#recursos">Recursos</a></li>
-                    <li><a href="#solucoes">Soluções</a></li>
-                    <li><a href="#precos">Preços</a></li>
-                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
                     <li><a href="produto.html">Produto</a></li>
                     <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
                     <li><a href="wiki/index.html">Wiki</a></li>
                     <li><a href="download.html">Download</a></li>
                     <li><a href="imprensa.html">Imprensa</a></li>
@@ -32,16 +30,15 @@
             <details class="sf-menu">
                 <summary>Menu</summary>
                 <div class="sf-menu-body">
-                    <a href="#recursos">Recursos</a>
-                    <a href="#solucoes">Soluções</a>
-                    <a href="#precos">Preços</a>
-                    <a href="galeria.html">Galeria</a>
+                    <a href="index.html" aria-current="page">Início</a>
                     <a href="produto.html">Produto</a>
                     <a href="servicos.html">Serviços</a>
+                    <a href="galeria.html">Galeria</a>
                     <a href="wiki/index.html">Wiki</a>
                     <a href="download.html">Download</a>
                     <a href="imprensa.html">Imprensa</a>
-                    <a href="servicos.html">Serviços</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="licenca-uso.html">Licença</a>
                     <a href="canal-feedback.html">Contato</a>
                 </div>
             </details>
@@ -52,88 +49,69 @@
         <section class="sf-hero" aria-labelledby="hero-title">
             <div class="sf-hero-grid sf-section-inner">
                 <div>
-                    <h1 id="hero-title">Autenticação OIDC segura em até cinco minutos</h1>
-                    <p class="sf-lede">Proteção com OAuth&nbsp;2.1 e PKCE, deploy automatizado e documentação objetiva para ambientes corporativos e públicos.</p>
-                    <div class="sf-chip-row" aria-label="Destaques">
-                        <span class="sf-chip">PKCE</span>
+                    <h1 id="hero-title">Área 51</h1>
+                    <p class="sf-lede">Pacote técnico para implantar autenticação federada com OpenID Connect e Keycloak em Docker. Inclui baseline versionada, scripts automatizados e documentação para equipes técnicas.</p>
+                    <div class="sf-chip-row" aria-label="Protocolos e componentes">
+                        <span class="sf-chip">OpenID Connect</span>
                         <span class="sf-chip">OAuth 2.1</span>
+                        <span class="sf-chip">PKCE</span>
                         <span class="sf-chip">Keycloak em Docker</span>
                     </div>
                     <div class="sf-actions">
-                        <a class="sf-btn sf-btn-primary" href="produto.html">Ver produto</a>
-                        <a class="sf-btn sf-btn-outline" href="download.html">Iniciar pelo download</a>
+                        <a class="sf-btn sf-btn-primary" href="produto.html">Detalhes do produto</a>
+                        <a class="sf-btn sf-btn-outline" href="download.html">Como começar</a>
                     </div>
                 </div>
                 <div class="sf-media">
-                    <img src="assets/img/02_security_network.png" width="960" height="600" alt="Diagrama conceitual de rede com autenticação federada entre aplicações.">
+                    <img src="assets/img/02_security_network.png" width="960" height="600" alt="Diagrama de rede com autenticação federada entre aplicações.">
                 </div>
             </div>
         </section>
 
-        <section class="sf-section sf-section-muted" id="recursos">
+        <section class="sf-section sf-section-muted" id="funcionalidades">
             <div class="sf-section-inner">
                 <div class="sf-section-heading">
-                    <h2>O que o ecossistema oferece</h2>
-                    <p>Um conjunto único para operar OpenID&nbsp;Connect com previsibilidade e segurança.</p>
+                    <h2>Principais funcionalidades</h2>
+                    <p>Capacidades técnicas do pacote para operar OIDC com previsibilidade entre ambientes.</p>
                 </div>
                 <div class="sf-grid sf-grid-cards">
-                    <a class="sf-card-link" href="download.html">
-                        <article class="sf-card">
-                            <img src="assets/img/05_speed_setup.png" width="640" height="360" loading="lazy" alt="">
-                            <div class="sf-card-body">
-                                <h3>Tempo reduzido de implantação</h3>
-                                <p>Keycloak provisionado por rotina automatizada, com baseline versionada.</p>
-                                <span class="sf-text-link">Abrir download</span>
-                            </div>
-                        </article>
-                    </a>
                     <a class="sf-card-link" href="produto.html">
                         <article class="sf-card">
-                            <img src="assets/img/01_oidc_flow.png" width="640" height="360" loading="lazy" alt="">
+                            <img src="assets/img/01_oidc_flow.png" width="640" height="360" loading="lazy" alt="Fluxo OpenID Connect.">
                             <div class="sf-card-body">
-                                <h3>Padrões de segurança modernos</h3>
-                                <p>Fluxo compatível com OAuth&nbsp;2.1, PKCE obrigatório e validação de tokens.</p>
-                                <span class="sf-text-link">Detalhes técnicos</span>
+                                <h3>Autenticação segura</h3>
+                                <p>Compatível com OAuth 2.1, PKCE obrigatório e validação de tokens integrada.</p>
+                                <span class="sf-text-link">Ver produto</span>
                             </div>
                         </article>
                     </a>
                     <a class="sf-card-link" href="download.html">
                         <article class="sf-card">
-                            <img src="assets/img/03_cloud_deployment.png" width="640" height="360" loading="lazy" alt="">
+                            <img src="assets/img/05_speed_setup.png" width="640" height="360" loading="lazy" alt="Deploy automatizado.">
                             <div class="sf-card-body">
-                                <h3>Pronto para ambientes distribuídos</h3>
-                                <p>Containers Docker e práticas aptas à evolução em infraestrutura atual.</p>
+                                <h3>Deploy automatizado</h3>
+                                <p>Keycloak provisionado por rotina automatizada, com baseline versionada para auditoria e reprodutibilidade.</p>
+                                <span class="sf-text-link">Entregável do serviço</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="download.html">
+                        <article class="sf-card">
+                            <img src="assets/img/03_cloud_deployment.png" width="640" height="360" loading="lazy" alt="Containers Docker.">
+                            <div class="sf-card-body">
+                                <h3>Ambientes distribuídos</h3>
+                                <p>Containers Docker preparados para evolução de infraestrutura.</p>
                                 <span class="sf-text-link">Guia de setup</span>
                             </div>
                         </article>
                     </a>
                     <a class="sf-card-link" href="download.html">
                         <article class="sf-card">
-                            <img src="assets/img/09_docker_deployment.png" width="640" height="360" loading="lazy" alt="">
+                            <img src="assets/img/09_docker_deployment.png" width="640" height="360" loading="lazy" alt="Implantação repetível.">
                             <div class="sf-card-body">
                                 <h3>Implantação repetível</h3>
-                                <p>Mesmo processo entre ambientes de laboratório, homologação e produção.</p>
+                                <p>Mesmo processo para laboratório, homologação e produção.</p>
                                 <span class="sf-text-link">Documentação</span>
-                            </div>
-                        </article>
-                    </a>
-                    <a class="sf-card-link" href="galeria.html">
-                        <article class="sf-card">
-                            <img src="assets/img/07_workshop_learning.png" width="640" height="360" loading="lazy" alt="">
-                            <div class="sf-card-body">
-                                <h3>Material orientado à equipe</h3>
-                                <p>Figuras em alta para oficinas, apresentações e kits internos.</p>
-                                <span class="sf-text-link">Explorar galeria</span>
-                            </div>
-                        </article>
-                    </a>
-                    <a class="sf-card-link" href="https://github.com/chmulato/caracore-area51">
-                        <article class="sf-card">
-                            <img src="assets/img/08_community.png" width="640" height="360" loading="lazy" alt="">
-                            <div class="sf-card-body">
-                                <h3>Transparência no código</h3>
-                                <p>Baseline pública para auditoria colaborativa e integração gradual.</p>
-                                <span class="sf-text-link">Repositório no GitHub</span>
                             </div>
                         </article>
                     </a>
@@ -141,153 +119,149 @@
             </div>
         </section>
 
-        <section class="sf-section" id="solucoes">
+        <section class="sf-section" id="pacote">
             <div class="sf-section-inner">
                 <div class="sf-section-heading">
-                    <h2>Soluções por contexto</h2>
-                    <p>Adapte a mesma fundação técnica a órgãos, empresas, integradores e treinamentos.</p>
+                    <h2>O que acompanha o pacote</h2>
+                    <p>Material publicado para documentação, comunicação e auditoria da baseline.</p>
+                </div>
+                <div class="sf-grid sf-grid-3">
+                    <a class="sf-card-link" href="wiki/index.html">
+                        <article class="sf-card">
+                            <img src="assets/img/07_workshop_learning.png" width="640" height="360" loading="lazy" alt="Documentação para equipes.">
+                            <div class="sf-card-body">
+                                <h3>Documentação</h3>
+                                <p>Material orientado à equipe, com figuras em alta resolução para oficinas e apresentações.</p>
+                                <span class="sf-text-link">Wiki</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="galeria.html">
+                        <article class="sf-card">
+                            <img src="assets/img/10_digital_transformation.png" width="640" height="360" loading="lazy" alt="Galeria institucional.">
+                            <div class="sf-card-body">
+                                <h3>Galeria institucional</h3>
+                                <p>Dez imagens panorâmicas 16:9 para comunicação e documentação externa.</p>
+                                <span class="sf-text-link">Ver galeria</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="apresentacao-tecnica.html">
+                        <article class="sf-card">
+                            <img src="assets/img/08_community.png" width="640" height="360" loading="lazy" alt="Documentação técnica institucional.">
+                            <div class="sf-card-body">
+                                <h3>Apresentação técnica</h3>
+                                <p>Arquitectura OIDC, componentes, segurança e modelo de entrega licenciada do produto privado.</p>
+                                <span class="sf-text-link">Documentação</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sf-section sf-section-muted" id="casos-de-uso">
+            <div class="sf-section-inner">
+                <div class="sf-section-heading">
+                    <h2>Casos de uso</h2>
+                    <p>Aplicação da mesma baseline em contextos públicos, corporativos, de desenvolvimento e de capacitação.</p>
                 </div>
                 <article class="sf-split">
                     <div class="sf-split-copy">
                         <h3>Órgãos públicos</h3>
                         <p>Portais internos e federação de identidade entre unidades administrativas.</p>
                         <ul class="sf-list-plain">
-                            <li>Cenários com Entra ID e integrações institucionais</li>
+                            <li>Cenários com Microsoft Entra ID</li>
                             <li>Rastreabilidade e auditoria de acesso</li>
-                            <li>Documentação adequada à governança</li>
+                            <li>Documentação alinhada à governança</li>
                         </ul>
                         <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="servicos.html">Serviços</a></div>
                     </div>
                     <div class="sf-split-media">
-                        <img src="assets/img/04_gov_federation.png" width="880" height="550" loading="lazy" alt="Ilustração de federação de identidades no setor público.">
+                        <img src="assets/img/04_gov_federation.png" width="880" height="550" loading="lazy" alt="Federação de identidades no setor público.">
                     </div>
                 </article>
 
                 <article class="sf-split sf-split-reverse">
                     <div class="sf-split-copy">
                         <h3>Empresas</h3>
-                        <p>Autenticação centralizada para múltiplos sistemas, com menor custo operacional por projeto.</p>
+                        <p>Autenticação centralizada para múltiplos sistemas, com redução de custo operacional por projeto.</p>
                         <ul class="sf-list-plain">
-                            <li>Single sign-on corporativo planejável</li>
-                            <li>Integração gradual com ERP e CRM existentes</li>
-                            <li>Implantação com suporte especializado opcional</li>
+                            <li>Single sign-on corporativo</li>
+                            <li>Integração com ERP e CRM</li>
+                            <li>Implementação guiada opcional</li>
                         </ul>
-                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="servicos.html">Solicitar apresentação</a></div>
+                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="canal-feedback.html">Contactar</a></div>
                     </div>
                     <div class="sf-split-media">
-                        <img src="assets/img/06_enterprise_integration.png" width="880" height="550" loading="lazy" alt="Integração corporativa multitenant.">
+                        <img src="assets/img/06_enterprise_integration.png" width="880" height="550" loading="lazy" alt="Integração corporativa.">
                     </div>
                 </article>
 
                 <article class="sf-split">
                     <div class="sf-split-copy">
                         <h3>Desenvolvimento</h3>
-                        <p>Provas de fluxo OAuth com exemplos objetivos para acelerar o time técnico.</p>
+                        <p>Scripts e testes de fluxo OAuth com baseline alinhada a boas práticas OIDC.</p>
                         <ul class="sf-list-plain">
-                            <li>Scripts e testes de validação de fluxo</li>
-                            <li>Baseline alinhada a boas práticas OIDC</li>
-                            <li>Contraste claro entre ambiente experimental e produção</li>
+                            <li>Testes de validação de fluxo</li>
+                            <li>Baseline versionada sob licença</li>
+                            <li>Separação clara entre laboratório e produção</li>
                         </ul>
-                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="https://github.com/chmulato/caracore-area51">GitHub</a></div>
+                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="apresentacao-tecnica.html">Apresentação técnica</a></div>
                     </div>
                     <div class="sf-split-media">
-                        <img src="assets/img/08_community.png" width="880" height="550" loading="lazy" alt="Colaboração em comunidade técnica.">
+                        <img src="assets/img/01_oidc_flow.png" width="880" height="550" loading="lazy" alt="Fluxo OAuth e OIDC.">
                     </div>
                 </article>
 
                 <article class="sf-split sf-split-reverse">
                     <div class="sf-split-copy">
-                        <h3>Facilitadores e capacitação</h3>
+                        <h3>Capacitação</h3>
                         <p>Laboratório padronizado para oficinas e trilhas de aprendizado em identidade federada.</p>
                         <ul class="sf-list-plain">
                             <li>Ambientes recriáveis em pouco tempo</li>
-                            <li>Slides e figuras institucionais na galeria</li>
-                            <li>Escopo combinável com Suporte Área&nbsp;51</li>
+                            <li>Figuras institucionais na galeria</li>
+                            <li>Suporte Área 51 combinável ao escopo</li>
                         </ul>
-                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="canal-feedback.html">Canal institucional</a></div>
+                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="galeria.html">Material visual</a></div>
                     </div>
                     <div class="sf-split-media">
-                        <img src="assets/img/07_workshop_learning.png" width="880" height="550" loading="lazy" alt="Ambiente para aprendizado e oficinas OIDC.">
+                        <img src="assets/img/07_workshop_learning.png" width="880" height="550" loading="lazy" alt="Oficinas e aprendizado OIDC.">
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="sf-section sf-section-muted">
+        <section class="sf-section" id="servicos">
             <div class="sf-section-inner">
                 <div class="sf-section-heading">
-                    <h2>Galeria de recursos visuais</h2>
-                    <p>Dez imagens panorâmicas 16:9 para comunicação institucional e documentação externa.</p>
-                </div>
-                <div class="sf-gallery-mini" aria-label="Prévia da galeria">
-                    <button type="button" onclick="window.open('assets/img/01_oidc_flow.png','_blank')">
-                        <img src="assets/img/01_oidc_flow.png" width="320" height="180" loading="lazy" alt="Fluxo OIDC.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/02_security_network.png','_blank')">
-                        <img src="assets/img/02_security_network.png" width="320" height="180" loading="lazy" alt="Rede federada segura.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/03_cloud_deployment.png','_blank')">
-                        <img src="assets/img/03_cloud_deployment.png" width="320" height="180" loading="lazy" alt="Deploy em nuvem.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/04_gov_federation.png','_blank')">
-                        <img src="assets/img/04_gov_federation.png" width="320" height="180" loading="lazy" alt="Federação governamental.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/05_speed_setup.png','_blank')">
-                        <img src="assets/img/05_speed_setup.png" width="320" height="180" loading="lazy" alt="Implementação rápida.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/06_enterprise_integration.png','_blank')">
-                        <img src="assets/img/06_enterprise_integration.png" width="320" height="180" loading="lazy" alt="Integração corporativa.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/07_workshop_learning.png','_blank')">
-                        <img src="assets/img/07_workshop_learning.png" width="320" height="180" loading="lazy" alt="Aprendizado e oficinas.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/08_community.png','_blank')">
-                        <img src="assets/img/08_community.png" width="320" height="180" loading="lazy" alt="Ecossistema comunitário.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/09_docker_deployment.png','_blank')">
-                        <img src="assets/img/09_docker_deployment.png" width="320" height="180" loading="lazy" alt="Docker e containers.">
-                    </button>
-                    <button type="button" onclick="window.open('assets/img/10_digital_transformation.png','_blank')">
-                        <img src="assets/img/10_digital_transformation.png" width="320" height="180" loading="lazy" alt="Transformação digital institucional.">
-                    </button>
-                </div>
-                <div class="sf-stack-center" style="margin-top: 32px;">
-                    <a class="sf-btn sf-btn-primary" href="galeria.html">Galeria completa</a>
-                    <a class="sf-btn sf-btn-outline" href="imprensa.html">Kit de imprensa</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="sf-section" id="precos">
-            <div class="sf-section-inner">
-                <div class="sf-section-heading">
-                    <h2>Modelos de engajamento</h2>
-                    <p>Estruture o relacionamento conforme disponibilidade interna e exigências de suporte.</p>
+                    <h2>Serviços disponíveis</h2>
+                    <p>Baseline licenciada e modelos contratados de implementação e acompanhamento.</p>
                 </div>
                 <div class="sf-pricing">
                     <div class="sf-price-card">
                         <h3>Baseline técnico</h3>
-                        <div class="sf-price-tag">Sem custo</div>
+                        <div class="sf-price-tag">Licenciado</div>
                         <ul>
                             <li>Scripts de referência OIDC</li>
-                            <li>Roteiro automatizado de deploy em Docker</li>
-                            <li>Testes de fluxo inclusos na baseline</li>
-                            <li>Documentação público-alvo institucional</li>
-                            <li>Acesso público ao repositório</li>
+                            <li>Deploy automatizado em Docker</li>
+                            <li>Testes de fluxo inclusos</li>
+                            <li>Documentação institucional</li>
+                            <li>Entrega mediante licença de uso</li>
                         </ul>
-                        <a class="sf-btn sf-btn-primary" href="download.html" style="width: 100%;">Abrir página de download</a>
+                        <a class="sf-btn sf-btn-primary sf-btn-block" href="download.html">Download e como começar</a>
                     </div>
                     <div class="sf-price-card">
                         <h3>Implementação guiada</h3>
                         <div class="sf-price-tag">Sob consulta</div>
                         <ul>
-                            <li>Assistência ponta-a-ponta no ambiente do cliente</li>
-                            <li>Integração com aplicações em escopo combinado</li>
-                            <li>Validações de segurança durante o projeto</li>
-                            <li>Entrega com registro técnico de configurações</li>
+                            <li>Assistência ponta a ponta no ambiente do cliente</li>
+                            <li>Integração com aplicações</li>
+                            <li>Validações de segurança</li>
+                            <li>Entrega com registro técnico</li>
                             <li>Prazo típico de poucos dias úteis após planejamento</li>
                         </ul>
-                        <a class="sf-btn sf-btn-primary" href="canal-feedback.html" style="width: 100%;">Solicitar proposta</a>
+                        <a class="sf-btn sf-btn-primary sf-btn-block" href="canal-feedback.html">Solicitar proposta</a>
                     </div>
                     <div class="sf-price-card">
                         <h3>Acompanhamento estendido</h3>
@@ -295,25 +269,28 @@
                         <ul>
                             <li>Personalizações e integrações institucionais</li>
                             <li>Evoluções com governança documentada</li>
-                            <li>Apoio com janelas acordadas de atendimento</li>
-                            <li>Orientação sobre auditoria técnica</li>
-                            <li>Mobilização opcional para treinamento formal</li>
+                            <li>Janelas de atendimento acordadas</li>
+                            <li>Orientação para auditoria técnica</li>
+                            <li>Treinamento formal opcional</li>
                         </ul>
-                        <a class="sf-btn sf-btn-primary" href="canal-feedback.html" style="width: 100%;">Falar com a equipe</a>
+                        <a class="sf-btn sf-btn-primary sf-btn-block" href="canal-feedback.html">Falar com a equipe</a>
                     </div>
                 </div>
-                <div class="sf-stack-center" style="margin-top: 40px;">
-                    <a class="sf-btn sf-btn-outline" href="servicos.html">Catálogo de serviços</a>
+                <div class="sf-stack-center sf-section-cta">
+                    <a class="sf-btn sf-btn-outline" href="servicos.html">Detalhes dos serviços</a>
                 </div>
             </div>
         </section>
 
-        <section class="sf-cta-banner">
+        <section class="sf-cta-banner" id="como-comecar">
             <div class="sf-section-inner">
-                <h2>Pronto para iniciar?</h2>
-                <p>Avance pela documentação oficial ou converse com a Cara&nbsp;Core Informática quando precisar de implementação supervisada.</p>
+                <h2>Como começar</h2>
+                <p>Inicie pela apresentação técnica, solicite entrega da baseline ou consulte o FAQ. Para implementação supervisada, use o canal de feedback.</p>
                 <div class="sf-stack-center">
-                    <a class="sf-btn sf-btn-primary" href="download.html">Acessar entregável</a>
+                    <a class="sf-btn sf-btn-primary" href="apresentacao-tecnica.html">Apresentação técnica</a>
+                    <a class="sf-btn sf-btn-outline" href="download.html">Entrega e download</a>
+                    <a class="sf-btn sf-btn-outline" href="faq.html">FAQ</a>
+                    <a class="sf-btn sf-btn-outline" href="wiki/index.html">Documentação</a>
                     <a class="sf-btn sf-btn-outline" href="canal-feedback.html">Canal de feedback</a>
                 </div>
             </div>
@@ -322,21 +299,27 @@
 
     <footer class="sf-footer">
         <div class="sf-footer-inner">
-            <h2 class="sf-visually-hidden">Rodapé</h2>
-            <p style="margin: 0; color: var(--sf-text); font-weight: 600;">Área&nbsp;51 OIDC Platform</p>
-            <p class="sf-muted-text" style="margin: 8px auto 0; max-width: 520px;">Autenticação federada planejável para instituições, empresas e comunidade técnica.</p>
-            <nav class="sf-footer-links" aria-label="Links do rodapé">
-                <a href="produto.html">Produto</a>
-                <a href="servicos.html">Serviços</a>
-                <a href="galeria.html">Galeria</a>
-                <a href="imprensa.html">Imprensa</a>
-                <a href="licenca-uso.html">Licença</a>
-                <a href="canal-feedback.html">Contato</a>
-                <a href="https://github.com/chmulato/caracore-area51">GitHub</a>
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="index.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="wiki/index.html"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Download</a>
+                <a href="imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
             </nav>
             <div class="sf-footer-leg">
-                <p>&copy; 2026 Cara Core Informática &middot; Área&nbsp;51 — implementação técnica correlata a serviço federal</p>
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
                 <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
             </div>
         </div>
     </footer>

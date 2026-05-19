@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria Área 51 — Imagens 16:9</title>
-    <meta name="description" content="Galeria institucional Área 51: dez imagens 16:9 para apresentações OIDC, segurança federada e comunicação corporativa.">
+    <title>Galeria — Área 51</title>
+    <meta name="description" content="Galeria institucional Área 51: material visual sobre OIDC, identidade federada e operação do produto.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,10 +33,11 @@
                     <a href="index.html">Início</a>
                     <a href="produto.html">Produto</a>
                     <a href="servicos.html">Serviços</a>
-                    <a href="galeria.html">Galeria</a>
+                    <a href="galeria.html" aria-current="page">Galeria</a>
                     <a href="wiki/index.html">Wiki</a>
                     <a href="download.html">Download</a>
                     <a href="imprensa.html">Imprensa</a>
+                    <a href="faq.html">FAQ</a>
                     <a href="licenca-uso.html">Licença</a>
                     <a href="canal-feedback.html">Contato</a>
                 </div>
@@ -46,198 +47,147 @@
 
     <main id="main" class="sf-main">
         <header class="sf-page-hero">
-            <h1>Galeria de recursos visuais</h1>
-            <p class="sf-lede">Conjunto institucional para apresentações formais, relatórios públicos e comunicação interna.</p>
+            <h1>Galeria institucional</h1>
+            <p class="sf-lede">Material visual para apresentações, relatórios e comunicação institucional.</p>
         </header>
 
-        <section class="sf-block">
-            <h2>Descrição geral</h2>
-            <p>Dez figuras panorâmicas 16:9 com orientação OpenID&nbsp;Connect e contexto corporativo institucional.</p>
-            <p class="sf-muted-text" style="margin-top: 10px;">Um toque ou clique abre a versão ampliada dentro desta página.</p>
-        </section>
-
-        <div class="sf-grid gallery-grid" style="gap: 22px; margin-bottom: 40px;">
+        <div class="sf-grid gallery-grid">
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('01_oidc_flow.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('01_oidc_flow.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/01_oidc_flow.png" alt="Fluxo OpenID Connect com PKCE." width="960" height="540" loading="lazy">
+                    <img src="assets/img/01_oidc_flow.png" alt="Fluxo de autenticação OpenID Connect." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Fluxo OIDC</h3>
-                    <p>Diagrama institucional de autenticação federada sob PKCE moderno.</p>
-                    <span class="sf-badge-tag">Documentação técnica</span>
-                    <span class="sf-badge-tag">Arquitetura</span>
+                    <h3>Fluxo de autenticação OIDC</h3>
+                    <p>Utilizador, aplicação e Keycloak; OAuth 2.1, PKCE e JWT.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('02_security_network.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('02_security_network.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/02_security_network.png" alt="Rede federada de segurança." width="960" height="540" loading="lazy">
+                    <img src="assets/img/02_security_network.png" alt="Rede de segurança federada." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Rede federada</h3>
-                    <p>HUB de identidades com relacionamento explícito entre aplicações internas autorizadas.</p>
-                    <span class="sf-badge-tag">Site institucional</span>
+                    <h3>Rede de segurança federada</h3>
+                    <p>Keycloak como IdP; aplicações web, mobile e API integradas.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('03_cloud_deployment.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('03_cloud_deployment.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/03_cloud_deployment.png" alt="Implantação em nuvem com OIDC." width="960" height="540" loading="lazy">
+                    <img src="assets/img/03_cloud_deployment.png" alt="Infraestrutura cloud com OIDC." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Implementação distribuída</h3>
-                    <p>Infraestrutura atual com encapsulamento institucional e governança de token.</p>
-                    <span class="sf-badge-tag">Operações</span>
+                    <h3>Infraestrutura cloud com OIDC</h3>
+                    <p>Containers, Keycloak e distribuição segura de tokens.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('04_gov_federation.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('04_gov_federation.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/04_gov_federation.png" alt="Federação governamental de identidades." width="960" height="540" loading="lazy">
+                    <img src="assets/img/04_gov_federation.png" alt="Federação de identidade governamental." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Federalização institucional</h3>
-                    <p>Unidades administrativas conectadas com identidade institucional homogênea.</p>
-                    <span class="sf-badge-tag">Setor público</span>
+                    <h3>Federação de identidade governamental</h3>
+                    <p>Órgãos, cidadãos e autenticação entre entidades públicas.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('05_speed_setup.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('05_speed_setup.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/05_speed_setup.png" alt="Breve período até ambiente inicial." width="960" height="540" loading="lazy">
+                    <img src="assets/img/05_speed_setup.png" alt="Rapidez de setup OIDC." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Implementação acelerada de laboratório</h3>
-                    <p>Redução de intervalo inicial quando comparado apenas a cenários inteiramente manuais.</p>
-                    <span class="sf-badge-tag">Comunicação institucional</span>
+                    <h3>Rapidez de setup</h3>
+                    <p>Deploy OIDC em minutos frente à implantação manual prolongada.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('06_enterprise_integration.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('06_enterprise_integration.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/06_enterprise_integration.png" alt="Integração corporativa multitenant." width="960" height="540" loading="lazy">
+                    <img src="assets/img/06_enterprise_integration.png" alt="Integração empresarial com OIDC." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Ecossistema corporativo</h3>
-                    <p>Canalização de serviços internos mediante camada institucional de identidade federada.</p>
-                    <span class="sf-badge-tag">Corporativo</span>
+                    <h3>Integração empresarial</h3>
+                    <p>ERP, CRM e sistemas corporativos com SSO centralizado.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('07_workshop_learning.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('07_workshop_learning.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/07_workshop_learning.png" alt="Capacitação em OIDC." width="960" height="540" loading="lazy">
+                    <img src="assets/img/07_workshop_learning.png" alt="Treinamento e workshop OIDC." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Capacitação formal</h3>
-                    <p>Suporte visual oficinas internas de OAuth e OpenID&nbsp;Connect.</p>
-                    <span class="sf-badge-tag">Educação corporativa</span>
+                    <h3>Treinamento e workshop</h3>
+                    <p>Capacitação em OAuth 2.1, PKCE, JWT e OpenID Connect.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('08_community.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('08_community.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/08_community.png" alt="Comunidade técnica colaborativa." width="960" height="540" loading="lazy">
+                    <img src="assets/img/08_community.png" alt="Colaboração técnica e desenvolvimento." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Ecossistema comunitário</h3>
-                    <p>Estruturas colaborativas externas combinadas ao núcleo público institucional.</p>
-                    <span class="sf-badge-tag">Transparência</span>
+                    <h3>Colaboração técnica</h3>
+                    <p>Equipes de desenvolvimento, ferramentas e conhecimento partilhado.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('09_docker_deployment.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('09_docker_deployment.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/09_docker_deployment.png" alt="Implantação com containers." width="960" height="540" loading="lazy">
+                    <img src="assets/img/09_docker_deployment.png" alt="Deploy com Docker e containers." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Camada Docker</h3>
-                    <p>Governança de imagens com repetição previsível em datacenters físicos institucionais.</p>
-                    <span class="sf-badge-tag">DevOps institucional</span>
+                    <h3>Deploy com Docker</h3>
+                    <p>Keycloak containerizado e pipeline de implantação simplificado.</p>
                 </div>
             </div>
             <div class="sf-gallery-item" role="button" tabindex="0" onclick="openModal('10_digital_transformation.png')" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openModal('10_digital_transformation.png');}">
                 <div class="gallery-image">
-                    <img src="assets/img/10_digital_transformation.png" alt="Modernização tecnológica governamental planejada." width="960" height="540" loading="lazy">
+                    <img src="assets/img/10_digital_transformation.png" alt="Transformação digital governamental." width="960" height="540" loading="lazy">
                 </div>
                 <div class="sf-gallery-caption">
-                    <h3>Modernização planejada</h3>
-                    <p>Jornadas formais atualizando plataforma identitária em órgão amplamente regulado.</p>
-                    <span class="sf-badge-tag">Alto escalão institucional</span>
+                    <h3>Transformação digital governamental</h3>
+                    <p>Modernização de serviços com identidade segura e Área 51.</p>
                 </div>
             </div>
         </div>
 
-        <section class="sf-block">
-            <h2>Orientações de uso</h2>
-            <div class="sf-grid sf-grid-2">
-                <div class="sf-block" style="margin: 0;">
-                    <h3 style="margin-top: 0;">Site institucional</h3>
-                    <p class="sf-muted-text" style="margin: 8px 0 0;">Preferir cenários de topo de página relacionados rede federada quando apresentação externa institucional exigir simplicidade forte.</p>
-                </div>
-                <div class="sf-block" style="margin: 0;">
-                    <h3 style="margin-top: 0;">Apresentações internas formais</h3>
-                    <p class="sf-muted-text" style="margin: 8px 0 0;">Integração corporativa, federalização pública ou modernização tecnológica compõem habitualmente relatórios de alto nível.</p>
-                </div>
-                <div class="sf-block" style="margin: 0;">
-                    <h3 style="margin-top: 0;">Documentação textual</h3>
-                    <p class="sf-muted-text" style="margin: 8px 0 0;">Fluxos técnicos, implantações containerizadas e modelos distribuídos reduzem dispersão institucional de leitor técnico.</p>
-                </div>
-                <div class="sf-block" style="margin: 0;">
-                    <h3 style="margin-top: 0;">Programas de capacitação</h3>
-                    <p class="sf-muted-text" style="margin: 8px 0 0;">Capítulo introdutório ou sumário executivo combinando laboratório e fluxo institucional resumido.</p>
-                </div>
+        <div class="sf-banner-warn sf-banner-warn-inform">
+            Consulte políticas internas antes da distribuição externa.
+        </div>
+
+        <div class="sf-banner-cta">
+            <h2>Material relacionado</h2>
+            <p>Kit de imprensa e documentação do produto.</p>
+            <div class="sf-actions sf-actions-center">
+                <a class="sf-btn sf-btn-primary" href="imprensa.html">Kit de imprensa</a>
+                <a class="sf-btn sf-btn-outline" href="apresentacao-tecnica.html">Apresentação técnica</a>
             </div>
-        </section>
-
-        <section class="sf-block">
-            <h2>Especificações técnicas declaradas pela loja</h2>
-            <div class="sf-grid sf-grid-2">
-                <div class="sf-block" style="margin: 0;">
-                    <h3 style="margin-top: 0;">Geometria</h3>
-                    <p style="margin: 0;"><strong>Formato:</strong> 16:9 horizontal</p>
-                    <p style="margin: 8px 0 0;" class="sf-muted-text">Resolução típica divulgada: 1920×1080 pixels ou equivalente exportado.</p>
-                </div>
-                <div class="sf-block" style="margin: 0;">
-                    <h3 style="margin-top: 0;">Arquivos</h3>
-                    <p style="margin: 0;"><strong>Formato:</strong> PNG</p>
-                    <p style="margin: 8px 0 0;" class="sf-muted-text">Tamanho médio indicado em documentação interna antiga: cerca de 2&nbsp;MB por arquivo (variação natural permitida).</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="sf-block">
-            <h2>Localização dos arquivos</h2>
-            <p class="sf-muted-text">Repositório estático publicado em <code>docs/assets/img/</code> com nomes padronizados:</p>
-            <ul style="margin-top: 12px; color: var(--sf-muted);">
-                <li>01_oidc_flow.png</li>
-                <li>02_security_network.png</li>
-                <li>03_cloud_deployment.png</li>
-                <li>04_gov_federation.png</li>
-                <li>05_speed_setup.png</li>
-                <li>06_enterprise_integration.png</li>
-                <li>07_workshop_learning.png</li>
-                <li>08_community.png</li>
-                <li>09_docker_deployment.png</li>
-                <li>10_digital_transformation.png</li>
-            </ul>
-        </section>
-
-        <section class="sf-banner-warn" style="border-left-color: var(--sf-accent); background: var(--sf-accent-soft);">
-            Observe sempre políticas internas antes de distribuir estas figuras oficialmente ao público-alvo combinado institucionalmente.
-        </section>
+        </div>
     </main>
 
     <div id="imageModal" class="modal sf-modal" role="dialog" aria-modal="true" aria-label="Pré-visualização ampliada" hidden onclick="modalBackdrop(event)">
         <div class="sf-modal-dialog">
             <button type="button" class="sf-modal-close" onclick="closeModal()">Fechar</button>
-            <img id="modalImage" class="sf-modal-img" src="" alt="Imagem expandida da galeria.">
+            <img id="modalImage" class="sf-modal-img" src="" alt="Imagem ampliada.">
         </div>
     </div>
 
     <footer class="sf-footer">
         <div class="sf-footer-inner">
-            <nav class="sf-footer-links" aria-label="Links do rodapé">
-                <a href="index.html">Início</a>
-                <a href="imprensa.html">Imprensa</a>
-                <a href="download.html">Download</a>
-                <a href="canal-feedback.html">Contato</a>
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="index.html"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="galeria.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="wiki/index.html"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Download</a>
+                <a href="imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
             </nav>
             <div class="sf-footer-leg">
-                <p>&copy; 2026 Cara Core Informática · Galeria institucional Área&nbsp;51</p>
-                <p>Figuras destinadas apenas a comunicação formalmente autorizada</p>
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
             </div>
         </div>
     </footer>

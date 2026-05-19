@@ -4,80 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área 51 - Wiki Cara Core</title>
-    <meta name="description" content="Área 51 - Wiki até o mundo da Lady OAuth (autenticação, primeira era do Reino OIDC). Para colaboradores e estagiários. Processo completo = produto na Oficina/Loja.">
-    
-    <!-- Bootstrap CSS -->
+    <meta name="description" content="Wiki Área 51: documentação de autenticação OIDC na loja oficial. Processo completo de implantação na Oficina/Loja.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Wiki CSS -->
+    <link rel="stylesheet" href="../assets/css/store-public.css">
     <link rel="stylesheet" href="assets/css/wiki.css">
-    <!-- Projeto Área 51 CSS -->
     <link rel="stylesheet" href="assets/css/projeto-area51.css">
-    <!-- Wiki Unified (overrides) -->
     <link rel="stylesheet" href="assets/css/wiki-unified.css">
     <link rel="stylesheet" href="assets/css/wiki-loja-align.css">
-    
-    <!-- Favicon -->
     <link rel="icon" href="../assets/img/favicon.ico" type="image/ico">
-    
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
 </head>
-<body>
-    <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">Área 51 · Wiki</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação" title="Menu de navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarWiki">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Loja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../produto.html">Produto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../servicos.html">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../galeria.html">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Wiki</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="projeto-area51.html">Documentação</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../download.html">Download</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../imprensa.html">Imprensa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../canal-feedback.html">Contato</a>
-                    </li>
+<body class="store store-inner wiki-loja">
+    <a class="sf-skip" href="#main">Ir para o conteúdo</a>
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="../index.html">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../produto.html">Produto</a></li>
+                    <li><a href="../servicos.html">Serviços</a></li>
+                    <li><a href="../galeria.html">Galeria</a></li>
+                    <li><a href="index.html" aria-current="page">Wiki</a></li>
+                    <li><a href="../download.html">Download</a></li>
+                    <li><a href="../imprensa.html">Imprensa</a></li>
+                    <li><a href="../canal-feedback.html">Contato</a></li>
                 </ul>
-            </div>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="../index.html">Início</a>
+                    <a href="../produto.html">Produto</a>
+                    <a href="../servicos.html">Serviços</a>
+                    <a href="../galeria.html">Galeria</a>
+                    <a href="index.html" aria-current="page">Wiki</a>
+                    <a href="../download.html">Download</a>
+                    <a href="../imprensa.html">Imprensa</a>
+                    <a href="../faq.html">FAQ</a>
+                    <a href="../licenca-uso.html">Licença</a>
+                    <a href="../canal-feedback.html">Contato</a>
+                </div>
+            </details>
         </div>
-    </nav>
+    </header>
 
-    <!-- Breadcrumb -->
-    <div class="wiki-breadcrumb">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="../index.html">Loja</a></li>
-                    <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
-                    <li class="breadcrumb-item active">Área 51</li>
-                </ol>
+    <div class="wiki-trail">
+        <div class="sf-header-inner">
+            <nav class="sf-breadcrumb" aria-label="Navegação">
+                <a href="../index.html">Loja</a>
+                <span class="sep">/</span>
+                <a href="index.html">Wiki</a>
+                <span class="sep">/</span>
+                <span class="sf-breadcrumb-current">Documentação do produto</span>
             </nav>
         </div>
     </div>
 
-    <div class="wiki-container">
+    <main id="main" class="wiki-container">
         <div class="row">
             <!-- Sidebar -->
             <div class="col-lg-3 col-md-4">
@@ -85,8 +71,9 @@
                     <h4>Nesta loja</h4>
                     <ul class="wiki-menu">
                         <li><a href="index.html">Início do wiki</a></li>
+                        <li><a href="../apresentacao-tecnica.html">Apresentação técnica</a></li>
                         <li><a href="projeto-area51.html" class="active">Documentação do produto</a></li>
-                        <li><a href="../download.html">Download / entregas</a></li>
+                        <li><a href="../download.html">Entrega e download</a></li>
                         <li><a href="../canal-feedback.html">Canal de feedback</a></li>
                     </ul>
 
@@ -108,11 +95,11 @@
                     <div class="project-card">
                         <div class="project-header area51">
                             <h1>Área 51</h1>
-                            <p>Sistema de Autenticação Empresarial de Alta Segurança</p>
+                            <p>Pacote técnico OpenID Connect — autenticação e identidade federada</p>
                         </div>
                         <div class="project-body">
                             <div class="alert alert-info mb-4">
-                                <strong>Wiki para colaboradores e estagiários.</strong> Esta wiki cobre <strong>somente até o mundo da Lady OAuth</strong> — a <strong>autenticação</strong> (primeira era do Reino OIDC): quem é você, login, OAuth/OIDC. O <strong>Reino das Entidades Federadas</strong> (processo completo: autorização, federação, deploy, etc.) <strong>não é divulgado aqui</strong>: é o produto da <strong>Oficina da Área 51</strong> (scripts Python em baseline) vendido na <strong>Loja da Área 51</strong>.
+                                Wiki para colaboradores e estagiários. Este conteúdo cobre autenticação (OAuth/OIDC, PKCE, login federado). A apresentação técnica na loja instrui sobre o produto privado; scripts e baseline são entregues mediante licença — não são open source.
                             </div>
                             <div class="project-status">
                                 <span class="badge badge-enterprise">Enterprise</span>
@@ -278,31 +265,47 @@
                     <section id="processo-completo" class="mb-5">
                         <h2>Reino das entidades federadas — produto Área 51</h2>
                         <div class="alert alert-warning">
-                            <h5>Processo completo não divulgado nesta wiki</h5>
-                            <p class="mb-2">Tudo que vem <strong>depois da autenticação</strong> (Lady OAuth) — autorização, federação, deploy, casos de uso, métricas — faz parte do <strong>Reino das Entidades Federadas</strong>. Esse processo está nos <strong>scripts Python</strong> da <strong>Oficina da Área 51</strong> (controle de versão, baseline) e é o <strong>produto vendido na Loja da Área 51</strong>.</p>
-                            <p class="mb-0">Colaboradores e estagiários: o detalhamento completo é interno ao produto (Oficina/Loja). Esta wiki expõe apenas até a primeira era — autenticação.</p>
+                            <h5>Processo completo fora desta wiki</h5>
+                            <p class="mb-2">Autorização, federação, deploy e casos de uso completos fazem parte do pacote técnico da Oficina/Loja da Área 51 (scripts Python em baseline versionada).</p>
+                            <p class="mb-0">Esta wiki expõe conceitos de autenticação. O detalhamento operacional está nos entregáveis da loja.</p>
                         </div>
                         <div class="d-grid gap-2 d-md-flex">
-                            <a href="../download.html" class="btn btn-primary">Loja Área 51 (produto)</a>
-                            <a href="../index.html" class="btn btn-outline-secondary">Reino OIDC (Lady OAuth)</a>
+                            <a href="../download.html" class="btn btn-primary">Download e como começar</a>
+                            <a href="../produto.html" class="btn btn-outline-secondary">Produto na loja</a>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Footer -->
-    <footer class="wiki-footer">
-        <div class="container">
-            <p>&copy; 2026 Cara Core Informática · CNPJ 23.969.028/0001-37</p>
-            <p>Área 51 - Sistema de Autenticação Empresarial de Alta Segurança</p>
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="../index.html"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="../produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="../servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="../galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="index.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="../download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Download</a>
+                <a href="../imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="../faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="../licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="../canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="../apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="../canal-feedback.html">Canal de feedback</a></p>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Wiki JS -->
     <script src="assets/js/wiki.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -37,8 +37,9 @@
                     <a href="wiki/index.html">Wiki</a>
                     <a href="download.html">Download</a>
                     <a href="imprensa.html">Imprensa</a>
+                    <a href="faq.html">FAQ</a>
                     <a href="licenca-uso.html">Licença</a>
-                    <a href="canal-feedback.html">Contato</a>
+                    <a href="canal-feedback.html" aria-current="page">Contato</a>
                 </div>
             </details>
         </div>
@@ -51,12 +52,12 @@
         </header>
 
         <div class="sf-banner-warn">
-            <strong>Sem chamadas por voz.</strong> Ligações para o número indicado não são atendidas. Utilize apenas e‑mail ou aplicações de mensagem combinadas oficialmente pela Cara Core.
+            Sem chamadas por voz. Ligações para o número indicado não são atendidas. Utilize apenas e-mail ou aplicações de mensagem oficialmente publicadas pela Cara Core.
         </div>
 
         <section class="sf-block">
             <h2>Dados de contato</h2>
-            <p>Utilize apenas estes canais segundo a publicação institucional vigente da Cara&nbsp;Core Informática. Referência típica de assunto: <strong>Suporte Área 51</strong>.</p>
+            <p>Utilize estes canais conforme a publicação institucional da Cara Core Informática. Assunto sugerido: Suporte Área 51.</p>
         </section>
 
         <div class="sf-channel-grid">
@@ -79,10 +80,11 @@
 
         <div class="sf-banner-cta">
             <h2>Antes de contactar</h2>
-            <p>Consulte serviços, entregáveis e licença para contextualizar o pedido.</p>
-            <div class="sf-actions" style="justify-content: center; flex-wrap: wrap;">
+            <p>Consulte serviços, FAQ, entregáveis e licença para contextualizar o pedido.</p>
+            <div class="sf-actions sf-actions-center">
+                <a class="sf-btn sf-btn-outline" href="faq.html">FAQ</a>
                 <a class="sf-btn sf-btn-outline" href="servicos.html">Serviços</a>
-                <a class="sf-btn sf-btn-outline" href="download.html">O que o serviço entrega</a>
+                <a class="sf-btn sf-btn-outline" href="download.html">Download e como começar</a>
                 <a class="sf-btn sf-btn-outline" href="licenca-uso.html">Licença de uso</a>
             </div>
         </div>
@@ -90,16 +92,27 @@
 
     <footer class="sf-footer">
         <div class="sf-footer-inner">
-            <nav class="sf-footer-links" aria-label="Links do rodapé">
-                <a href="index.html">Início</a>
-                <a href="produto.html">Produto</a>
-                <a href="servicos.html">Serviços</a>
-                <a href="download.html">Download</a>
-                <a href="licenca-uso.html">Licença</a>
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="index.html"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="produto.html"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="wiki/index.html"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Download</a>
+                <a href="imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="canal-feedback.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
             </nav>
             <div class="sf-footer-leg">
-                <p>&copy; 2026 Cara Core Informática · Canal de feedback Área&nbsp;51</p>
-                <p>Produto institucional de titularidade do Governo Federal · OAuth&nbsp;2.1, OIDC, PKCE</p>
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
             </div>
         </div>
     </footer>

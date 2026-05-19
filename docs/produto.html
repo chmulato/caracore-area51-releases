@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto Área 51 OIDC Platform — Federada e segura</title>
-    <meta name="description" content="Plataforma Área 51 para OpenID Connect: scripts baseline, deploy automatizado PKCE OAuth 2.1, Keycloak Docker. Visão institucional.">
+    <title>Produto Área 51 — OpenID Connect e Keycloak</title>
+    <meta name="description" content="Pacote técnico Área 51: autenticação federada com OpenID Connect, Keycloak em Docker, OAuth 2.1, PKCE e baseline versionada.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,12 +31,13 @@
                 <summary>Menu</summary>
                 <div class="sf-menu-body">
                     <a href="index.html">Início</a>
-                    <a href="produto.html">Produto</a>
+                    <a href="produto.html" aria-current="page">Produto</a>
                     <a href="servicos.html">Serviços</a>
                     <a href="galeria.html">Galeria</a>
                     <a href="wiki/index.html">Wiki</a>
                     <a href="download.html">Download</a>
                     <a href="imprensa.html">Imprensa</a>
+                    <a href="faq.html">FAQ</a>
                     <a href="licenca-uso.html">Licença</a>
                     <a href="canal-feedback.html">Contato</a>
                 </div>
@@ -46,43 +47,57 @@
 
     <main id="main" class="sf-main">
         <header class="sf-page-hero">
-            <h1>Área 51 OIDC Platform</h1>
-            <p class="sf-lede">Autenticação federada aplicável rapidamente sobre baseline documentada.</p>
+            <h1>Produto Área 51</h1>
+            <p class="sf-lede">Pacote técnico para implantar autenticação federada com OpenID Connect e Keycloak em Docker, incluindo baseline versionada, scripts automatizados e documentação para equipes técnicas.</p>
         </header>
 
-        <section class="sf-block">
-            <h2>Contexto da necessidade</h2>
-            <p>Órgãos públicos e empresas utilizam OpenID&nbsp;Connect (OIDC) para proteção de acesso, mas frequentemente enfrentam:</p>
-            <ul class="sf-block-list-warn">
-                <li>Pontos de falha onde a montagem manual de Keycloak deixa inconsistências entre equipamentos;</li>
-                <li>Espaço onde verificações obrigatórias PKCE/JWT ficam apenas em papel de projeto;</li>
-                <li>Perda de reproducibilidade entre laboratório, homologação e produção;</li>
-                <li>Calendários longamente consumidos apenas por preparação de infraestrutura.</li>
-            </ul>
+        <nav class="sf-product-nav" aria-label="Secções do produto">
+            <a href="produto.html" aria-current="page">Visão geral</a>
+            <a href="apresentacao-tecnica.html">Apresentação técnica</a>
+            <a href="download.html">Entrega e download</a>
+            <a href="licenca-uso.html">Licença</a>
+        </nav>
 
-            <h3>Linha institucional</h3>
-            <p>O ecossistema <strong>Área&nbsp;51</strong> associa automatização declarada à documentação institucional, reduzindo o custo inicial de adoção quando comparado apenas a projetos inteiramente manuais.</p>
-            <p><strong>Objetivo de referência temporal:</strong> provisionar cenário típico de laboratório em poucos minutos após saneamento das premissas técnicas; maturidade plena para produção exige ciclo próprio da organização cliente.</p>
+        <section class="sf-block">
+            <h2>Principais funcionalidades</h2>
+            <div class="sf-grid sf-grid-2">
+                <div>
+                    <h3>Autenticação segura</h3>
+                    <p>Compatível com OAuth 2.1, PKCE obrigatório e validação de tokens integrada.</p>
+                </div>
+                <div>
+                    <h3>Deploy automatizado</h3>
+                    <p>Keycloak provisionado por rotina automatizada, com baseline versionada para auditoria e reprodutibilidade.</p>
+                </div>
+                <div>
+                    <h3>Ambientes distribuídos</h3>
+                    <p>Containers Docker preparados para evolução de infraestrutura.</p>
+                </div>
+                <div>
+                    <h3>Implantação repetível</h3>
+                    <p>Mesmo processo para laboratório, homologação e produção.</p>
+                </div>
+            </div>
         </section>
 
         <section class="sf-block">
-            <h2>Camadas funcionais</h2>
+            <h2>Componentes do pacote</h2>
             <div class="sf-grid sf-grid-2">
                 <div>
                     <h3>Baseline em scripts</h3>
-                    <p>Configuração OIDC sob controle de versão, compatível OAuth&nbsp;2.1 e PKCE obrigatório.</p>
+                    <p>Configuração OIDC sob controle de versão, compatível com OAuth 2.1 e PKCE obrigatório.</p>
                 </div>
                 <div>
-                    <h3>Implantação assistida por rotina</h3>
-                    <p>Uma entrada de comando alinha Keycloak e aplicação protegida em Docker.</p>
+                    <h3>Rotina de implantação</h3>
+                    <p>Provisionamento de Keycloak e aplicação protegida em Docker.</p>
                 </div>
                 <div>
-                    <h3>Validação automatizada sugerida</h3>
-                    <p>Roteiros de teste conferem comportamento esperado antes de promover cenários produtivos.</p>
+                    <h3>Testes de fluxo</h3>
+                    <p>Scripts de validação OAuth e OIDC antes de promover ambientes produtivos.</p>
                 </div>
                 <div>
-                    <h3>Caderno técnico em português</h3>
-                    <p>Estrutura para setup, revisão conceitual e encaminhamento de incidentes comuns.</p>
+                    <h3>Documentação</h3>
+                    <p>Guias de setup, conceitos de protocolo e material visual na galeria.</p>
                 </div>
             </div>
         </section>
@@ -101,29 +116,29 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>PKCE</strong></td>
+                            <td>PKCE</td>
                             <td>Interceptação de código Authorization</td>
                             <td>Automático conforme baseline</td>
                         </tr>
                         <tr>
-                            <td><strong>Estado OAuth</strong></td>
+                            <td>Estado OAuth</td>
                             <td>CSRF contra redireções</td>
                             <td>Automático conforme baseline</td>
                         </tr>
                         <tr>
-                            <td><strong>Assinatura JWT</strong></td>
+                            <td>Assinatura JWT</td>
                             <td>Troca de token</td>
-                            <td>Checagens previstas nos testes integrados</td>
+                            <td>Checagens nos testes integrados</td>
                         </tr>
                         <tr>
-                            <td><strong>Uso combinado cookie HTTP-only</strong></td>
-                            <td>Violações via JavaScript superficial</td>
+                            <td>Cookie HTTP-only</td>
+                            <td>Exposição via JavaScript</td>
                             <td>Configuração exemplo documentada</td>
                         </tr>
                         <tr>
-                            <td><strong>Expiração de token</strong></td>
+                            <td>Expiração de token</td>
                             <td>Replay prolongado</td>
-                            <td>Parâmetros padrões publicados nos guias</td>
+                            <td>Parâmetros publicados nos guias</td>
                         </tr>
                     </tbody>
                 </table>
@@ -131,35 +146,29 @@
         </section>
 
         <section class="sf-block">
-            <h2>Casos de uso institucional</h2>
-            <h3>Setor público</h3>
-            <p>Portais restritos combinando infraestrutura existente à centralização federada quando previsto pela organização contratante.</p>
-            <h3>Setor corporativo</h3>
-            <p>Oficinas técnicas com laboratório previsível, redução de dispersão quando se replica o modelo por filiais.</p>
-            <h3>Integradora</h3>
-            <p>Base comum antes de parametrizações específicas a cada conta atendida.</p>
+            <h2>Casos de uso</h2>
+            <h3>Órgãos públicos</h3>
+            <p>Portais internos, federação de identidade entre unidades administrativas e cenários com Microsoft Entra ID.</p>
+            <h3>Empresas</h3>
+            <p>Autenticação centralizada para múltiplos sistemas, integração com ERP e CRM e redução de custo operacional por projeto.</p>
+            <h3>Desenvolvimento</h3>
+            <p>Scripts e testes de fluxo OAuth com baseline alinhada a boas práticas OIDC.</p>
+            <h3>Capacitação</h3>
+            <p>Laboratório padronizado para oficinas e trilhas de aprendizado em identidade federada.</p>
         </section>
 
         <section class="sf-block">
-            <h2>Referência rápida de comandos</h2>
-            <p>Pré-requisitos exemplo: distribuição GNU/Linux atual, Docker ativo e Python compatível declarado pelo repositório.</p>
-            <pre class="sf-code" tabindex="0"># Clonar baseline
-git clone https://github.com/chmulato/caracore-area51.git
-cd caracore-area51
+            <h2>Documentação técnica</h2>
+            <p>A apresentação técnica institucional descreve arquitectura, fluxos OIDC, componentes, segurança e modelo de entrega licenciada — sem distribuir código-fonte.</p>
+            <div class="sf-actions">
+                <a class="sf-btn sf-btn-primary" href="apresentacao-tecnica.html">Ver apresentação técnica</a>
+            </div>
+        </section>
 
-# Dependências declaradas pela release ativa
-pip install -r operational/requirements.txt
-
-# Rotina exemplo (ajustar endereços e credenciais)
-python operational/setup_oidc_environment.py \
-  --server 192.168.1.100 \
-  --docker-user admin \
-  --docker-pass password
-
-python operational/tests/validate_oidc_flow.py \
-  --keycloak-url http://192.168.1.100:8080</pre>
-
-            <p><strong>Saída esperada quando o cenário fecha sem bloqueios:</strong> servidor de identidades ativo com aplicação protegida e validação automatizada bem-sucedida.</p>
+        <section class="sf-block">
+            <h2>Pré-requisitos operacionais</h2>
+            <p>Distribuição GNU/Linux actual, Docker activo e Python 3 compatível com a release licenciada. A baseline é entregue mediante <a href="licenca-uso.html">licença de uso</a>; instruções de instalação acompanham o pacote no canal acordado.</p>
+            <p>Saída esperada quando o cenário conclui sem bloqueios: servidor de identidades activo, aplicação protegida e validação automatizada concluída.</p>
         </section>
 
         <section class="sf-block">
@@ -213,41 +222,50 @@ python operational/tests/validate_oidc_flow.py \
         </section>
 
         <section class="sf-block">
-            <h2>Relação com contratações</h2>
-            <p>O material público permite autoatendimento. A Cara Core Informática oferece <strong>Suporte Área 51</strong> mediante escopo institucional, inclusive integrações críticas. Detalhar em <a href="servicos.html">serviços</a> e <a href="canal-feedback.html">canal de feedback</a>.</p>
-            <div class="sf-actions" style="margin-top: 16px;"><a class="sf-btn sf-btn-primary" href="canal-feedback.html">Solicitar avaliação comercial</a></div>
+            <h2>Serviços contratados</h2>
+            <p>O pacote licenciado permite autoatendimento técnico quando a entrega está activa. A Cara Core Informática oferece Suporte Área 51 para implementação guiada e acompanhamento SLA. Ver <a href="servicos.html">serviços</a> e <a href="canal-feedback.html">canal de feedback</a>.</p>
+            <div class="sf-actions"><a class="sf-btn sf-btn-primary" href="canal-feedback.html">Solicitar proposta</a></div>
         </section>
 
         <div class="sf-banner-warn">
-            <strong>Titularidade institucional.</strong>
-            Produto Área&nbsp;51 de titularidade do Governo Federal.
-            Cara&nbsp;Core Informática figurando como realizadora técnica de artefatos de implantação e manutenção associados.
+            Titularidade: produto Área 51 do Governo Federal. Cara Core Informática como implementadora técnica dos artefatos de implantação.
         </div>
 
         <div class="sf-banner-cta">
-            <h2>Próximos passos</h2>
-            <p>Consolide leitura com o material de licença, download e roteiro institucional publicado pela loja oficial.</p>
-            <div class="sf-actions" style="justify-content: center; flex-wrap: wrap;">
-                <a class="sf-btn sf-btn-primary" href="https://github.com/chmulato/caracore-area51">Repositório público</a>
-                <a class="sf-btn sf-btn-outline" href="download.html">Download institucional</a>
-                <a class="sf-btn sf-btn-outline" href="canal-feedback.html">Contato institucional</a>
+            <h2>Como começar</h2>
+            <p>Inicie pela apresentação técnica, solicite entrega da baseline ou contacte a Cara Core para implementação supervisada.</p>
+            <div class="sf-actions sf-actions-center">
+                <a class="sf-btn sf-btn-primary" href="apresentacao-tecnica.html">Apresentação técnica</a>
+                <a class="sf-btn sf-btn-outline" href="download.html">Entrega e download</a>
+                <a class="sf-btn sf-btn-outline" href="canal-feedback.html">Canal de feedback</a>
             </div>
-            <p class="sf-muted-text" style="margin-top: 24px;"><a href="licenca-uso.html">Texto integral da licença de uso</a></p>
+            <p class="sf-muted-text sf-banner-foot"><a href="licenca-uso.html">Licença de uso</a></p>
         </div>
     </main>
 
     <footer class="sf-footer">
         <div class="sf-footer-inner">
-            <nav class="sf-footer-links" aria-label="Links do rodapé">
-                <a href="index.html">Início</a>
-                <a href="download.html">Download</a>
-                <a href="galeria.html">Galeria</a>
-                <a href="licenca-uso.html">Licença</a>
-                <a href="canal-feedback.html">Contato</a>
+            <h2 class="sf-visually-hidden">Rodapé institucional</h2>
+            <p class="sf-footer-brand">Área 51</p>
+            <p class="sf-footer-implementer">Cara Core Informática — implementadora técnica do Suporte Área 51</p>
+            <p class="sf-footer-tagline">Pacote técnico OpenID Connect com Keycloak em Docker, baseline versionada e documentação para equipes técnicas.</p>
+            <nav class="sf-footer-links" aria-label="Mapa do site">
+                <a href="index.html"><span class="sf-footer-num" aria-hidden="true">01</span> Início</a>
+                <a href="produto.html" aria-current="page"><span class="sf-footer-num" aria-hidden="true">02</span> Produto</a>
+                <a href="servicos.html"><span class="sf-footer-num" aria-hidden="true">03</span> Serviços</a>
+                <a href="galeria.html"><span class="sf-footer-num" aria-hidden="true">04</span> Galeria</a>
+                <a href="wiki/index.html"><span class="sf-footer-num" aria-hidden="true">05</span> Wiki</a>
+                <a href="download.html"><span class="sf-footer-num" aria-hidden="true">06</span> Download</a>
+                <a href="imprensa.html"><span class="sf-footer-num" aria-hidden="true">07</span> Imprensa</a>
+                <a href="faq.html"><span class="sf-footer-num" aria-hidden="true">08</span> FAQ</a>
+                <a href="licenca-uso.html"><span class="sf-footer-num" aria-hidden="true">09</span> Licença</a>
+                <a href="canal-feedback.html"><span class="sf-footer-num" aria-hidden="true">10</span> Contato</a>
+                <a href="apresentacao-tecnica.html"><span class="sf-footer-num" aria-hidden="true">11</span> Apresentação</a>
             </nav>
             <div class="sf-footer-leg">
-                <p>&copy; 2026 Cara Core Informática · Implementação técnica associada a serviço federal</p>
-                <p>Produto Área&nbsp;51 de titularidade do Governo Federal · <a href="https://area51.caracore.com.br/">area51.caracore.com.br</a></p>
+                <p>&copy; 2026 Cara Core Informática · Área 51 — implementação técnica de serviço</p>
+                <p>Produto de titularidade do Governo Federal</p>
+                <p class="sf-footer-contact">Contato institucional: <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
             </div>
         </div>
     </footer>
