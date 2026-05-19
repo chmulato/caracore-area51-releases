@@ -1,0 +1,48 @@
+# Memória da loja — Área 51 (caracore-area51-releases)
+
+Referência interna para manutenção da vitrine em docs/. Publicação: https://area51.caracore.com.br/
+
+## Posicionamento
+
+- Produto Área 51: titularidade Governo Federal; implementação Cara Core (Suporte Área 51).
+- Oficina (caracore-area51): código privado, licenciado — não open source.
+- Loja (este repo): HTML/CSS institucional, documentação pública do produto; não distribui código.
+
+## Mapa do site (rodapé 01–11)
+
+01 index · 02 produto · 03 servicos · 04 galeria · 05 wiki · 06 download · 07 imprensa · 08 faq · 09 licenca-uso · 10 canal-feedback · 11 apresentacao-tecnica
+
+Menu desktop (8): Início, Produto, Serviços, Galeria, Wiki, Download, Imprensa, Contato.
+Menu mobile: idem + FAQ + Licença (antes de Contato).
+
+## Área produto (subnav)
+
+produto.html · apresentacao-tecnica.html · download.html · licenca-uso.html
+
+apresentacao-tecnica.html — documentação técnica institucional (arquitetura, fluxo OIDC, entrega licenciada).
+download.html — entrega da baseline; sem repositório público.
+
+## Galeria (galeria.html)
+
+10 imagens em docs/assets/img/; legendas alinhadas aos prompts caracore-area51/marketing/prompts/01–10.
+Sem listagem de arquivos nem especificação de formato na página.
+
+Temas: 01 fluxo OIDC · 02 rede federada · 03 cloud OIDC · 04 federação gov · 05 rapidez setup · 06 integração empresarial · 07 workshop · 08 colaboração técnica · 09 Docker · 10 transformação digital gov.
+
+## Wiki
+
+docs/wiki/index.html · docs/wiki/projeto-area51.html
+Tema escuro: store-public.css + wiki-loja-align.css (data-loja-shell="1").
+
+## Sincronização
+
+scripts/sync_store_shell.py — cabeçalho e rodapé em todas as páginas docs/*.html e docs/wiki/*.html.
+Fragmentos: docs/assets/inc/store-nav.html, store-footer.html; docs/wiki/assets/inc/wiki-nav.html, wiki-footer.html.
+
+## CSS principal
+
+docs/assets/css/store-public.css (--sf-gutter, sf-header, sf-footer, sf-product-nav, galeria).
+
+## Tom editorial
+
+Profissional, institucional, conciso. Sem prolixidade; bullets directos; vocabulário corporativo.

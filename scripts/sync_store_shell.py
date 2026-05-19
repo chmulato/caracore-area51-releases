@@ -1,4 +1,7 @@
-"""Sincroniza cabeçalho e rodapé institucional em todas as páginas da loja e wiki."""
+"""Sincroniza cabeçalho e rodapé institucional (docs/*.html, docs/wiki/*.html).
+
+Referência: docs/assets/inc/loja-memoria.txt
+"""
 import re
 from pathlib import Path
 
