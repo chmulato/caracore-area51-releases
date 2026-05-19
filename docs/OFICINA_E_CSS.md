@@ -18,9 +18,8 @@ Arquivos canónicos de estilo **neste** repositório:
 
 ### Imagens da vitrine (convenção de pastas)
 
-- **Pasta padrão (canônica):** `docs/assets/img/` — usar para novo conteúdo visual ligado ao site da loja. Nas páginas em `docs/*.html`, o caminho de referência típico é **`assets/img/…`** (URL relativo à raiz `docs/` no deploy).
-- **Legado atual:** várias páginas ainda carregam os panoramas 16:9 a partir de `docs/images/` com `src="images/…"`. Mantém URLs estáveis até uma migração coordenada; **não** é obrigatório renomear arquivos ou `src` só por este guia.
-- **Wiki:** favicon e estáticos similares costumam apontar para `../assets/images/…` a partir das HTML em `docs/wiki/`; isso refere-se sobretudo a **ícone e metadados**, não ao conjunto principal de ilustrações de conteúdo (que deve seguir `assets/img` quando forem criados novos materiais ali).
+- **Pasta canônica:** `docs/assets/img/` — **todas** as imagens da loja (panoramas 16:9, favicon, novos raster/vetoriais). Nas páginas em `docs/*.html`, use **`assets/img/…`** (URL relativo à raiz `docs/` no deploy).
+- **Wiki:** a partir de `docs/wiki/*.html`, referencie com `../assets/img/…` (por exemplo `favicon.ico`).
 
 Consulte também o texto em `docs/assets/img/README.md`.
 

@@ -3,7 +3,7 @@
 Site estático em **`docs/`** (GitHub Pages) do **Suporte Área 51**, em torno de **OpenID Connect** e **OAuth 2.1** (PKCE nos exemplos públicos). Publicação habitual: **https://area51.caracore.com.br/**. Código baseline e operações: repositório **caracore-area51**.
 
 - **CSS da vitrine e vínculo com a oficina:** [docs/OFICINA_E_CSS.md](docs/OFICINA_E_CSS.md)
-- **Imagens da vitrine:** pasta canônica **`docs/assets/img/`** — convenções, legado (`docs/images/` em algumas páginas) e exceções estão descritas em [OFICINA_E_CSS.md](docs/OFICINA_E_CSS.md).
+- **Imagens da vitrine:** pasta canônica **`docs/assets/img/`** (inclui favicon e panoramas). Convenções em [OFICINA_E_CSS.md](docs/OFICINA_E_CSS.md).
 - **Ao gerar HTML institucional a partir da oficina:** `caracore-area51/docs/ALINHAMENTO_LOJA_PRESENTACAO.md`
 
 ## O que comunicamos ao público
