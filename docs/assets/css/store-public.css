@@ -130,19 +130,6 @@ body.store {
     margin-bottom: 8px;
 }
 
-.sf-skip:focus {
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    z-index: 200;
-    padding: 10px 16px;
-    background: var(--sf-accent);
-    color: var(--sf-bg);
-    font-weight: 600;
-    border-radius: var(--sf-radius-sm);
-    text-decoration: none;
-}
-
 .sf-header {
     position: sticky;
     top: 0;

@@ -65,7 +65,7 @@ WIKI_CURRENT = {
 }
 
 HEADER_PATTERN = re.compile(
-    r"    <a class=\"sf-skip\" href=\"#main\">.*?</header>",
+    r"    <header class=\"sf-header\">.*?</header>",
     re.DOTALL,
 )
 FOOTER_PATTERN = re.compile(
@@ -130,7 +130,6 @@ def store_header(current_href: str, brand_href: str = "index.html") -> str:
     ]
     mobile = [link(h, l, current_href, "                    ") for h, l in mobile_items()]
     return (
-        '    <a class="sf-skip" href="#main">Ir para o conteúdo</a>\n'
         '    <header class="sf-header">\n'
         '        <div class="sf-header-inner">\n'
         f'            <a class="sf-brand" href="{brand_href}">Área 51 — Loja</a>\n'
@@ -161,7 +160,6 @@ def wiki_header(current_href: str) -> str:
     nav_lines = [link(h, l, current_href, "                    ", wrap_li=True) for h, l in fixed]
     mobile = [link(h, l, current_href, "                    ") for h, l in wiki_mobile_items()]
     return (
-        '    <a class="sf-skip" href="#main">Ir para o conteúdo</a>\n'
         '    <header class="sf-header">\n'
         '        <div class="sf-header-inner">\n'
         '            <a class="sf-brand" href="../index.html">Área 51 — Loja</a>\n'
