@@ -46,3 +46,7 @@ docs/assets/css/store-public.css (--sf-gutter, sf-header, sf-footer, sf-product-
 ## Tom editorial
 
 Profissional, institucional, conciso. Sem prolixidade; bullets directos; vocabulário corporativo.
+
+## index.html
+
+Hero: única imagem (02 rede federada). Demais secções: cards texto (sf-card-flat). Galeria concentra as 10 figuras.
