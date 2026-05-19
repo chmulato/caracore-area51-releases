@@ -1,0 +1,71 @@
+/**
+ * Wiki Área 51 — Alinhamento com a loja oficial (tokens de store-public.css)
+ * Incluir depois dos CSS existentes da wiki. Usar html[data-loja-shell="1"] na raiz do documento.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+html[data-loja-shell="1"] body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html[data-loja-shell="1"] .wiki-nav {
+    background: rgba(13, 17, 23, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #30363d;
+    box-shadow: none !important;
+}
+
+html[data-loja-shell="1"] .wiki-nav::after {
+    content: none !important;
+    display: none !important;
+}
+
+html[data-loja-shell="1"] .wiki-nav .navbar-brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.02em;
+}
+
+html[data-loja-shell="1"] .wiki-nav .navbar-brand,
+html[data-loja-shell="1"] .wiki-nav .nav-link {
+    color: #e6edf3 !important;
+}
+
+html[data-loja-shell="1"] .wiki-nav .nav-link:hover,
+html[data-loja-shell="1"] .wiki-nav .nav-link:focus {
+    color: #58a6ff !important;
+}
+
+html[data-loja-shell="1"] .wiki-nav .navbar-toggler {
+    border-color: #30363d;
+}
+
+html[data-loja-shell="1"] .wiki-nav .navbar-toggler-icon {
+    filter: invert(1);
+    opacity: 0.92;
+}
+
+html[data-loja-shell="1"] .wiki-nav .bi,
+html[data-loja-shell="1"] .wiki-sidebar .bi,
+html[data-loja-shell="1"] .area51-nav .bi {
+    display: none !important;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb {
+    background: #161b22;
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #30363d;
+    padding: 12px 0;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item a:hover {
+    text-decoration: underline;
+}

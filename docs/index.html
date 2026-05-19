@@ -1,765 +1,344 @@
 <!DOCTYPE html>
-<html lang=”pt-BR”>
+<html lang="pt-BR">
 <head>
-    <meta charset=”UTF-8”>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
-    <title>Área 51 OIDC Platform — Autenticação Federada Segura em 5 Minutos</title>
-    <meta name=”description” content=”Proteja suas aplicações com OIDC seguro. Deploy automatizado de Keycloak, OAuth 2.1, PKCE. Para governo, empresas e desenvolvedores.”>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
-
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 15px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo { font-size: 1.5em; font-weight: bold; color: #667eea; }
-
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: #667eea; }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .hero-text h1 { font-size: 2.8em; margin-bottom: 20px; line-height: 1.2; }
-        .hero-text p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.95; }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.05em;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-        }
-
-        .hero-image {
-            position: relative;
-            height: 400px;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .badge-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 20px;
-            background: #f8f9ff;
-        }
-
-        .features-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5em;
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .section-title p {
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
-        }
-
-        .feature-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .feature-card-content {
-            padding: 25px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .feature-card h3 {
-            color: #667eea;
-            font-size: 1.3em;
-            margin-bottom: 12px;
-        }
-
-        .feature-card p {
-            color: #666;
-            margin-bottom: 20px;
-            flex: 1;
-        }
-
-        .feature-card a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: gap 0.3s;
-        }
-
-        .feature-card a:hover {
-            gap: 12px;
-        }
-
-        /* Solutions Section */
-        .solutions {
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .solutions-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .solution-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            margin-bottom: 80px;
-        }
-
-        .solution-block:nth-child(even) {
-            grid-template-columns: 1fr 1fr;
-            direction: rtl;
-        }
-
-        .solution-block:nth-child(even) > * {
-            direction: ltr;
-        }
-
-        .solution-image {
-            height: 350px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-        }
-
-        .solution-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .solution-text h3 {
-            font-size: 2em;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-
-        .solution-text p {
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .solution-points {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .solution-points li {
-            padding: 12px 0;
-            padding-left: 35px;
-            position: relative;
-            color: #666;
-        }
-
-        .solution-points li:before {
-            content: “✓”;
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .cta-content p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            opacity: 0.95;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            padding: 80px 20px;
-            background: #f8f9ff;
-        }
-
-        .gallery-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-preview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 40px 0;
-        }
-
-        .gallery-preview img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .gallery-preview img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 80px 20px;
-            background: white;
-        }
-
-        .pricing-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .pricing-card {
-            background: #f9f9f9;
-            border-radius: 12px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 2px solid #f0f0f0;
-            transition: all 0.3s;
-        }
-
-        .pricing-card:hover {
-            border-color: #667eea;
-            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
-            transform: translateY(-8px);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5em;
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .pricing-card .price {
-            font-size: 2.5em;
-            color: #764ba2;
-            margin: 20px 0;
-            font-weight: bold;
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            margin: 30px 0;
-            text-align: left;
-        }
-
-        .pricing-card li {
-            padding: 10px 0;
-            color: #666;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .pricing-card li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-card li:before {
-            content: “✓ “;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #555;
-            padding-top: 20px;
-            margin-top: 30px;
-            color: #999;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            nav ul { display: none; }
-            .hero-content { grid-template-columns: 1fr; }
-            .hero-text h1 { font-size: 2em; }
-            .hero-image { height: 250px; }
-            .solution-block { grid-template-columns: 1fr; gap: 30px; }
-            .solution-block:nth-child(even) { direction: ltr; }
-            .section-title h2 { font-size: 1.8em; }
-            .footer-links { flex-direction: column; gap: 15px; }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área 51 OIDC Platform — Autenticação federada segura em minutos</title>
+    <meta name="description" content="Proteja aplicações com OIDC seguro. OAuth 2.1 e PKCE, deploy automatizado de Keycloak. Para órgãos públicos, empresas e equipes de desenvolvimento.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/store-public.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class=”logo”>🔐 Área 51</div>
-        <ul>
-            <li><a href=”#features”>Recursos</a></li>
-            <li><a href=”#solutions”>Soluções</a></li>
-            <li><a href=”#pricing”>Preços</a></li>
-            <li><a href=”galeria.html”>Galeria</a></li>
-            <li><a href=”canal-feedback.html”>Contato</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class=”hero”>
-        <div class=”hero-content”>
-            <div class=”hero-text”>
-                <h1>🔐 Autenticação OIDC Segura em 5 Minutos</h1>
-                <p>Proteja suas aplicações com OAuth 2.1 + PKCE. Deploy automático, sem complexidade.</p>
-
-                <div class=”badge-group”>
-                    <span class=”badge”>✓ PKCE Seguro</span>
-                    <span class=”badge”>✓ OAuth 2.1</span>
-                    <span class=”badge”>✓ Keycloak Docker</span>
+<body class="store store-landing">
+    <a class="sf-skip" href="#main">Ir para o conteúdo</a>
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="index.html">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#precos">Preços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="produto.html">Produto</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="wiki/index.html">Wiki</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="imprensa.html">Imprensa</a></li>
+                    <li><a href="canal-feedback.html">Contato</a></li>
+                </ul>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="#recursos">Recursos</a>
+                    <a href="#solucoes">Soluções</a>
+                    <a href="#precos">Preços</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="produto.html">Produto</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="wiki/index.html">Wiki</a>
+                    <a href="download.html">Download</a>
+                    <a href="imprensa.html">Imprensa</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="canal-feedback.html">Contato</a>
                 </div>
-
-                <div class=”hero-buttons”>
-                    <a href=”produto.html” class=”btn btn-primary”>📖 Ver Produto</a>
-                    <a href=”download.html” class=”btn btn-secondary”>🚀 Começar Agora</a>
-                </div>
-            </div>
-            <div class=”hero-image”>
-                <img src=”images/02_security_network.png” alt=”Segurança de Rede Federada”>
-            </div>
+            </details>
         </div>
-    </section>
+    </header>
 
-    <!-- Features Section -->
-    <section class=”features” id=”features”>
-        <div class=”features-container”>
-            <div class=”section-title”>
-                <h2>⚡ O Que Área 51 Oferece</h2>
-                <p>Tudo que você precisa para OIDC seguro em um único lugar</p>
-            </div>
-
-            <div class=”features-grid”>
-                <div class=”feature-card”>
-                    <img src=”images/05_speed_setup.png” alt=”Setup Rápido”>
-                    <div class=”feature-card-content”>
-                        <h3>⚡ Setup em 5 Min</h3>
-                        <p>Deploy automático de Keycloak com um único comando. Sem configuração manual complexa.</p>
-                        <a href=”download.html”>Começar →</a>
+    <main id="main">
+        <section class="sf-hero" aria-labelledby="hero-title">
+            <div class="sf-hero-grid sf-section-inner">
+                <div>
+                    <h1 id="hero-title">Autenticação OIDC segura em até cinco minutos</h1>
+                    <p class="sf-lede">Proteção com OAuth&nbsp;2.1 e PKCE, deploy automatizado e documentação objetiva para ambientes corporativos e públicos.</p>
+                    <div class="sf-chip-row" aria-label="Destaques">
+                        <span class="sf-chip">PKCE</span>
+                        <span class="sf-chip">OAuth 2.1</span>
+                        <span class="sf-chip">Keycloak em Docker</span>
+                    </div>
+                    <div class="sf-actions">
+                        <a class="sf-btn sf-btn-primary" href="produto.html">Ver produto</a>
+                        <a class="sf-btn sf-btn-outline" href="download.html">Iniciar pelo download</a>
                     </div>
                 </div>
+                <div class="sf-media">
+                    <img src="images/02_security_network.png" width="960" height="600" alt="Diagrama conceitual de rede com autenticação federada entre aplicações.">
+                </div>
+            </div>
+        </section>
 
-                <div class=”feature-card”>
-                    <img src=”images/01_oidc_flow.png” alt=”Fluxo OIDC Seguro”>
-                    <div class=”feature-card-content”>
-                        <h3>🔒 Segurança PKCE</h3>
-                        <p>Implementa OAuth 2.1 com PKCE, JWT validado e proteção contra ataques.</p>
-                        <a href=”produto.html”>Ver Detalhes →</a>
+        <section class="sf-section sf-section-muted" id="recursos">
+            <div class="sf-section-inner">
+                <div class="sf-section-heading">
+                    <h2>O que o ecossistema oferece</h2>
+                    <p>Um conjunto único para operar OpenID&nbsp;Connect com previsibilidade e segurança.</p>
+                </div>
+                <div class="sf-grid sf-grid-cards">
+                    <a class="sf-card-link" href="download.html">
+                        <article class="sf-card">
+                            <img src="images/05_speed_setup.png" width="640" height="360" loading="lazy" alt="">
+                            <div class="sf-card-body">
+                                <h3>Tempo reduzido de implantação</h3>
+                                <p>Keycloak provisionado por rotina automatizada, com baseline versionada.</p>
+                                <span class="sf-text-link">Abrir download</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="produto.html">
+                        <article class="sf-card">
+                            <img src="images/01_oidc_flow.png" width="640" height="360" loading="lazy" alt="">
+                            <div class="sf-card-body">
+                                <h3>Padrões de segurança modernos</h3>
+                                <p>Fluxo compatível com OAuth&nbsp;2.1, PKCE obrigatório e validação de tokens.</p>
+                                <span class="sf-text-link">Detalhes técnicos</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="download.html">
+                        <article class="sf-card">
+                            <img src="images/03_cloud_deployment.png" width="640" height="360" loading="lazy" alt="">
+                            <div class="sf-card-body">
+                                <h3>Pronto para ambientes distribuídos</h3>
+                                <p>Containers Docker e práticas aptas à evolução em infraestrutura atual.</p>
+                                <span class="sf-text-link">Guia de setup</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="download.html">
+                        <article class="sf-card">
+                            <img src="images/09_docker_deployment.png" width="640" height="360" loading="lazy" alt="">
+                            <div class="sf-card-body">
+                                <h3>Implantação repetível</h3>
+                                <p>Mesmo processo entre ambientes de laboratório, homologação e produção.</p>
+                                <span class="sf-text-link">Documentação</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="galeria.html">
+                        <article class="sf-card">
+                            <img src="images/07_workshop_learning.png" width="640" height="360" loading="lazy" alt="">
+                            <div class="sf-card-body">
+                                <h3>Material orientado à equipe</h3>
+                                <p>Figuras em alta para oficinas, apresentações e kits internos.</p>
+                                <span class="sf-text-link">Explorar galeria</span>
+                            </div>
+                        </article>
+                    </a>
+                    <a class="sf-card-link" href="https://github.com/chmulato/caracore-area51">
+                        <article class="sf-card">
+                            <img src="images/08_community.png" width="640" height="360" loading="lazy" alt="">
+                            <div class="sf-card-body">
+                                <h3>Transparência no código</h3>
+                                <p>Baseline pública para auditoria colaborativa e integração gradual.</p>
+                                <span class="sf-text-link">Repositório no GitHub</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sf-section" id="solucoes">
+            <div class="sf-section-inner">
+                <div class="sf-section-heading">
+                    <h2>Soluções por contexto</h2>
+                    <p>Adapte a mesma fundação técnica a órgãos, empresas, integradores e treinamentos.</p>
+                </div>
+                <article class="sf-split">
+                    <div class="sf-split-copy">
+                        <h3>Órgãos públicos</h3>
+                        <p>Portais internos e federação de identidade entre unidades administrativas.</p>
+                        <ul class="sf-list-plain">
+                            <li>Cenários com Entra ID e integrações institucionais</li>
+                            <li>Rastreabilidade e auditoria de acesso</li>
+                            <li>Documentação adequada à governança</li>
+                        </ul>
+                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="servicos.html">Serviços</a></div>
+                    </div>
+                    <div class="sf-split-media">
+                        <img src="images/04_gov_federation.png" width="880" height="550" loading="lazy" alt="Ilustração de federação de identidades no setor público.">
+                    </div>
+                </article>
+
+                <article class="sf-split sf-split-reverse">
+                    <div class="sf-split-copy">
+                        <h3>Empresas</h3>
+                        <p>Autenticação centralizada para múltiplos sistemas, com menor custo operacional por projeto.</p>
+                        <ul class="sf-list-plain">
+                            <li>Single sign-on corporativo planejável</li>
+                            <li>Integração gradual com ERP e CRM existentes</li>
+                            <li>Implantação com suporte especializado opcional</li>
+                        </ul>
+                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="servicos.html">Solicitar apresentação</a></div>
+                    </div>
+                    <div class="sf-split-media">
+                        <img src="images/06_enterprise_integration.png" width="880" height="550" loading="lazy" alt="Integração corporativa multitenant.">
+                    </div>
+                </article>
+
+                <article class="sf-split">
+                    <div class="sf-split-copy">
+                        <h3>Desenvolvimento</h3>
+                        <p>Provas de fluxo OAuth com exemplos objetivos para acelerar o time técnico.</p>
+                        <ul class="sf-list-plain">
+                            <li>Scripts e testes de validação de fluxo</li>
+                            <li>Baseline alinhada a boas práticas OIDC</li>
+                            <li>Contraste claro entre ambiente experimental e produção</li>
+                        </ul>
+                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="https://github.com/chmulato/caracore-area51">GitHub</a></div>
+                    </div>
+                    <div class="sf-split-media">
+                        <img src="images/08_community.png" width="880" height="550" loading="lazy" alt="Colaboração em comunidade técnica.">
+                    </div>
+                </article>
+
+                <article class="sf-split sf-split-reverse">
+                    <div class="sf-split-copy">
+                        <h3>Facilitadores e capacitação</h3>
+                        <p>Laboratório padronizado para oficinas e trilhas de aprendizado em identidade federada.</p>
+                        <ul class="sf-list-plain">
+                            <li>Ambientes recriáveis em pouco tempo</li>
+                            <li>Slides e figuras institucionais na galeria</li>
+                            <li>Escopo combinável com Suporte Área&nbsp;51</li>
+                        </ul>
+                        <div class="sf-actions"><a class="sf-btn sf-btn-outline" href="canal-feedback.html">Canal institucional</a></div>
+                    </div>
+                    <div class="sf-split-media">
+                        <img src="images/07_workshop_learning.png" width="880" height="550" loading="lazy" alt="Ambiente para aprendizado e oficinas OIDC.">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="sf-section sf-section-muted">
+            <div class="sf-section-inner">
+                <div class="sf-section-heading">
+                    <h2>Galeria de recursos visuais</h2>
+                    <p>Dez imagens panorâmicas 16:9 para comunicação institucional e documentação externa.</p>
+                </div>
+                <div class="sf-gallery-mini" aria-label="Prévia da galeria">
+                    <button type="button" onclick="window.open('images/01_oidc_flow.png','_blank')">
+                        <img src="images/01_oidc_flow.png" width="320" height="180" loading="lazy" alt="Fluxo OIDC.">
+                    </button>
+                    <button type="button" onclick="window.open('images/02_security_network.png','_blank')">
+                        <img src="images/02_security_network.png" width="320" height="180" loading="lazy" alt="Rede federada segura.">
+                    </button>
+                    <button type="button" onclick="window.open('images/03_cloud_deployment.png','_blank')">
+                        <img src="images/03_cloud_deployment.png" width="320" height="180" loading="lazy" alt="Deploy em nuvem.">
+                    </button>
+                    <button type="button" onclick="window.open('images/04_gov_federation.png','_blank')">
+                        <img src="images/04_gov_federation.png" width="320" height="180" loading="lazy" alt="Federação governamental.">
+                    </button>
+                    <button type="button" onclick="window.open('images/05_speed_setup.png','_blank')">
+                        <img src="images/05_speed_setup.png" width="320" height="180" loading="lazy" alt="Implementação rápida.">
+                    </button>
+                    <button type="button" onclick="window.open('images/06_enterprise_integration.png','_blank')">
+                        <img src="images/06_enterprise_integration.png" width="320" height="180" loading="lazy" alt="Integração corporativa.">
+                    </button>
+                    <button type="button" onclick="window.open('images/07_workshop_learning.png','_blank')">
+                        <img src="images/07_workshop_learning.png" width="320" height="180" loading="lazy" alt="Aprendizado e oficinas.">
+                    </button>
+                    <button type="button" onclick="window.open('images/08_community.png','_blank')">
+                        <img src="images/08_community.png" width="320" height="180" loading="lazy" alt="Ecossistema comunitário.">
+                    </button>
+                    <button type="button" onclick="window.open('images/09_docker_deployment.png','_blank')">
+                        <img src="images/09_docker_deployment.png" width="320" height="180" loading="lazy" alt="Docker e containers.">
+                    </button>
+                    <button type="button" onclick="window.open('images/10_digital_transformation.png','_blank')">
+                        <img src="images/10_digital_transformation.png" width="320" height="180" loading="lazy" alt="Transformação digital institucional.">
+                    </button>
+                </div>
+                <div class="sf-stack-center" style="margin-top: 32px;">
+                    <a class="sf-btn sf-btn-primary" href="galeria.html">Galeria completa</a>
+                    <a class="sf-btn sf-btn-outline" href="imprensa.html">Kit de imprensa</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sf-section" id="precos">
+            <div class="sf-section-inner">
+                <div class="sf-section-heading">
+                    <h2>Modelos de engajamento</h2>
+                    <p>Estruture o relacionamento conforme disponibilidade interna e exigências de suporte.</p>
+                </div>
+                <div class="sf-pricing">
+                    <div class="sf-price-card">
+                        <h3>Baseline técnico</h3>
+                        <div class="sf-price-tag">Sem custo</div>
+                        <ul>
+                            <li>Scripts de referência OIDC</li>
+                            <li>Roteiro automatizado de deploy em Docker</li>
+                            <li>Testes de fluxo inclusos na baseline</li>
+                            <li>Documentação público-alvo institucional</li>
+                            <li>Acesso público ao repositório</li>
+                        </ul>
+                        <a class="sf-btn sf-btn-primary" href="download.html" style="width: 100%;">Abrir página de download</a>
+                    </div>
+                    <div class="sf-price-card">
+                        <h3>Implementação guiada</h3>
+                        <div class="sf-price-tag">Sob consulta</div>
+                        <ul>
+                            <li>Assistência ponta-a-ponta no ambiente do cliente</li>
+                            <li>Integração com aplicações em escopo combinado</li>
+                            <li>Validações de segurança durante o projeto</li>
+                            <li>Entrega com registro técnico de configurações</li>
+                            <li>Prazo típico de poucos dias úteis após planejamento</li>
+                        </ul>
+                        <a class="sf-btn sf-btn-primary" href="canal-feedback.html" style="width: 100%;">Solicitar proposta</a>
+                    </div>
+                    <div class="sf-price-card">
+                        <h3>Acompanhamento estendido</h3>
+                        <div class="sf-price-tag">Contrato SLA</div>
+                        <ul>
+                            <li>Personalizações e integrações institucionais</li>
+                            <li>Evoluções com governança documentada</li>
+                            <li>Apoio com janelas acordadas de atendimento</li>
+                            <li>Orientação sobre auditoria técnica</li>
+                            <li>Mobilização opcional para treinamento formal</li>
+                        </ul>
+                        <a class="sf-btn sf-btn-primary" href="canal-feedback.html" style="width: 100%;">Falar com a equipe</a>
                     </div>
                 </div>
-
-                <div class=”feature-card”>
-                    <img src=”images/03_cloud_deployment.png” alt=”Deploy Cloud”>
-                    <div class=”feature-card-content”>
-                        <h3>☁️ Cloud-Native</h3>
-                        <p>Docker, Kubernetes-ready, infraestrutura moderna para ambientes distribuídos.</p>
-                        <a href=”download.html”>Setup Guide →</a>
-                    </div>
-                </div>
-
-                <div class=”feature-card”>
-                    <img src=”images/09_docker_deployment.png” alt=”Deploy Docker”>
-                    <div class=”feature-card-content”>
-                        <h3>🐳 Containerizado</h3>
-                        <p>Keycloak em Docker. Deploy consistente em qualquer infraestrutura Linux.</p>
-                        <a href=”download.html”>Documentação →</a>
-                    </div>
-                </div>
-
-                <div class=”feature-card”>
-                    <img src=”images/07_workshop_learning.png” alt=”Treinamento”>
-                    <div class=”feature-card-content”>
-                        <h3>📚 Bem Documentado</h3>
-                        <p>Guias passo-a-passo, conceitos explicados, exemplos prontos para usar.</p>
-                        <a href=”galeria.html”>Ver Recursos →</a>
-                    </div>
-                </div>
-
-                <div class=”feature-card”>
-                    <img src=”images/08_community.png” alt=”Comunidade”>
-                    <div class=”feature-card-content”>
-                        <h3>👥 Open Source</h3>
-                        <p>Código aberto, comunidade global, contribuições bem-vindas no GitHub.</p>
-                        <a href=”https://github.com/chmulato/caracore-area51”>GitHub →</a>
-                    </div>
+                <div class="sf-stack-center" style="margin-top: 40px;">
+                    <a class="sf-btn sf-btn-outline" href="servicos.html">Catálogo de serviços</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Solutions Section -->
-    <section class=”solutions” id=”solutions”>
-        <div class=”solutions-container”>
-            <div class=”section-title”>
-                <h2>🎯 Soluções para Cada Caso</h2>
-                <p>Área 51 se adapta a diferentes necessidades</p>
-            </div>
-
-            <!-- Solution 1 -->
-            <div class=”solution-block”>
-                <div class=”solution-text”>
-                    <h3>🏛️ Governo Federal</h3>
-                    <p>Proteja portais internos e federalize identidades entre agências.</p>
-                    <ul class=”solution-points”>
-                        <li>Integração com Entra ID / Gov.br</li>
-                        <li>Conformidade NIST 800-63</li>
-                        <li>Suporte técnico dedicado</li>
-                        <li>Segurança auditada</li>
-                    </ul>
-                    <a href=”servicos.html” class=”btn btn-primary”>Ver Serviços</a>
-                </div>
-                <div class=”solution-image”>
-                    <img src=”images/04_gov_federation.png” alt=”Federação Governamental”>
+        <section class="sf-cta-banner">
+            <div class="sf-section-inner">
+                <h2>Pronto para iniciar?</h2>
+                <p>Avance pela documentação oficial ou converse com a Cara&nbsp;Core Informática quando precisar de implementação supervisada.</p>
+                <div class="sf-stack-center">
+                    <a class="sf-btn sf-btn-primary" href="download.html">Acessar entregável</a>
+                    <a class="sf-btn sf-btn-outline" href="canal-feedback.html">Canal de feedback</a>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Solution 2 -->
-            <div class=”solution-block”>
-                <div class=”solution-text”>
-                    <h3>🏢 Empresas</h3>
-                    <p>Integre múltiplos sistemas com autenticação centralizada segura.</p>
-                    <ul class=”solution-points”>
-                        <li>SSO para múltiplas aplicações</li>
-                        <li>Escalável para 1000s de usuários</li>
-                        <li>Integração ERP/CRM/HR</li>
-                        <li>Implementação rápida</li>
-                    </ul>
-                    <a href=”servicos.html” class=”btn btn-primary”>Solicitar Demo</a>
-                </div>
-                <div class=”solution-image”>
-                    <img src=”images/06_enterprise_integration.png” alt=”Integração Empresarial”>
-                </div>
-            </div>
-
-            <!-- Solution 3 -->
-            <div class=”solution-block”>
-                <div class=”solution-text”>
-                    <h3>👨‍💻 Desenvolvedores</h3>
-                    <p>Aprenda e implemente OAuth 2.1 com exemplos práticos e documentação clara.</p>
-                    <ul class=”solution-points”>
-                        <li>Exemplos de código Python/Flask</li>
-                        <li>Testes automáticos inclusos</li>
-                        <li>Documentação técnica completa</li>
-                        <li>Comunidade para dúvidas</li>
-                    </ul>
-                    <a href=”https://github.com/chmulato/caracore-area51” class=”btn btn-primary”>GitHub</a>
-                </div>
-                <div class=”solution-image”>
-                    <img src=”images/08_community.png” alt=”Comunidade Developer”>
-                </div>
-            </div>
-
-            <!-- Solution 4 -->
-            <div class=”solution-block”>
-                <div class=”solution-text”>
-                    <h3>🎓 Facilitadores / Oficinas</h3>
-                    <p>Treine equipes em OIDC com ambiente pronto em minutos.</p>
-                    <ul class=”solution-points”>
-                        <li>Setup automático para workshops</li>
-                        <li>Fluxo visível e interativo</li>
-                        <li>Materiais de treinamento inclusos</li>
-                        <li>Suporte para facilitadores</li>
-                    </ul>
-                    <a href=”canal-feedback.html” class=”btn btn-primary”>Agendar Workshop</a>
-                </div>
-                <div class=”solution-image”>
-                    <img src=”images/07_workshop_learning.png” alt=”Workshop e Treinamento”>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class=”gallery-section”>
-        <div class=”gallery-container”>
-            <div class=”section-title”>
-                <h2>🎨 Galeria de Recursos Visuais</h2>
-                <p>10 imagens profissionais 16:9 para entender melhor o produto</p>
-            </div>
-
-            <div class=”gallery-preview”>
-                <img src=”images/01_oidc_flow.png” title=”OIDC Flow” onclick=”window.open('images/01_oidc_flow.png')”>
-                <img src=”images/02_security_network.png” title=”Security Network” onclick=”window.open('images/02_security_network.png')”>
-                <img src=”images/03_cloud_deployment.png” title=”Cloud” onclick=”window.open('images/03_cloud_deployment.png')”>
-                <img src=”images/04_gov_federation.png” title=”Gov” onclick=”window.open('images/04_gov_federation.png')”>
-                <img src=”images/05_speed_setup.png” title=”Speed” onclick=”window.open('images/05_speed_setup.png')”>
-                <img src=”images/06_enterprise_integration.png” title=”Enterprise” onclick=”window.open('images/06_enterprise_integration.png')”>
-                <img src=”images/07_workshop_learning.png” title=”Workshop” onclick=”window.open('images/07_workshop_learning.png')”>
-                <img src=”images/08_community.png” title=”Community” onclick=”window.open('images/08_community.png')”>
-                <img src=”images/09_docker_deployment.png” title=”Docker” onclick=”window.open('images/09_docker_deployment.png')”>
-                <img src=”images/10_digital_transformation.png” title=”Transformation” onclick=”window.open('images/10_digital_transformation.png')”>
-            </div>
-
-            <div style=”text-align: center; margin-top: 40px;”>
-                <a href=”galeria.html” class=”btn btn-primary”>📸 Ver Galeria Completa</a>
-                <a href=”imprensa.html” class=”btn btn-secondary” style=”background: #667eea; color: white; margin-left: 15px;”>📰 Kit de Imprensa</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class=”pricing” id=”pricing”>
-        <div class=”pricing-container”>
-            <div class=”section-title”>
-                <h2>💰 Opções e Preços</h2>
-                <p>Escolha o modelo que melhor se adequa</p>
-            </div>
-
-            <div class=”pricing-cards”>
-                <div class=”pricing-card”>
-                    <h3>📦 Produto Básico</h3>
-                    <div class=”price”>Gratuito</div>
-                    <ul>
-                        <li>Scripts baseline OIDC</li>
-                        <li>Deploy automatizado</li>
-                        <li>Testes integrados</li>
-                        <li>Documentação completa</li>
-                        <li>Open source</li>
-                    </ul>
-                    <a href=”download.html” class=”btn btn-primary” style=”width: 100%; margin-top: 20px; text-align: center;”>Baixar</a>
-                </div>
-
-                <div class=”pricing-card”>
-                    <h3>🚀 Implementação</h3>
-                    <div class=”price”>T&M</div>
-                    <ul>
-                        <li>Setup guiado</li>
-                        <li>Integração aplicação</li>
-                        <li>Suporte implementação</li>
-                        <li>Validação segurança</li>
-                        <li>2-5 dias entrega</li>
-                    </ul>
-                    <a href=”canal-feedback.html” class=”btn btn-primary” style=”width: 100%; margin-top: 20px; text-align: center;”>Solicitar</a>
-                </div>
-
-                <div class=”pricing-card”>
-                    <h3>🏆 Platinum</h3>
-                    <div class=”price”>SLA</div>
-                    <ul>
-                        <li>Setup + customizações</li>
-                        <li>Gov.br / Entra ID</li>
-                        <li>Auditoria segurança</li>
-                        <li>Suporte 24x5</li>
-                        <li>Treinamento equipe</li>
-                    </ul>
-                    <a href=”canal-feedback.html” class=”btn btn-primary” style=”width: 100%; margin-top: 20px; text-align: center;”>Contatar</a>
-                </div>
-            </div>
-
-            <div style=”text-align: center; margin-top: 50px;”>
-                <a href=”servicos.html” class=”btn btn-primary”>💼 Ver Todos os Serviços</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class=”cta-section”>
-        <div class=”cta-content”>
-            <h2>Pronto para Proteger Suas Aplicações?</h2>
-            <p>Implemente OIDC seguro em minutos, não semanas</p>
-            <div style=”display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;”>
-                <a href=”download.html” class=”btn btn-primary”>🚀 Começar Agora</a>
-                <a href=”canal-feedback.html” class=”btn btn-secondary”>💬 Falar com Especialista</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class=”footer-content”>
-            <h3>🔐 Área 51 OIDC Platform</h3>
-            <p style=”margin: 15px 0; color: #aaa;”>Autenticação federada segura para governo, empresas e comunidade desenvolvedora</p>
-
-            <div class=”footer-links”>
-                <a href=”produto.html”>Produto</a>
-                <a href=”servicos.html”>Serviços</a>
-                <a href=”galeria.html”>Galeria</a>
-                <a href=”imprensa.html”>Imprensa</a>
-                <a href=”licenca-uso.html”>Licença</a>
-                <a href=”canal-feedback.html”>Contato</a>
-                <a href=”https://github.com/chmulato/caracore-area51”>GitHub</a>
-            </div>
-
-            <div class=”footer-bottom”>
-                <p>&copy; 2026 Cara Core Informática · Área 51 — Implementação técnica de serviço do Governo Federal</p>
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <h2 class="sf-visually-hidden">Rodapé</h2>
+            <p style="margin: 0; color: var(--sf-text); font-weight: 600;">Área&nbsp;51 OIDC Platform</p>
+            <p class="sf-muted-text" style="margin: 8px auto 0; max-width: 520px;">Autenticação federada planejável para instituições, empresas e comunidade técnica.</p>
+            <nav class="sf-footer-links" aria-label="Links do rodapé">
+                <a href="produto.html">Produto</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="imprensa.html">Imprensa</a>
+                <a href="licenca-uso.html">Licença</a>
+                <a href="canal-feedback.html">Contato</a>
+                <a href="https://github.com/chmulato/caracore-area51">GitHub</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>&copy; 2026 Cara Core Informática &middot; Área&nbsp;51 — implementação técnica correlata a serviço federal</p>
                 <p>Produto de titularidade do Governo Federal</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
-

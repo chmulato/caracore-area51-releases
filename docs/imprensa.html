@@ -3,402 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kit de Imprensa — Área 51 OIDC Platform</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
-
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 20px; text-align: center; }
-        header h1 { font-size: 2.2em; margin-bottom: 10px; }
-        header p { font-size: 1.1em; opacity: 0.9; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-
-        section { margin: 40px 0; padding: 30px; background: #f9f9f9; border-radius: 8px; }
-        section h2 { color: #667eea; margin-bottom: 20px; font-size: 1.8em; }
-        section h3 { color: #764ba2; margin-top: 20px; margin-bottom: 10px; font-size: 1.3em; }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin: 25px 0;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .card h4 { color: #667eea; margin-bottom: 10px; }
-
-        .button-group {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover { background: #764ba2; }
-
-        .btn-secondary { background: #764ba2; }
-        .btn-secondary:hover { background: #667eea; }
-
-        .highlight {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-
-        .key-facts {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .fact {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            border: 2px solid #667eea;
-        }
-
-        .fact .number {
-            font-size: 2.5em;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .fact .label {
-            color: #666;
-            margin-top: 10px;
-        }
-
-        .testimonials {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .testimonial {
-            margin: 20px 0;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 5px;
-            border-left: 3px solid #764ba2;
-        }
-
-        .testimonial strong { color: #667eea; }
-
-        .gallery-preview {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .gallery-preview img {
-            width: 100%;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .gallery-preview img:hover { transform: scale(1.05); }
-
-        footer { background: #333; color: white; padding: 20px; text-align: center; margin-top: 40px; }
-
-        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.5em; }
-            .grid-2 { grid-template-columns: 1fr; }
-        }
-    </style>
+    <title>Kit de imprensa — Área 51 OIDC | Cara Core Informática</title>
+    <meta name="description" content="Informações institucionais Área 51: resumo editorial, dados centrais, galeria 16:9 e contatos formais para mídia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/store-public.css">
 </head>
-<body>
-    <header>
-        <h1>📰 Kit de Imprensa — Área 51 OIDC Platform</h1>
-        <p>Recursos profissionais para mídia, apresentações e materiais comerciais</p>
+<body class="store store-inner">
+    <a class="sf-skip" href="#main">Ir para o conteúdo</a>
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="index.html">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produto.html">Produto</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="wiki/index.html">Wiki</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="imprensa.html" aria-current="page">Imprensa</a></li>
+                    <li><a href="canal-feedback.html">Contato</a></li>
+                </ul>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="index.html">Início</a>
+                    <a href="produto.html">Produto</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="wiki/index.html">Wiki</a>
+                    <a href="download.html">Download</a>
+                    <a href="imprensa.html">Imprensa</a>
+                    <a href="licenca-uso.html">Licença</a>
+                    <a href="canal-feedback.html">Contato</a>
+                </div>
+            </details>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- Executive Summary -->
-        <section>
-            <h2>📋 Resumo Executivo</h2>
-            <p><strong>Área 51</strong> é a <strong>plataforma completa de OIDC (OpenID Connect)</strong> que reduz o tempo de implementação de autenticação federada de semanas para minutos.</p>
+    <main id="main" class="sf-main">
+        <header class="sf-page-hero">
+            <h1>Kit de imprensa</h1>
+            <p class="sf-lede">Texto público sobre a linha Área&nbsp;51 OIDC, alinhamento institucional e recursos disponíveis na loja oficial.</p>
+        </header>
+
+        <section class="sf-block">
+            <h2>Resumo editorial</h2>
+            <p><strong>Área&nbsp;51</strong> é uma linha técnica de apoio à implantação de OpenID&nbsp;Connect e OAuth&nbsp;2.1, com baseline publicada, exemplo de automatização para Keycloak em Docker e roteiros de validação.</p>
 
             <div class="key-facts">
                 <div class="fact">
-                    <div class="number">&lt;5min</div>
-                    <div class="label">Setup Automatizado</div>
+                    <div class="number">&lt; 5 min</div>
+                    <div class="label">Referência de laboratório após saneamento de pré‑requisitos</div>
                 </div>
                 <div class="fact">
-                    <div class="number">100%</div>
-                    <div class="label">Segurança (PKCE)</div>
+                    <div class="number">OAuth 2.1</div>
+                    <div class="label">PKCE e controles relacionados conforme exemplos públicos</div>
                 </div>
                 <div class="fact">
-                    <div class="number">70%</div>
-                    <div class="label">Redução de Tempo</div>
+                    <div class="number">~70%</div>
+                    <div class="label">Economia relatada em cenários exemplo (estimativa ilustrativa)</div>
                 </div>
                 <div class="fact">
                     <div class="number">10</div>
-                    <div class="label">Imagens 16:9</div>
+                    <div class="label">Figuras institucionais 16:9 na galeria</div>
                 </div>
             </div>
 
-            <div class="highlight">
-                <strong>💡 Fato Chave:</strong> Área 51 transforma a implementação de OIDC de um projeto de semanas em um setup de minutos, com segurança garantida e documentação completa.
+            <div class="highlight-soft">
+                <strong>Nota institucional.</strong>
+                Não substitui proposta comercial nem documento jurídico. Produção oficial exige revisão pela Cara Core ou órgão competente antes de distribuição externa.
             </div>
         </section>
 
-        <!-- Company Boilerplate -->
-        <section>
-            <h2>🏢 Sobre a Cara Core Informática</h2>
-            <p>A Cara Core Informática é especialista em <strong>transformação digital</strong> e <strong>segurança de identidade federada</strong> para órgãos públicos, empresas e integradores.</p>
-
-            <h3>Missão</h3>
-            <p>Democratizar o acesso a autenticação federada moderna (OIDC/OAuth 2.1) através de soluções open-source, seguras e de fácil implementação.</p>
-
-            <h3>O Produto: Área 51</h3>
-            <p>Desenvolvimento conjunto entre Cara Core e Governo Federal:</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li><strong>Scripts baseline</strong> — Configuração OIDC padronizada (Python)</li>
-                <li><strong>Deploy automatizado</strong> — Keycloak em Docker com um comando</li>
-                <li><strong>Segurança integrada</strong> — PKCE, JWT, OAuth 2.1</li>
-                <li><strong>Documentação completa</strong> — Setup, conceitos, troubleshooting</li>
-            </ul>
+        <section class="sf-block">
+            <h2>Sobre a Cara Core Informática</h2>
+            <p>Presta serviços técnicos de implementação relacionados ao ecossistema identitário, conforme instrumentos válidos entre as partes. Atua sobre material baseline público e escopos sob contrato.</p>
+            <h3>Produto e titularidade</h3>
+            <p>O núcleo de produto institucional <strong>Área&nbsp;51</strong> é de titularidade do Governo Federal. A Cara Core figura como implementadora técnica de artefatos e serviços contratados, conforme já descrito nas páginas de <a href="licenca-uso.html">licença de uso</a> e do <a href="download.html">download</a>.</p>
         </section>
 
-        <!-- Marketing Assets -->
-        <section>
-            <h2>🎨 Ativos de Marketing Disponíveis</h2>
-
-            <h3>Imagens em Alta Resolução (16:9 Landscape)</h3>
-            <p>Conjunto de <strong>10 imagens profissionais</strong> criadas especificamente para apresentações, websites e material promocional.</p>
-
-            <div class="gallery-preview">
-                <img src="images/01_oidc_flow.png" title="OIDC Flow" onclick="window.open('images/01_oidc_flow.png')">
-                <img src="images/02_security_network.png" title="Security Network" onclick="window.open('images/02_security_network.png')">
-                <img src="images/03_cloud_deployment.png" title="Cloud Deployment" onclick="window.open('images/03_cloud_deployment.png')">
-                <img src="images/04_gov_federation.png" title="Gov Federation" onclick="window.open('images/04_gov_federation.png')">
-                <img src="images/05_speed_setup.png" title="Speed Setup" onclick="window.open('images/05_speed_setup.png')">
-                <img src="images/06_enterprise_integration.png" title="Enterprise" onclick="window.open('images/06_enterprise_integration.png')">
-                <img src="images/07_workshop_learning.png" title="Workshop" onclick="window.open('images/07_workshop_learning.png')">
-                <img src="images/08_community.png" title="Community" onclick="window.open('images/08_community.png')">
-                <img src="images/09_docker_deployment.png" title="Docker" onclick="window.open('images/09_docker_deployment.png')">
-                <img src="images/10_digital_transformation.png" title="Digital Trans" onclick="window.open('images/10_digital_transformation.png')">
+        <section class="sf-block">
+            <h2>Recursos disponíveis</h2>
+            <p>Galeria com dez imagens em proporção panorâmica, adequadas a relatórios, apresentações e páginas institucionais, conforme permissões internas aplicáveis.</p>
+            <div class="gallery-preview-mini">
+                <img src="images/01_oidc_flow.png" alt="OIDC Flow" tabindex="0" onclick="window.open('images/01_oidc_flow.png','_blank')">
+                <img src="images/02_security_network.png" alt="Rede segurança federada" tabindex="0" onclick="window.open('images/02_security_network.png','_blank')">
+                <img src="images/03_cloud_deployment.png" alt="Cloud deployment" tabindex="0" onclick="window.open('images/03_cloud_deployment.png','_blank')">
+                <img src="images/04_gov_federation.png" alt="Federação governamental" tabindex="0" onclick="window.open('images/04_gov_federation.png','_blank')">
+                <img src="images/05_speed_setup.png" alt="Setup rápido" tabindex="0" onclick="window.open('images/05_speed_setup.png','_blank')">
+                <img src="images/06_enterprise_integration.png" alt="Integração corporativa" tabindex="0" onclick="window.open('images/06_enterprise_integration.png','_blank')">
+                <img src="images/07_workshop_learning.png" alt="Treinamento" tabindex="0" onclick="window.open('images/07_workshop_learning.png','_blank')">
+                <img src="images/08_community.png" alt="Comunidade técnica" tabindex="0" onclick="window.open('images/08_community.png','_blank')">
+                <img src="images/09_docker_deployment.png" alt="Docker" tabindex="0" onclick="window.open('images/09_docker_deployment.png','_blank')">
+                <img src="images/10_digital_transformation.png" alt="Transformação digital governamental" tabindex="0" onclick="window.open('images/10_digital_transformation.png','_blank')">
             </div>
-
-            <div class="button-group">
-                <a href="galeria.html" class="btn">🖼️ Ver Galeria Completa</a>
-                <a href="images/" class="btn btn-secondary">📥 Download de Imagens</a>
+            <div class="button-row">
+                <a class="sf-btn sf-btn-primary" href="galeria.html">Ver galeria completa</a>
+                <a class="sf-btn sf-btn-outline" href="images/">Abrir índice de imagens</a>
             </div>
-
-            <h3>Especificações das Imagens</h3>
-            <div class="grid-2">
-                <div class="card">
-                    <h4>📐 Técnico</h4>
-                    <p><strong>Formato:</strong> PNG</p>
-                    <p><strong>Resolução:</strong> 1920x1080px</p>
-                    <p><strong>Aspect Ratio:</strong> 16:9 Landscape</p>
-                    <p><strong>Tamanho:</strong> ~2MB por imagem</p>
+            <div class="sf-grid sf-grid-2" style="margin-top: 24px;">
+                <div class="sf-block" style="margin: 0;">
+                    <h4 style="margin: 0 0 10px;">Arquivo técnico</h4>
+                    <p class="sf-muted-text" style="margin: 0;"><strong>Formato:</strong> PNG<br><strong>Sugestão de resolução:</strong> 1920&nbsp;×&nbsp;1080<br><strong>Proporção:</strong> 16:9 horizontal</p>
                 </div>
-                <div class="card">
-                    <h4>🎨 Design</h4>
-                    <p><strong>Estilo:</strong> Moderno e corporativo</p>
-                    <p><strong>Cores:</strong> Azul, roxo, gradientes</p>
-                    <p><strong>Tema:</strong> OIDC, segurança, cloud</p>
-                    <p><strong>Qualidade:</strong> Premium</p>
-                </div>
-                <div class="card">
-                    <h4>✅ Licença</h4>
-                    <p><strong>Direitos:</strong> Comerciais</p>
-                    <p><strong>Reutilização:</strong> Permitida</p>
-                    <p><strong>Modificação:</strong> Permitida</p>
-                    <p><strong>Atribuição:</strong> Recomendada</p>
-                </div>
-                <div class="card">
-                    <h4>📦 Entrega</h4>
-                    <p><strong>Formato:</strong> Arquivos PNG</p>
-                    <p><strong>Localização:</strong> /docs/images/</p>
-                    <p><strong>Acesso:</strong> Web + download</p>
-                    <p><strong>Status:</strong> Pronto</p>
+                <div class="sf-block" style="margin: 0;">
+                    <h4 style="margin: 0 0 10px;">Uso e conformidade</h4>
+                    <p class="sf-muted-text" style="margin: 0;"><a href="licenca-uso.html">Licença de uso institucional</a>. Rever políticas da sua organização antes de publicação externa.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Key Messages -->
-        <section>
-            <h2>💬 Mensagens-Chave para Comunicação</h2>
+        <section class="sf-block">
+            <h2>Mensagens públicas recomendadas (editorial neutro)</h2>
 
-            <h3>Para Órgãos Públicos / Governo</h3>
-            <div class="card">
-                <p>✅ <strong>Segurança certificada:</strong> Implementa padrões OAuth 2.1 + OIDC com PKCE</p>
-                <p>✅ <strong>Rapidez:</strong> Deploy em minutos, não semanas</p>
-                <p>✅ <strong>Transparência:</strong> Open-source, código auditável</p>
-                <p>✅ <strong>Soberania:</strong> Executável localmente, sem dependência de cloud externo</p>
-            </div>
-
-            <h3>Para Empresas / Integradores</h3>
-            <div class="card">
-                <p>✅ <strong>ROI rápido:</strong> Reduza tempo de implementação em 70%</p>
-                <p>✅ <strong>Padrão reutilizável:</strong> Implemente para múltiplos clientes</p>
-                <p>✅ <strong>Suporte dedicado:</strong> Oferecemos serviços de implementação</p>
-                <p>✅ <strong>Comunidade:</strong> Compartilhe conhecimento com devs globais</p>
-            </div>
-
-            <h3>Para Desenvolvedores / Tech Community</h3>
-            <div class="card">
-                <p>✅ <strong>Open-source:</strong> Código Python reutilizável</p>
-                <p>✅ <strong>Fácil de usar:</strong> Deploy automatizado com Docker</p>
-                <p>✅ <strong>Bem documentado:</strong> Setup, conceitos, exemplos</p>
-                <p>✅ <strong>Comunidade ativa:</strong> Contribua e aprenda</p>
-            </div>
-        </section>
-
-        <!-- Use Cases -->
-        <section>
-            <h2>📋 Casos de Uso Reais</h2>
-
-            <h3>1. Órgão Federal — Proteger Portal Interno</h3>
+            <h3>Setor público</h3>
             <div class="testimonials">
-                <p><strong>Desafio:</strong> Portal interno sem proteção adequada de acesso</p>
-                <p><strong>Solução:</strong> Area 51 + Keycloak + Integração Entra ID</p>
-                <p><strong>Resultado:</strong> Implementado em 3 dias, acesso federado seguro, PKCE validado</p>
-                <p><strong>Impacto:</strong> Segurança 100%, conformidade NIST 800-63</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Alinhamento a padrões OAuth&nbsp;2.1 e OIDC com PKCE, conforme material técnico publicado.</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Possibilidade de laboratório em tempo reduzido após saneamento de pré‑requisitos institucional.</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Código exemplo aberto, sujeito a políticas próprias de auditoria antes de produção crítica.</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Implantações podem ficar inteiramente em infraestrutura controlada pela organização clientes.</p>
             </div>
 
-            <h3>2. Empresa Média — Oficina de OIDC</h3>
+            <h3>Empresas e integradores</h3>
             <div class="testimonials">
-                <p><strong>Desafio:</strong> Treinar 50 desenvolvedores em OAuth 2.1 / OIDC</p>
-                <p><strong>Solução:</strong> Ambiente de treinamento com Area 51</p>
-                <p><strong>Resultado:</strong> 4 horas de treinamento prático, hands-on</p>
-                <p><strong>Impacto:</strong> Equipe capacitada em segurança de identidade</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Modelo repetível pode reduzir retrabalho em novos projetos (estimativa de referência apenas).</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Possibilidade de serviços especializados via Cara&nbsp;Core, mediante escopo contratual próprio.</p>
             </div>
 
-            <h3>3. Integrador — Múltiplos Clientes</h3>
+            <h3>Desenvolvimento</h3>
             <div class="testimonials">
-                <p><strong>Desafio:</strong> Implementar OIDC para 5+ clientes com padrão consistente</p>
-                <p><strong>Solução:</strong> Area 51 como baseline, scripts reutilizáveis</p>
-                <p><strong>Resultado:</strong> 70% redução de tempo por cliente</p>
-                <p><strong>Impacto:</strong> Modelo de negócio escalável</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Baseline em Python exemplificativo; integração deve seguir padrões de cada organização cliente.</p>
+                <p class="sf-muted-text" style="margin: 8px 0;">Documentação e exercícios de validação fazem parte do repositório público.</p>
             </div>
         </section>
 
-        <!-- Facts & Figures -->
-        <section>
-            <h2>📊 Dados e Fatos</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h4>⏱️ Tempo</h4>
-                    <p><strong>Antes:</strong> 2-3 semanas setup manual</p>
-                    <p><strong>Depois:</strong> &lt;5 minutos automatizado</p>
-                    <p><strong>Economia:</strong> 95% redução</p>
-                </div>
-                <div class="card">
-                    <h4>🛡️ Segurança</h4>
-                    <p><strong>Padrões:</strong> OAuth 2.1, OIDC, PKCE</p>
-                    <p><strong>Proteções:</strong> 6 camadas de segurança</p>
-                    <p><strong>Validação:</strong> Testes automáticos inclusos</p>
-                </div>
-                <div class="card">
-                    <h4>💰 Custo</h4>
-                    <p><strong>Produto básico:</strong> Gratuito (Gov Federal)</p>
-                    <p><strong>Implementação:</strong> T&M (dias vs. semanas)</p>
-                    <p><strong>ROI:</strong> 70% redução de horas</p>
-                </div>
-                <div class="card">
-                    <h4>👥 Público</h4>
-                    <p><strong>Governo:</strong> Órgãos federais</p>
-                    <p><strong>Empresa:</strong> PME a grandes corporações</p>
-                    <p><strong>Dev:</strong> Comunidade global</p>
-                </div>
+        <section class="sf-banner-cta">
+            <h2>Contato institucional</h2>
+            <p>Dúvidas de mídia e pedidos formais devem usar o canal consolidado ou o endereço de imprensa, se vigente:</p>
+            <p style="margin: 8px 0 20px;"><strong>imprensa@caracore.com.br</strong><br>Página institucional: <a href="https://area51.caracore.com.br/">area51.caracore.com.br</a><br>Código exemplo: <a href="https://github.com/chmulato/caracore-area51">GitHub público declarado na loja</a></p>
+            <div class="button-row" style="justify-content: center;">
+                <a class="sf-btn sf-btn-primary" href="canal-feedback.html">Canal de feedback oficial</a>
+                <a class="sf-btn sf-btn-outline" href="produto.html">Produto</a>
+                <a class="sf-btn sf-btn-outline" href="servicos.html">Serviços</a>
             </div>
         </section>
 
-        <!-- Contact & Resources -->
-        <section style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-            <h2 style="color: white;">📞 Contato e Recursos</h2>
-            <p style="font-size: 1.1em; margin: 20px 0;">Para cobertura de mídia, entrevistas ou material adicional</p>
-
-            <div class="button-group" style="justify-content: center;">
-                <a href="canal-feedback.html" class="btn" style="background: white; color: #667eea;">📧 Contato de Imprensa</a>
-                <a href="produto.html" class="btn" style="background: rgba(255,255,255,0.2);">📖 Página do Produto</a>
-                <a href="galeria.html" class="btn" style="background: rgba(255,255,255,0.2);">🖼️ Galeria de Imagens</a>
-            </div>
-
-            <p style="margin-top: 30px; opacity: 0.9;">
-                <strong>Email:</strong> imprensa@caracore.com.br<br>
-                <strong>Website:</strong> https://area51.caracore.com.br/<br>
-                <strong>GitHub:</strong> https://github.com/chmulato/caracore-area51
-            </p>
-        </section>
-
-        <!-- Downloads Section -->
-        <section>
-            <h2>📥 Downloads Rápidos</h2>
-            <p>Todos os recursos estão disponíveis para download:</p>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h4>🖼️ Imagens (10x)</h4>
-                    <p>Conjunto completo de imagens 16:9 landscape em PNG alta resolução</p>
-                    <a href="images/01_oidc_flow.png" class="btn" style="display: inline-block; margin-top: 10px;">Download</a>
+        <section class="sf-block">
+            <h2>Referências rápidas</h2>
+            <div class="sf-grid sf-grid-2">
+                <div class="sf-block" style="margin: 0;">
+                    <h4 style="margin: 0 0 8px;">Imagens completas</h4>
+                    <p class="sf-muted-text" style="margin: 0;"><a href="galeria.html">Catálogo com ampliável</a> e arquivo em <code>docs/images/</code>.</p>
                 </div>
-                <div class="card">
-                    <h4>📄 Documentação</h4>
-                    <p>Proposta de serviço, especificações técnicas, casos de uso</p>
-                    <a href="download.html" class="btn" style="display: inline-block; margin-top: 10px;">Acessar</a>
+                <div class="sf-block" style="margin: 0;">
+                    <h4 style="margin: 0 0 8px;">Oferta de implementação</h4>
+                    <p class="sf-muted-text" style="margin: 0;"><a href="servicos.html">Serviços e modelos contratuais</a>; <a href="download.html">o que entrega o serviço</a>.</p>
                 </div>
-                <div class="card">
-                    <h4>💻 Código</h4>
-                    <p>Repositório GitHub com scripts, testes e documentação</p>
-                    <a href="https://github.com/chmulato/caracore-area51" class="btn" style="display: inline-block; margin-top: 10px;">GitHub</a>
+                <div class="sf-block" style="margin: 0;">
+                    <h4 style="margin: 0 0 8px;">Linha técnica</h4>
+                    <p class="sf-muted-text" style="margin: 0;"><a href="produto.html">Visão institucional do produto baseline</a>.</p>
                 </div>
-                <div class="card">
-                    <h4>🎯 Apresentação</h4>
-                    <p>Deck de vendas, materiais comerciais, casos de uso</p>
-                    <a href="servicos.html" class="btn" style="display: inline-block; margin-top: 10px;">Ver</a>
+                <div class="sf-block" style="margin: 0;">
+                    <h4 style="margin: 0 0 8px;">Reposição econômica</h4>
+                    <p class="sf-muted-text" style="margin: 0;"><a href="servicos.html">Informações econômicas</a> via contato institucional.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Copyright -->
-        <section style="text-align: center; background: white; border-top: 2px solid #667eea; border-bottom: 2px solid #667eea;">
+        <section class="sf-block" style="text-align: center;">
             <p style="margin: 0;"><strong>© 2026 Cara Core Informática</strong></p>
-            <p style="margin: 5px 0; color: #666;">Produto Área 51 de titularidade do Governo Federal</p>
-            <p style="margin: 5px 0; color: #999; font-size: 0.9em;">Imagens © Cara Core Informática — Uso comercial permitido</p>
+            <p class="sf-muted-text" style="margin: 8px 0 0;">Produto Área&nbsp;51 — titularidade do Governo Federal. Figuras institucionalmente atribuídas à Cara Core conforme comunicação oficial da loja.</p>
+            <p class="sf-muted-text" style="margin: 16px 0 0;"><strong>Versão sugerida do kit:</strong> 2026-05</p>
         </section>
-    </div>
+    </main>
 
-    <footer>
-        <p>Kit de Imprensa — Área 51 OIDC Platform</p>
-        <p>Atualizado em 2026-05-18</p>
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <nav class="sf-footer-links" aria-label="Links do rodapé">
+                <a href="index.html">Início</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="download.html">Download</a>
+                <a href="canal-feedback.html">Contato</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>Kit institucional · Área&nbsp;51 OIDC Platform · material redacional estático hospedado em GitHub Pages</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

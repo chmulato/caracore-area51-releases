@@ -5,53 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://area51.caracore.com.br/">
     <title>Licença de Uso — Área 51 | Cara Core Informática</title>
-    <meta name="description" content="Licença de uso dos scripts de configuração Área 51. OpenID Connect, Reino das Entidades Federadas. Suporte para médias empresas.">
+    <meta name="description" content="Licença de uso dos scripts de configuração Área 51. OpenID Connect e titularidade do produto.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/area51.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+    <link rel="stylesheet" href="assets/css/store-public.css">
+    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
 </head>
-<body>
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">Área 51 — Loja</a>
-            <span> · </span>
-            <a href="index.html">Área 51 — Loja</a>
-            <span> · </span>
-            <span>Licença de uso</span>
+<body class="store store-inner">
+    <a class="sf-skip" href="#main">Ir para o conteúdo</a>
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="index.html">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produto.html">Produto</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="wiki/index.html">Wiki</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="imprensa.html">Imprensa</a></li>
+                    <li><a href="canal-feedback.html">Contato</a></li>
+                </ul>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="index.html">Início</a>
+                    <a href="produto.html">Produto</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="wiki/index.html">Wiki</a>
+                    <a href="download.html">Download</a>
+                    <a href="imprensa.html">Imprensa</a>
+                    <a href="licenca-uso.html">Licença</a>
+                    <a href="canal-feedback.html">Contato</a>
+                </div>
+            </details>
+        </div>
+    </header>
+
+    <main id="main" class="sf-main">
+        <nav class="sf-breadcrumb" aria-label="Navegação secundária">
+            <a href="index.html">Loja</a><span class="sep">/</span>
+            <span class="sf-breadcrumb-current">Licença de uso</span>
         </nav>
-        <header>
-            <h1>Licença de Uso — Área 51</h1>
-            <p class="subtitle">Cara Core Informática — CNPJ 23.969.028/0001-37</p>
+
+        <header class="sf-page-hero">
+            <h1>Licença de uso</h1>
+            <p class="sf-lede" style="max-width: none;">Cara Core Informática — CNPJ 23.969.028/0001-37</p>
         </header>
 
-        <section class="methodology">
-            <div class="card">
-                <h2>Produto: scripts de configuração OpenID Connect</h2>
-                <p>Os scripts de configuração da Área 51 (Reino das Entidades Federadas, OpenID Connect) integram produto de titularidade do Governo Federal. Entregues em formato baseline, com controle de versão, para configuração de ambientes de autenticação e autorização (OAuth 2.1, OIDC, PKCE). O Suporte Área 51 é o serviço de implementação e configuração técnica para médias empresas, executado pela Cara Core conforme escopo contratado. A contratação do serviço é feita pelo <a href="canal-feedback.html">canal de feedback</a>. Ver <a href="download.html">Download</a>.</p>
-            </div>
-            <div class="card">
-                <h2>Uso e responsabilidade</h2>
-                <p>O uso dos scripts e das configurações geradas em ambiente de produção é de responsabilidade do cliente. A Cara Core recomenda validação da baseline e testes antes do uso em cenários críticos. A documentação técnica (oficina, estratégia de desenvolvimento) descreve boas práticas e o alinhamento ao protocolo usado pela Matriz em produção. A Cara Core não reivindica titularidade do produto Área 51, atuando apenas na implementação técnica do serviço.</p>
-            </div>
-            <div class="card">
-                <h2>Propriedade intelectual</h2>
-                <p>A titularidade do produto Área 51 pertence ao Governo Federal. Os artefatos técnicos de implementação e configuração entregues pela Cara Core seguem contrato e escopo de serviço firmado com o cliente. O Reino das Entidades Federadas e o Crachá (OpenID Connect, padrão de mercado) são apresentados como modelo técnico-operacional desta solução.</p>
-            </div>
+        <section class="sf-block">
+            <h2>Produto — scripts de configuração OpenID Connect</h2>
+            <p>Os scripts de configuração da Área 51 destinam‑se ao ambiente de autenticação e autorização (OAuth&nbsp;2.1, OIDC, PKCE) em formato baseline versionado. O produto institucional <strong>Área&nbsp;51</strong> reconhece titularidade do Governo Federal. O <strong>Suporte Área&nbsp;51</strong> refere‑se ao serviço de implementação e configuração executado pela Cara Core conforme escopo formal. Contratação: <a href="canal-feedback.html">canal de feedback</a>. Entregável público relacionado ao serviço: <a href="download.html">O que o serviço entrega</a>.</p>
         </section>
 
-        <nav class="download-back">
-            <a href="canal-feedback.html">Canal de feedback</a> · <a href="download.html">Download</a> · <a href="index.html">Voltar à Área 51 — Loja</a>
+        <section class="sf-block">
+            <h2>Uso e responsabilidade</h2>
+            <p>O uso dos scripts ou das configurações derivadas em produção é da responsabilidade do cliente ou da entidade instaladora conforme lei aplicável e contrato próprio com a Cara Core. É recomendado validação e testes em ambiente controlado antes de cenários críticos. A documentação técnica no repositório da oficina (por exemplo estratégia de desenvolvimento e guias operacionais) pode ser consultada segundo a versão disponível públicamente ao tempo da utilização.</p>
+        </section>
+
+        <section class="sf-block">
+            <h2>Propriedade intelectual</h2>
+            <p>A titularidade do produto institucional <strong>Área&nbsp;51</strong> associa‑se ao Governo Federal, conforme divulgação pública atual. Artefatos técnicos de implementação pela Cara Core seguem instrumental contratual e escopo pactuado. Modelos técnico‑operacionais descritos sob &quot;Reino das Entidades Federadas&quot; e referências correlatas destinam‑se apenas a comunicação institucional do projeto.</p>
+        </section>
+
+        <nav class="sf-breadcrumb sf-muted-text" style="border-bottom: none; padding-top: 8px;">
+            <a href="index.html">Loja</a><span class="sep">/</span>
+            <a href="download.html">Download</a><span class="sep">/</span>
+            <a href="canal-feedback.html">Canal de feedback</a><span class="sep">/</span>
+            <a href="wiki/index.html">Wiki</a>
         </nav>
-        <footer>
-            <p><a href="index.html">Área 51 — Loja</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
-            <p>Área 51 — produto de titularidade do Governo Federal, com serviço contratado de implementação técnica pela Cara Core. Configuração OAuth 2.1, OIDC, PKCE.</p>
-        </footer>
-    </div>
+    </main>
+
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <nav class="sf-footer-links" aria-label="Links do rodapé">
+                <a href="index.html">Início</a>
+                <a href="produto.html">Produto</a>
+                <a href="download.html">Download</a>
+                <a href="canal-feedback.html">Contato</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>Área&nbsp;51 — produto de titularidade do Governo Federal com serviço de implementação técnica pela Cara Core</p>
+            </div>
+        </div>
+    </footer>
     <script src="assets/js/area51.js"></script>
 </body>
 </html>
-
-

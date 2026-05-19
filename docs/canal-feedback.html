@@ -5,63 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://area51.caracore.com.br/">
     <title>Canal de feedback — Suporte Área 51 | Cara Core Informática</title>
-    <meta name="description" content="Solicitar suporte ou orçamento Área 51: e-mail suporte@caracore.com.br, WhatsApp e Telegram.">
+    <meta name="description" content="Solicitar suporte ou orçamento Área 51: e-mail suporte@caracore.com.br, WhatsApp e Telegram. Sem atendimento telefónico por voz.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/area51.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+    <link rel="stylesheet" href="assets/css/store-public.css">
+    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
 </head>
-<body class="page-canal">
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">Área 51 — Loja</a>
-            <span> · </span>
-            <a href="index.html">Área 51 — Loja</a>
-            <span> · </span>
-            <span>Canal de feedback</span>
+<body class="store store-inner store-canal">
+    <a class="sf-skip" href="#main">Ir para o conteúdo</a>
+    <header class="sf-header">
+        <div class="sf-header-inner">
+            <a class="sf-brand" href="index.html">Área 51 — Loja</a>
+            <nav class="sf-nav" aria-label="Principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produto.html">Produto</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="wiki/index.html">Wiki</a></li>
+                    <li><a href="download.html">Download</a></li>
+                    <li><a href="imprensa.html">Imprensa</a></li>
+                    <li><a href="canal-feedback.html" aria-current="page">Contato</a></li>
+                </ul>
+            </nav>
+            <details class="sf-menu">
+                <summary>Menu</summary>
+                <div class="sf-menu-body">
+                    <a href="index.html">Início</a>
+                    <a href="produto.html">Produto</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="galeria.html">Galeria</a>
+                    <a href="wiki/index.html">Wiki</a>
+                    <a href="download.html">Download</a>
+                    <a href="imprensa.html">Imprensa</a>
+                    <a href="licenca-uso.html">Licença</a>
+                    <a href="canal-feedback.html">Contato</a>
+                </div>
+            </details>
+        </div>
+    </header>
+
+    <main id="main" class="sf-main">
+        <nav class="sf-breadcrumb" aria-label="Navegação secundária">
+            <a href="index.html">Loja</a><span class="sep">/</span>
+            <span class="sf-breadcrumb-current">Canal de feedback</span>
         </nav>
 
-        <header>
-            <h1>Canal de feedback — Suporte Área 51</h1>
-            <p class="subtitle">Solicitar suporte, orçamento ou consultoria para autenticação enterprise (OAuth 2.1, OIDC, PKCE). E-mail, WhatsApp e Telegram.</p>
+        <header class="sf-page-hero">
+            <h1>Canal de feedback</h1>
+            <p class="sf-lede">Suporte, orçamento ou consultoria em autenticação empresarial (OAuth 2.1, OIDC, PKCE). Utilize apenas e‑mail ou mensagens por WhatsApp e Telegram conforme dados abaixo.</p>
         </header>
 
-        <div class="no-phone"><strong>Não atendemos ligações telefônicas.</strong> Use e-mail, WhatsApp ou Telegram.</div>
+        <div class="sf-banner-warn sf-block" style="margin-bottom: 24px; padding: 16px;">
+            <strong>Sem chamadas por voz.</strong> Ligações para o número indicado não são atendidas. Utilize apenas e‑mail ou aplicações de mensagem combinadas oficialmente pela Cara Core.
+        </div>
 
-        <section class="intro">
-            <p><strong>Contato da Cara Core Informática</strong> para solicitar suporte ou orçamento do <strong>Suporte Área 51</strong> (consultoria OAuth 2.1, OIDC, PKCE, autenticação enterprise, integração Google/Microsoft).</p>
+        <section class="sf-block">
+            <h2>Dados de contato</h2>
+            <p>Utilize apenas estes canais segundo a publicação institucional vigente da Cara&nbsp;Core Informática. Referência típica de assunto: <strong>Suporte Área 51</strong>.</p>
         </section>
 
-        <section class="channels">
-            <div class="nav-card" role="text">
-                <span class="channel-icon" aria-hidden="true">&#9993;</span>
-                <h3>suporte@caracore.com.br</h3>
-                <p>Assunto sugerido: &quot;Suporte Área 51 - Orçamento / Consultoria OIDC&quot;. Descreva sua necessidade de autenticação ou suporte.</p>
+        <section class="channels" style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="nav-card sf-block" role="article" style="margin: 0;">
+                <span class="channel-kind">E-mail</span>
+                <h3 style="margin: 6px 0 10px; font-size: 1rem;">suporte@caracore.com.br</h3>
+                <p style="margin: 0;">Assunto sugerido: Suporte Área 51 — orçamento ou consultoria OIDC. Descriva cenário institucional, integrações esperadas e janelas de projeto.</p>
             </div>
-            <div class="nav-card" role="text">
-                <span class="channel-icon" aria-hidden="true">&#128172;</span>
-                <h3>55 41 9 9909-7797 (WhatsApp)</h3>
-                <p>Cara Core Informática. Suporte Área 51 — orçamento e consultoria.</p>
+            <div class="nav-card sf-block" role="article" style="margin: 0;">
+                <span class="channel-kind">WhatsApp</span>
+                <h3 style="margin: 6px 0 10px; font-size: 1rem;">55&nbsp;41&nbsp;9&nbsp;9909&nbsp;-&nbsp;7797</h3>
+                <p style="margin: 0;">Cara Core Informática · Suporte Área 51 — apenas mensagens textuais e de voz dentro da aplicação, conforme uso institucional atual.</p>
             </div>
-            <div class="nav-card" role="text">
-                <span class="channel-icon" aria-hidden="true">&#9992;</span>
-                <h3>55 41 9 9909-7797 (Telegram)</h3>
-                <p>Cara Core Informática. Suporte Área 51. Não atendemos ligações telefônicas.</p>
+            <div class="nav-card sf-block" role="article" style="margin: 0;">
+                <span class="channel-kind">Telegram</span>
+                <h3 style="margin: 6px 0 10px; font-size: 1rem;">55&nbsp;41&nbsp;9&nbsp;9909&nbsp;-&nbsp;7797</h3>
+                <p style="margin: 0;">Cara Core Informática · Suporte Área 51. Ligações não aceites.</p>
             </div>
         </section>
 
-        <nav class="download-back">
-            <a href="index.html">Voltar à Área 51 — Loja</a> · <a href="download.html">Download</a> · <a href="licenca-uso.html">Licença de uso</a>
+        <nav class="sf-breadcrumb sf-muted-text" style="border-bottom: none; padding-top: 24px;">
+            <a href="index.html">Loja</a><span class="sep">/</span>
+            <a href="download.html">Download</a><span class="sep">/</span>
+            <a href="licenca-uso.html">Licença</a><span class="sep">/</span>
+            <a href="servicos.html">Serviços</a>
         </nav>
-        <footer>
-            <p><a href="index.html">Área 51 — Loja</a> · <a href="canal-feedback.html">Canal de feedback</a></p>
-            <p>Área 51 — serviço contratado. Configuração OAuth 2.1, OIDC, PKCE. Cara Core Informática.</p>
-        </footer>
-    </div>
+    </main>
+
+    <footer class="sf-footer">
+        <div class="sf-footer-inner">
+            <nav class="sf-footer-links" aria-label="Links do rodapé">
+                <a href="index.html">Início</a>
+                <a href="download.html">Download</a>
+                <a href="wiki/index.html">Wiki</a>
+                <a href="licenca-uso.html">Licença</a>
+            </nav>
+            <div class="sf-footer-leg">
+                <p>Cara Core Informática · OAuth&nbsp;2.1, OIDC, PKCE</p>
+            </div>
+        </div>
+    </footer>
     <script src="assets/js/area51.js"></script>
 </body>
 </html>
-
-

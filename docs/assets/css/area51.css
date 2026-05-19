@@ -210,9 +210,14 @@ header p {
 
 .nav-card .icon svg { width: 100%; height: 100%; }
 
-.nav-card .channel-icon {
-    font-size: 1.75rem;
-    margin-bottom: 8px;
+.channel-kind {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
 }
 
 .nav-card h3 {
@@ -298,3 +303,10 @@ footer a:hover,
 .download-back a:hover,
 .back a:hover,
 .nav-links a:hover { text-decoration: underline; }
+
+@media (max-width: 599px) {
+    body {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}

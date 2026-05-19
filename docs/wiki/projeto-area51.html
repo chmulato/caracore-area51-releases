@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-loja-shell="1">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,13 @@
     
     <!-- Bootstrap CSS -->
     <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
     <!-- Wiki CSS -->
     <link rel="stylesheet" href="assets/css/wiki.css">
     <!-- Projeto Área 51 CSS -->
     <link rel="stylesheet" href="assets/css/projeto-area51.css">
     <!-- Wiki Unified (overrides) -->
     <link rel="stylesheet" href="assets/css/wiki-unified.css">
+    <link rel="stylesheet" href="assets/css/wiki-loja-align.css">
     
     <!-- Favicon -->
     <link rel="icon" href="../assets/images/favicon.ico" type="image/ico">
@@ -27,33 +26,38 @@
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="bi bi-journal-code"></i> Wiki Cara Core
-            </a>
+            <a class="navbar-brand" href="../index.html">Área 51 · Wiki</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Alternar navegação" title="Menu de navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarWiki">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <i class="bi bi-shop"></i> Loja
-                        </a>
+                        <a class="nav-link" href="../index.html">Loja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <i class="bi bi-journal-text"></i> Wiki da loja
-                        </a>
+                        <a class="nav-link" href="../produto.html">Produto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../download.html">
-                            <i class="bi bi-download"></i> Download / entregas
-                        </a>
+                        <a class="nav-link" href="../servicos.html">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../canal-feedback.html">
-                            <i class="bi bi-chat-dots"></i> Canal de feedback
-                        </a>
+                        <a class="nav-link" href="../galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Wiki</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="projeto-area51.html">Documentação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../download.html">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../imprensa.html">Imprensa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../canal-feedback.html">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -78,21 +82,21 @@
             <!-- Sidebar -->
             <div class="col-lg-3 col-md-4">
                 <div class="wiki-sidebar">
-                    <h4><i class="bi bi-list-ul"></i> Nesta loja</h4>
+                    <h4>Nesta loja</h4>
                     <ul class="wiki-menu">
-                        <li><a href="index.html"><i class="bi bi-journal-text"></i> Início do wiki</a></li>
-                        <li><a href="projeto-area51.html" class="active"><i class="bi bi-file-earmark-text"></i> Documentação do produto</a></li>
-                        <li><a href="../download.html"><i class="bi bi-box-arrow-down"></i> Download / entregas</a></li>
-                        <li><a href="../canal-feedback.html"><i class="bi bi-chat-dots"></i> Canal de feedback</a></li>
+                        <li><a href="index.html">Início do wiki</a></li>
+                        <li><a href="projeto-area51.html" class="active">Documentação do produto</a></li>
+                        <li><a href="../download.html">Download / entregas</a></li>
+                        <li><a href="../canal-feedback.html">Canal de feedback</a></li>
                     </ul>
 
                     <!-- Navegação: até Lady OAuth (1ª era) -->
                     <div class="mt-4">
-                        <h5><i class="bi bi-shield-fill-check"></i> Até Lady OAuth (1ª era)</h5>
+                        <h5>Até Lady OAuth (1ª era)</h5>
                         <ul class="area51-nav">
-                            <li><a href="#arquitetura"><i class="bi bi-diagram-3"></i> Conceitos</a></li>
-                            <li><a href="#authentication"><i class="bi bi-key"></i> Autenticação (Lady OAuth)</a></li>
-                            <li><a href="#processo-completo"><i class="bi bi-shop"></i> Processo completo → Loja</a></li>
+                            <li><a href="#arquitetura">Conceitos</a></li>
+                            <li><a href="#authentication">Autenticação (Lady OAuth)</a></li>
+                            <li><a href="#processo-completo">Processo completo → Loja</a></li>
                         </ul>
                     </div>
                 </div>
@@ -103,12 +107,12 @@
                 <div class="wiki-content">
                     <div class="project-card">
                         <div class="project-header area51">
-                            <h1><i class="bi bi-rocket"></i> Área 51</h1>
+                            <h1>Área 51</h1>
                             <p>Sistema de Autenticação Empresarial de Alta Segurança</p>
                         </div>
                         <div class="project-body">
                             <div class="alert alert-info mb-4">
-                                <strong><i class="bi bi-journal-code"></i> Wiki para colaboradores e estagiários.</strong> Esta wiki cobre <strong>somente até o mundo da Lady OAuth</strong> — a <strong>autenticação</strong> (primeira era do Reino OIDC): quem é você, login, OAuth/OIDC. O <strong>Reino das Entidades Federadas</strong> (processo completo: autorização, federação, deploy, etc.) <strong>não é divulgado aqui</strong>: é o produto da <strong>Oficina da Área 51</strong> (scripts Python em baseline) vendido na <strong>Loja da Área 51</strong>.
+                                <strong>Wiki para colaboradores e estagiários.</strong> Esta wiki cobre <strong>somente até o mundo da Lady OAuth</strong> — a <strong>autenticação</strong> (primeira era do Reino OIDC): quem é você, login, OAuth/OIDC. O <strong>Reino das Entidades Federadas</strong> (processo completo: autorização, federação, deploy, etc.) <strong>não é divulgado aqui</strong>: é o produto da <strong>Oficina da Área 51</strong> (scripts Python em baseline) vendido na <strong>Loja da Área 51</strong>.
                             </div>
                             <div class="project-status">
                                 <span class="badge badge-enterprise">Enterprise</span>
@@ -125,19 +129,17 @@
                         <div class="area51-intro">
                             <div class="classification-banner">
                                 <div class="classification-text">
-                                    <i class="bi bi-exclamation-triangle"></i>
-                                    <span>CONFIDENCIAL - ACESSO RESTRITO</span>
-                                    <i class="bi bi-exclamation-triangle"></i>
+                                    <span>CONFIDENCIAL — ACESSO RESTRITO</span>
                                 </div>
                             </div>
                             <div class="row align-items-center mt-4">
                                 <div class="col-md-8">
-                                    <h2><i class="bi bi-shield-fill-exclamation text-warning"></i> Projeto Ultra-Secreto</h2>
+                                    <h2>Projeto Ultra-Secreto</h2>
                                     <p class="lead">A Área 51 representa o que há de mais avançado em sistemas de autenticação e autorização empresarial. Desenvolvido para organizações que necessitam do mais alto nível de segurança e conformidade.</p>
                                 </div>
                                 <div class="col-md-4 text-center">
                                     <div class="area51-badge">
-                                        <i class="bi bi-rocket-takeoff area51-main-icon text-danger"></i>
+                                        <span class="area51-main-label" aria-hidden="true">A51</span>
                                         <div class="badge-text">
                                             <strong>Nível de Segurança</strong><br>
                                             <small>MÁXIMO</small>
@@ -150,16 +152,16 @@
 
                     <!-- Conceitos e Benefícios (contexto da 1ª era — Lady OAuth) -->
                     <section id="arquitetura" class="mb-5">
-                        <h2><i class="bi bi-diagram-3 text-primary"></i> Conceitos Fundamentais</h2>
+                        <h2>Conceitos Fundamentais</h2>
                         <p class="text-muted">Contexto para o mundo da <strong>Lady OAuth</strong> (autenticação, primeira era do Reino OIDC).</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="leigos-section">
-                                    <h3><i class="bi bi-building"></i> Visão para Gestores</h3>
+                                    <h3>Visão para Gestores</h3>
                                     <p>Imagine a Área 51 como um <strong>sistema de segurança ultra-avançado</strong> para sua empresa:</p>
                                     
                                     <div class="analogy-card">
-                                        <h4>🏢 Como um Edifício Corporativo</h4>
+                                        <h4>Como um edifício corporativo</h4>
                                         <p><strong>Recepção Central:</strong> Um único ponto de entrada onde todos se identificam</p>
                                         <p><strong>Múltiplos Andares:</strong> Diferentes sistemas e aplicações da empresa</p>
                                         <p><strong>Cartão Universal:</strong> Acesso automático baseado no seu cargo e departamento</p>
@@ -167,7 +169,7 @@
                                     </div>
 
                                     <div class="benefits-card">
-                                        <h4>💼 Benefícios para o Negócio</h4>
+                                        <h4>Benefícios para o negócio</h4>
                                         <ul class="benefit-list">
                                             <li><strong>Produtividade:</strong> Funcionários fazem login uma vez por dia</li>
                                             <li><strong>Segurança:</strong> Controle granular de acesso</li>
@@ -180,11 +182,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="estagiario-section">
-                                    <h3><i class="bi bi-shield-lock"></i> Arquitetura de Alta Segurança</h3>
+                                    <h3>Arquitetura de alta segurança</h3>
                                     <p>Sistema empresarial com arquitetura distribuída e redundante:</p>
                                     
                                     <div class="benefits-card">
-                                        <h4>🔒 Pilares Técnicos</h4>
+                                        <h4>Pilares técnicos</h4>
                                         <ul class="benefit-list">
                                             <li><strong>Microsserviços:</strong> Componentes independentes e escaláveis</li>
                                             <li><strong>Alta Disponibilidade:</strong> 99.9% uptime garantido</li>
@@ -195,7 +197,7 @@
                                     </div>
 
                                     <div class="alert alert-info mt-3">
-                                        <h5><i class="bi bi-lightbulb"></i> Quer Aprender Mais?</h5>
+                                        <h5>Quer aprender mais?</h5>
                                         <p class="mb-0">Explore os conceitos de <a href="../index.html" class="alert-link"><strong>autenticação OIDC</strong></a> no projeto <strong>Reino OIDC</strong> para entender as tecnologias por trás do sistema.</p>
                                     </div>
                                 </div>
@@ -205,7 +207,7 @@
 
                     <!-- Recursos de Autenticação (mundo da Lady OAuth — 1ª era) -->
                     <section id="authentication" class="mb-5">
-                        <h2><i class="bi bi-key text-success"></i> Autenticação — Mundo da Lady OAuth (1ª era)</h2>
+                        <h2>Autenticação — Mundo da Lady OAuth (1ª era)</h2>
                         <p class="text-muted">Conteúdo desta wiki: <strong>autenticação</strong> (OAuth 2.1, OIDC, PKCE, login com Google/Microsoft). Corresponde à primeira era do Reino OIDC.</p>
                         
                         <div class="auth-methods">
@@ -213,8 +215,7 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="auth-card primary">
                                         <div class="auth-header">
-                                            <i class="bi bi-person-badge"></i>
-                                            <h4>Multi-Factor Authentication</h4>
+                                            <h4>Multi-factor authentication</h4>
                                         </div>
                                         <div class="auth-body">
                                             <p><strong>Algo que você sabe:</strong> Senha ou PIN</p>
@@ -232,8 +233,7 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="auth-card social">
                                         <div class="auth-header">
-                                            <i class="bi bi-globe"></i>
-                                            <h4>Federação de Identidades</h4>
+                                            <h4>Federação de identidades</h4>
                                         </div>
                                         <div class="auth-body">
                                             <p><strong>Azure AD:</strong> Microsoft 365, Teams</p>
@@ -251,8 +251,7 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="auth-card enterprise">
                                         <div class="auth-header">
-                                            <i class="bi bi-shield-check"></i>
-                                            <h4>Autenticação Adaptativa</h4>
+                                            <h4>Autenticação adaptativa</h4>
                                         </div>
                                         <div class="auth-body">
                                             <p><strong>Análise de Risco:</strong> IP, Device, Comportamento</p>
@@ -270,26 +269,22 @@
                         </div>
 
                         <div class="alert alert-info mt-4">
-                            <h5><i class="bi bi-book"></i> Aprenda os Fundamentos</h5>
+                            <h5>Aprenda os fundamentos</h5>
                             <p>O <a href="../index.html" class="alert-link"><strong>Reino OIDC</strong></a> é o projeto educacional onde você aprende autenticação, OAuth 2.0 e OpenID Connect (mundo da Lady OAuth).</p>
                         </div>
                     </section>
 
                     <!-- Processo completo = produto Oficina/Loja (não divulgado na wiki) -->
                     <section id="processo-completo" class="mb-5">
-                        <h2><i class="bi bi-shop text-primary"></i> Reino das Entidades Federadas — Produto Área 51</h2>
+                        <h2>Reino das entidades federadas — produto Área 51</h2>
                         <div class="alert alert-warning">
-                            <h5><i class="bi bi-lock"></i> Processo completo não divulgado nesta wiki</h5>
+                            <h5>Processo completo não divulgado nesta wiki</h5>
                             <p class="mb-2">Tudo que vem <strong>depois da autenticação</strong> (Lady OAuth) — autorização, federação, deploy, casos de uso, métricas — faz parte do <strong>Reino das Entidades Federadas</strong>. Esse processo está nos <strong>scripts Python</strong> da <strong>Oficina da Área 51</strong> (controle de versão, baseline) e é o <strong>produto vendido na Loja da Área 51</strong>.</p>
                             <p class="mb-0">Colaboradores e estagiários: o detalhamento completo é interno ao produto (Oficina/Loja). Esta wiki expõe apenas até a primeira era — autenticação.</p>
                         </div>
                         <div class="d-grid gap-2 d-md-flex">
-                            <a href="../download.html" class="btn btn-primary">
-                                <i class="bi bi-shop"></i> Loja Área 51 (produto)
-                            </a>
-                            <a href="../index.html" class="btn btn-outline-secondary">
-                                <i class="bi bi-mortarboard"></i> Reino OIDC (Lady OAuth)
-                            </a>
+                            <a href="../download.html" class="btn btn-primary">Loja Área 51 (produto)</a>
+                            <a href="../index.html" class="btn btn-outline-secondary">Reino OIDC (Lady OAuth)</a>
                         </div>
                     </section>
                 </div>
@@ -300,7 +295,7 @@
     <!-- Footer -->
     <footer class="wiki-footer">
         <div class="container">
-            <p>&copy; 2025 Cara Core Informática - CNPJ: 23.969.028/0001-37</p>
+            <p>&copy; 2026 Cara Core Informática · CNPJ 23.969.028/0001-37</p>
             <p>Área 51 - Sistema de Autenticação Empresarial de Alta Segurança</p>
         </div>
     </footer>

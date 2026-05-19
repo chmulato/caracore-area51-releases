@@ -43,6 +43,14 @@
         .area51-main-icon {
             font-size: 4rem;
         }
+
+        .area51-main-label {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: #e74c3c;
+            line-height: 1.15;
+        }
         
         .badge-text {
             margin-top: 10px;
@@ -127,6 +135,11 @@
             font-size: 2.5rem;
             margin-bottom: 10px;
             display: block;
+        }
+
+        .auth-header h4 {
+            margin: 0;
+            font-size: 1.2rem;
         }
         
         .auth-body {

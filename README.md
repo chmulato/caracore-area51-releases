@@ -1,21 +1,25 @@
-# caracore-area51-releases — Loja Oficial Área 51
+# caracore-area51-releases — Loja oficial Área 51
 
-**Loja e releases** do **Suporte Área 51** — Plataforma completa de OIDC (OpenID Connect / OAuth 2.1).
+Site estático em **`docs/`** (GitHub Pages) do **Suporte Área 51**, em torno de **OpenID Connect** e **OAuth 2.1** (PKCE nos exemplos públicos). Publicação habitual: **https://area51.caracore.com.br/**. Código baseline e operações: repositório **caracore-area51**.
 
-## 🎯 O Que É Área 51
+- **CSS da vitrine e vínculo com a oficina:** [docs/OFICINA_E_CSS.md](docs/OFICINA_E_CSS.md)
+- **Imagens da vitrine:** pasta canônica **`docs/assets/img/`** — convenções, legado (`docs/images/` em algumas páginas) e exceções estão descritas em [OFICINA_E_CSS.md](docs/OFICINA_E_CSS.md).
+- **Ao gerar HTML institucional a partir da oficina:** `caracore-area51/docs/ALINHAMENTO_LOJA_PRESENTACAO.md`
 
-**Plataforma de configuração e operação de ambientes OpenID Connect seguro** para órgãos públicos e empresas.
+## O que comunicamos ao público
 
-- ✅ **Scripts baseline** — Configuração OIDC padronizada (Python)
-- ✅ **Deploy automatizado** — Keycloak + Protected App em um comando
-- ✅ **Testes integrados** — Validação OAuth 2.1 + PKCE
-- ✅ **Documentação completa** — Setup, conceitos, troubleshooting
+**Implementação exemplo de ambientes OIDC seguros**, referenciados ao projeto técnico publicado.
 
-**Tempo:** &lt;5 minutos de setup (vs. 2-3 semanas manual)
+- **Scripts baseline** — Configuração OIDC padronizada (Python); detalhes no repositório de código.
+- **Deploy automatizado (exemplo)** — Keycloak e aplicação protegida em Docker, segundo guias de `operational/`.
+- **Testes exemplo** — Validação de fluxo OAuth 2.1 e PKCE conforme projeto atual.
+- **Documentação combinada** — Páginas desta loja e guias técnicos no repositório de oficina.
+
+**Referência de tempo em laboratório:** ordem frequentemente relatada até **vários minutos** após pré‑requisitos atendidos (ilustrativo; produção segue ciclo do cliente).
 
 ---
 
-## 📍 Repositórios
+## Repositórios
 
 | Repositório | Propósito | Público |
 |------------|----------|---------|
@@ -24,26 +28,27 @@
 
 ---
 
-## 🛍️ Acesso Rápido (GitHub Pages)
+## Páginas em `docs/`
 
-A pasta `docs/` é publicada em: **https://area51.caracore.com.br/**
+Domínio publicado: **https://area51.caracore.com.br/**
 
 | Página | Descrição | Tipo |
 |--------|-----------|------|
-| [**produto.html**](docs/produto.html) | 🎯 Visão geral do produto, features, casos de uso | Marketing |
-| [**galeria.html**](docs/galeria.html) | 🖼️ Galeria de 10 imagens profissionais 16:9 | Recursos |
-| [**imprensa.html**](docs/imprensa.html) | 📰 Kit de imprensa para mídia e vendas | Press Kit |
-| [**servicos.html**](docs/servicos.html) | 💼 Três opções de engajamento (Básico, Implementação, Platinum) | Vendas |
-| [**index.html**](docs/index.html) | 🏠 Página inicial da loja | Home |
-| [**download.html**](docs/download.html) | 📥 Como baixar e começar | Getting Started |
-| [**licenca-uso.html**](docs/licenca-uso.html) | ⚖️ Termos e licença | Legal |
-| [**canal-feedback.html**](docs/canal-feedback.html) | 💬 Contato e suporte | Contato |
+| [index.html](docs/index.html) | Início institucional | Landing |
+| [produto.html](docs/produto.html) | Visão de produto, cenários | Produto |
+| [servicos.html](docs/servicos.html) | Modelos baseline, implementação guiada e contratos | Serviços |
+| [galeria.html](docs/galeria.html) | Dez imagens panorama 16:9 | Material |
+| [imprensa.html](docs/imprensa.html) | Kit institucional de imprensa | Imprensa |
+| [wiki](docs/wiki/index.html) | Wiki no mesmo domínio (Bootstrap + `wiki-loja-align.css`) | Wiki |
+| [download.html](docs/download.html) | O que o serviço contratado pode entregar | Serviço |
+| [licenca-uso.html](docs/licenca-uso.html) | Licença e titularidade | Jurídico |
+| [canal-feedback.html](docs/canal-feedback.html) | Solicitar suporte ou orçamento | Canal |
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### 1. Produto Básico (Gratuito)
+### 1. Baseline público (repositório `caracore-area51`)
 
 ```bash
 # Clonar repositório de código
@@ -64,13 +69,13 @@ python operational/tests/validate_oidc_flow.py \
   --keycloak-url http://192.168.1.100:8080
 ```
 
-**Resultado:** Keycloak + Protected App + Testes ✅ em &lt;5 minutos
+**Resultado esperado (ilustrativo):** Keycloak, aplicação protegida e validação segundo guias públicos atualizados; tempo depende da infraestrutura do cliente.
 
 ---
 
-### 2. Implementação Guiada
+### 2. Implementação guiada
 
-Precisa de ajuda? **[Solicite orçamento](docs/canal-feedback.html)**
+**[Pedir orçamento ou suporte formal](docs/canal-feedback.html)**
 
 - Setup no seu ambiente
 - Integração com sua aplicação
@@ -79,9 +84,9 @@ Precisa de ajuda? **[Solicite orçamento](docs/canal-feedback.html)**
 
 ---
 
-### 3. Suporte Platinum
+### 3. Contrato com SLA (“Platinum” apenas como rótulo comercial habitual)
 
-Para órgãos críticos:
+Para órgãos com requisitos críticos:
 - Implementação completa
 - Integração Gov.br / Entra ID
 - Auditoria de segurança
@@ -91,46 +96,39 @@ Para órgãos críticos:
 
 ---
 
-## 📊 Comparação: Antes vs. Depois
+## Comparativo apenas ilustrativo
 
-| Aspecto | Antes (Manual) | Com Área 51 |
-|--------|---------------|-----------|
-| Tempo de setup | 2-3 semanas | &lt;5 min ⚡ |
-| Segurança (PKCE) | Manual | Automático ✅ |
-| Testes OIDC | Inexistentes | Inclusos ✅ |
-| Documentação | Dispersa | Centralizada ✅ |
-| Reprodutibilidade | Inconsistente | 100% ✅ |
-
----
-
-## 🔐 Segurança
-
-Implementamos **padrões OAuth 2.1 + OpenID Connect**:
-
-- ✅ PKCE (Proof Key Code Exchange)
-- ✅ Authorization Code Flow
-- ✅ JWT Token Validation
-- ✅ State Parameter (CSRF)
-- ✅ Token Introspection
-- ✅ HTTP-only Cookies
+| Aspecto | Cenário tipicamente manual disperso | Com baseline e rotinas públicas do projeto |
+|---------|--------------------------------------|--------------------------------------------|
+| Lead time laboratório | Ordens típicas de semanas apenas com montagem manual | Minutos habitualmente relatados após pré‑requisitos e rotina de guias |
+| PKCE em exemplo público | Inconsistente sem padrão comum | Fluxos descritos na baseline e nos testes de fluxo do repositório |
+| Testes de fluxo | Frequentemente adiados quando não há automatização exemplo | Scripts em `operational/tests/` segundo versão atual do GitHub |
+| Documentação | Dispersão típica só com montagens manuais | Páginas desta loja e guias `operational/` no repositório |
+| Repetibilidade | Depende fortemente de quem instalou e de anotações locais | Rotinas e containers documentados no repositório `caracore-area51` |
 
 ---
 
-## 📋 Componentes
+## Segurança referida na documentação
 
-### Componente 1: Scripts Baseline
+O material público costuma destacar OAuth 2.1, OIDC, PKCE, fluxo código de autorização, validação exemplo de JWT quando aplicável, parâmetro de estado contra CSRF, introspecção de token conforme desenho, cookies HTTP‑only segundo exemplos apresentados.
+
+---
+
+## Componentes comunicados institucionalmente
+
+### Scripts baseline (repositório de código)
 - Configuração OIDC padronizada
 - Testes de validação
 - Versionamento Git
 - Entrega via GitHub
 
-### Componente 2: Deploy Operacional
+### Operação exemplo (`operational/`)
 - Keycloak em Docker (automatizado)
 - Exemplo de app protegida (Flask)
 - Validação de fluxo OIDC
 - Documentação passo-a-passo
 
-### Componente 3: Suporte Técnico
+### Suporte Cara Core (contrato)
 - Consultoria OIDC
 - Customizações
 - Integração Gov.br/Entra ID
@@ -138,34 +136,34 @@ Implementamos **padrões OAuth 2.1 + OpenID Connect**:
 
 ---
 
-## 📚 Documentação
+## Documentação
 
 - **Produto:** [produto.html](docs/produto.html)
 - **Serviços:** [servicos.html](docs/servicos.html)
 - **Download:** [download.html](docs/download.html)
+- **Wiki:** [wiki](docs/wiki/index.html)
 - **Termos:** [licenca-uso.html](docs/licenca-uso.html)
 - **Contato:** [canal-feedback.html](docs/canal-feedback.html)
 
 ---
 
-## 🔗 Links
+## Links
 
 - **Loja online:** https://area51.caracore.com.br/
 - **Código (GitHub):** https://github.com/chmulato/caracore-area51
-- **Propose serviço:** Ver [PROPOSTA_SERVICO_AREA51.md](https://github.com/chmulato/caracore-area51/blob/main/PROPOSTA_SERVICO_AREA51.md)
+- **Proposta de serviço:** [PROPOSTA_SERVICO_AREA51.md](https://github.com/chmulato/caracore-area51/blob/main/PROPOSTA_SERVICO_AREA51.md)
 
 ---
 
-## ⚖️ Licença
+## Licença
 
-> ⚠️ **Titularidade:** Produto Área 51 é de titularidade do **Governo Federal**.
-> Cara Core Informática atua como implementadora técnica.
+> **Titularidade:** Produto Área 51 é de titularidade do **Governo Federal**. A Cara Core Informática atua como implementadora técnica. Ver [licenca-uso.html](docs/licenca-uso.html).
 
-O produto não é MIT e não é open source. Consulte [LICENSE](LICENSE) para detalhes.
+O produto não é MIT e não é “open source” no sentido de licença única ampla. Consulte [LICENSE](LICENSE).
 
 ---
 
-## 📞 Contato
+## Contato
 
 **Suporte & Orçamentos:**
 - Email: suporte@caracore.com.br
