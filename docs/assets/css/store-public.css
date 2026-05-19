@@ -22,6 +22,10 @@
     --sf-max: 1120px;
     --sf-header-h: 56px;
     --sf-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* Margens horizontais partilhadas: header, main, secções, rodapé */
+    --sf-gutter: clamp(14px, 4vw, 24px);
+    --sf-pad-main-top: clamp(20px, 3vw, 28px);
+    --sf-pad-main-bottom: clamp(40px, 6vw, 64px);
 }
 
 *,
@@ -131,7 +135,7 @@ body.store.store-canal .sf-main {
 .sf-header-inner {
     max-width: var(--sf-max);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--sf-gutter);
     height: var(--sf-header-h);
     display: flex;
     align-items: center;
@@ -205,8 +209,8 @@ body.store.store-canal .sf-main {
 
 .sf-menu-body {
     position: absolute;
-    right: 20px;
-    left: 20px;
+    right: var(--sf-gutter);
+    left: var(--sf-gutter);
     top: calc(var(--sf-header-h) + 10px);
     max-height: calc(100vh - var(--sf-header-h) - 28px);
     overflow: auto;
@@ -234,7 +238,7 @@ body.store.store-canal .sf-main {
 .sf-main {
     max-width: var(--sf-max);
     margin: 0 auto;
-    padding: 28px 20px 64px;
+    padding: var(--sf-pad-main-top) var(--sf-gutter) var(--sf-pad-main-bottom);
 }
 
 .store-landing .sf-main {
@@ -247,8 +251,8 @@ body.store.store-canal .sf-main {
 .sf-inner-wrap {
     max-width: var(--sf-max);
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: var(--sf-gutter);
+    padding-right: var(--sf-gutter);
 }
 
 .sf-section {
@@ -283,7 +287,7 @@ body.store.store-canal .sf-main {
 }
 
 .sf-hero {
-    padding: 48px 20px 64px;
+    padding: 48px 0 64px;
     background: radial-gradient(120% 100% at 50% 0%, rgba(88, 166, 255, 0.09) 0%, transparent 55%),
         var(--sf-bg);
     border-bottom: 1px solid var(--sf-border);
@@ -570,7 +574,7 @@ body.store.store-canal .sf-main {
 }
 
 .sf-cta-banner {
-    padding: 56px 20px;
+    padding: 56px 0;
     text-align: center;
     border-block: 1px solid var(--sf-border);
     background: radial-gradient(80% 100% at 50% 0%, rgba(88, 166, 255, 0.08) 0%, var(--sf-bg));
@@ -590,7 +594,7 @@ body.store.store-canal .sf-main {
 
 .sf-footer {
     border-top: 1px solid var(--sf-border);
-    padding: 40px 20px;
+    padding: 40px var(--sf-gutter);
     margin-top: 0;
 }
 

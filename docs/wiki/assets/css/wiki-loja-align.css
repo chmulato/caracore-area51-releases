@@ -69,3 +69,36 @@ html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item a {
 html[data-loja-shell="1"] .wiki-breadcrumb .breadcrumb-item a:hover {
     text-decoration: underline;
 }
+
+/* --- Layout: mesmas margens e largura máxima que store-public.css --- */
+
+html[data-loja-shell="1"] {
+    --sf-max: 1120px;
+    --sf-gutter: clamp(14px, 4vw, 24px);
+}
+
+html[data-loja-shell="1"] .wiki-nav .container,
+html[data-loja-shell="1"] .wiki-breadcrumb .container,
+html[data-loja-shell="1"] .wiki-footer .container {
+    max-width: var(--sf-max);
+    padding-left: var(--sf-gutter);
+    padding-right: var(--sf-gutter);
+}
+
+html[data-loja-shell="1"] .wiki-container {
+    max-width: var(--sf-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--sf-gutter);
+    padding-right: var(--sf-gutter);
+}
+
+/* Mantém gutter uniforme em todos os breakpoints (wiki.css reduzia padding por viewport) */
+@media (max-width: 991px),
+       (max-width: 767px),
+       (max-width: 480px) {
+    html[data-loja-shell="1"] .wiki-container {
+        padding-left: var(--sf-gutter);
+        padding-right: var(--sf-gutter);
+    }
+}
