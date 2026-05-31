@@ -1,5 +1,5 @@
 /**
- * Suporte Área 51 — Delivery (matriz: caracore-site/delivery/area51). Loja: caracore-area51-releases.
+ * Suporte Área 51 — Loja area51.caracore.com.br. Matriz: portfolio.html#area-51.
  */
 'use strict';
 
