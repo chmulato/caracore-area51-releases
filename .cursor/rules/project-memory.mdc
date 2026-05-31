@@ -1,0 +1,20 @@
+---
+description: Memória da loja Suporte Área 51 — caracore-area51-releases; vitrine area51.caracore.com.br
+alwaysApply: true
+---
+
+# Memória da Loja — caracore-area51-releases
+
+## Repositório e papel
+- **caracore-area51-releases:** loja (vitrine) do **Suporte Área 51**.
+- **URL:** https://area51.caracore.com.br/
+- **Publicação:** GitHub Pages a partir de **docs/**.
+- **Oficina:** caracore-area51
+
+## Matriz
+- **Portfólio:** `portfolio.html#area-51`
+- **Posicionamento:** serviço institucional B2B / consulta
+
+## Convenções
+- Footer → portfólio `#area-51`
+- Distinto do **Reino OIDC** (oidc.caracore.com.br) — produto educativo imersivo.
